@@ -211,6 +211,42 @@ This differentiation ensures teams can't simply copy each other's work while mai
 
 ---
 
+## Week 1 Required Deliverables (All Teams)
+
+Before technical work begins, teams must establish interpersonal foundations. Research consistently shows that teams who skip this step underperform.
+
+### Day 1-5 Deliverables
+
+| Deliverable | Due | Evidence Required |
+|-------------|-----|-------------------|
+| **Team Contract Signed** | Day 5 | Submitted document with all signatures |
+| **Communication Channel** | Day 2 | Slack/Discord/Teams link shared |
+| **First Standup Completed** | Day 3 | Meeting notes posted |
+| **First GitHub Issue Created** | Day 5 | Issue link |
+| **Design Partner Contact** | Day 5 | Screenshot of introduction message |
+
+### Day 6-10 Deliverables
+
+| Deliverable | Due | Evidence Required |
+|-------------|-----|-------------------|
+| **First PR Merged** | Day 10 | PR link (even if trivial) |
+| **Something Deployed** | Day 10 | URL or screenshot |
+| **Dev Environment Working** | Day 10 | All members confirm |
+
+### The Team Contract Must Include
+
+- Communication expectations (response time, channels)
+- Work expectations (minimum hours, deadline handling)
+- Escalation agreement (when instructor gets involved)
+- Collaboration commitment (the Collaboration Minimum)
+- All member signatures
+
+See `DAY_1_ESSENTIALS.md` for the full template.
+
+**Rationale:** "We spent Week 1 on architecture" is how teams fail. Interpersonal foundations first, technical foundations second.
+
+---
+
 ## Assignment Considerations
 
 ### Team-Platform Matching

@@ -31,6 +31,7 @@ jump to sections using the codes in brackets.
 [VERSN]   Version History
 [QUICK]   Quick Start - The 5-Minute Survival Brief
 [SCRUM]   Chapter 1: Scrum for Humans (Not Robots)
+[VSLCE]   The Vertical Slice Manifesto (CRITICAL)
 [GITGD]   Chapter 2: GitHub Workflows That Won't Kill You
 [TEAMS]   Chapter 3: Team Dynamics (The Hard Part)
 [TIMETV]  Chapter 4: Time Travel Transmissions (What Went Wrong)
@@ -315,6 +316,169 @@ FIX: Work in progress limits. Max 2 items per person at a time.
 SYMPTOM: Retrospectives produce no changes.
 DIAGNOSIS: Action items are too vague or nobody owns them.
 FIX: Every action item needs a name attached and a due date.
+
+===============================================================================
+[VSLCE]          THE VERTICAL SLICE MANIFESTO
+===============================================================================
+
+// BEGIN TRANSMISSION
+
+This concept is so important it gets its own section. More capstone projects
+fail from ignoring this than from any technical limitation.
+
+// END TRANSMISSION
+
+WHAT IS A VERTICAL SLICE?
+-------------------------
+
+A vertical slice is a feature that touches ALL layers of your application,
+but does ONE thing completely.
+
+```
+HORIZONTAL LAYERS (Wrong approach):
+┌─────────────────────────────────────────────────────────┐
+│  Sprint 1-2: Database layer (all tables, no app)        │
+├─────────────────────────────────────────────────────────┤
+│  Sprint 3-4: API layer (all endpoints, no UI)           │
+├─────────────────────────────────────────────────────────┤
+│  Sprint 5-6: UI layer (finally users can see something) │
+├─────────────────────────────────────────────────────────┤
+│  Sprint 7-8: Oh no, nothing integrates, panic           │
+└─────────────────────────────────────────────────────────┘
+
+VERTICAL SLICES (Correct approach):
+┌──────────┬──────────┬──────────┬──────────┬──────────┐
+│ Sprint 1 │ Sprint 2 │ Sprint 3 │ Sprint 4 │ Sprint 5+│
+│          │          │          │          │          │
+│ Register │ Create   │ Assign   │ Dashboard│ Polish & │
+│ + Login  │ Task     │ Task     │ Views    │ Features │
+│          │          │          │          │          │
+│ DB: users│ DB: tasks│ DB: refs │ DB: query│ DB: perf │
+│ API: auth│ API: CRUD│ API: refs│ API: list│ API: opt │
+│ UI: forms│ UI: form │ UI: pick │ UI: table│ UI: UX   │
+│          │          │          │          │          │
+│ WORKS    │ WORKS    │ WORKS    │ WORKS    │ WORKS    │
+└──────────┴──────────┴──────────┴──────────┴──────────┘
+```
+
+THE RULE:
+At the end of every sprint, a HUMAN should be able to DO something with
+your application that they couldn't do before.
+
+WHY THIS MATTERS
+----------------
+
+1. **Integration Problems Surface Early**
+   When you build horizontally, you discover integration issues in Week 10.
+   When you build vertically, you discover them in Week 2—when you have
+   time to fix them.
+
+2. **You Always Have Something to Demo**
+   "Here's what users can do now" beats "here's what we've been working on"
+   every single time.
+
+3. **Scope Cuts Become Possible**
+   If you run out of time with vertical slices, you have a working app with
+   fewer features. If you run out of time with horizontal layers, you have
+   a pile of components that don't connect.
+
+4. **Morale Stays Higher**
+   Seeing working software is motivating. Seeing infrastructure is not.
+
+THE SPRINT 1 TEST
+-----------------
+
+Your Sprint 1 deliverable should pass this test:
+
+"A person who is not on our team can [VERB] using our application."
+
+Good examples:
+- "A person can create an account and log in."
+- "A person can add a task and see it in a list."
+- "A person can view a product catalog."
+
+Bad examples:
+- "We designed the database schema."
+- "We set up the API structure."
+- "We chose our component library."
+
+Those are necessary steps, but they're not deliverables. They're means to
+an end. The end is: a human can DO something.
+
+THE UGLY WORKING THING
+----------------------
+
+Your Sprint 1 feature will be ugly. That's fine.
+
+```
+ACCEPTABLE SPRINT 1:
+┌────────────────────────────────┐
+│  Login                         │
+│  ────────────────────────────  │
+│  Username: [          ]        │
+│  Password: [          ]        │
+│                                │
+│  [Submit]                      │
+│                                │
+│  (No styling. Default fonts.   │
+│   It works. That's enough.)    │
+└────────────────────────────────┘
+
+NOT ACCEPTABLE SPRINT 1:
+- Beautiful Figma mockups
+- Perfect database schema
+- Comprehensive API documentation
+- Zero working software
+```
+
+You can make it pretty later. You can refactor the code later. You cannot
+recover from having nothing working at Week 8.
+
+HOW TO SLICE
+------------
+
+Take your big feature list and ask: "What's the smallest thing that would
+be useful to a user?"
+
+Platform-specific examples:
+
+TASK MANAGEMENT:
+- Slice 1: Create account, create one task, see task list
+- Slice 2: Mark task complete, see completion status
+- Slice 3: Create project, assign task to project
+- Slice 4: Assign task to user, filter by assignee
+
+E-COMMERCE:
+- Slice 1: View product catalog (even if hardcoded)
+- Slice 2: Add item to cart, view cart
+- Slice 3: Checkout flow (even without real payment)
+- Slice 4: Order history, order status
+
+RECOMMENDATION:
+- Slice 1: Create account, rate 5 items
+- Slice 2: See "top rated" list
+- Slice 3: See "recommended for you" (even if simple)
+- Slice 4: Search/filter items
+
+WELLNESS:
+- Slice 1: Create account, log one metric (weight, mood, etc.)
+- Slice 2: View history of that metric
+- Slice 3: Set a goal, see progress toward goal
+- Slice 4: Dashboard with multiple metrics
+
+THE MANTRA
+----------
+
+Repeat after me:
+
+"Working software over comprehensive documentation."
+"Working software over comprehensive documentation."
+"Working software over comprehensive documentation."
+
+This is literally the second line of the Agile Manifesto. It's not new
+wisdom. It's wisdom that teams keep forgetting.
+
+The Algorithm measures commits. Users measure outcomes. Ship the slice.
 
 ===============================================================================
 [GITGD]     CHAPTER 2: GITHUB WORKFLOWS THAT WON'T KILL YOU

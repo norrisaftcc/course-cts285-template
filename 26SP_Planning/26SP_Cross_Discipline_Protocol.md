@@ -96,6 +96,20 @@ GRAY throughout (parallel track, different progression model)
 
 **Communication Expectation:** At least one touchpoint per week
 
+**CRITICAL CHECKPOINT: Week 4-5 Wireframe Share**
+
+Before design students finalize their brand direction, dev teams MUST share:
+- Current wireframes showing actual UI structure
+- Feature list with status (building / planned / cut)
+- Technical constraints document
+
+This is a **required deliverable**, not optional. Evidence: screenshot of 
+shared wireframes with timestamp, or meeting notes.
+
+Why This Matters: The Design Handoff Disaster (see Survival Guide) happens
+when designers create assets for an app that doesn't match what's being built.
+This checkpoint prevents that.
+
 **Developer → Designer Communication:**
 - "Here's what the interface will be able to do"
 - "This feature is technically difficult, consider alternatives"
@@ -185,6 +199,24 @@ Design Group A ←──reviews──► Design Group B (creative execution)
 ```
 
 ### Collaboration Quality Rubric (Draft)
+
+**THE COLLABORATION MINIMUM (Required, Graded)**
+
+Every team member must demonstrate, per sprint:
+
+| Requirement | Evidence | Points At Risk |
+|-------------|----------|----------------|
+| 2+ PR reviews | GitHub PR history | Collaboration grade |
+| 1+ help request | Documented message | Collaboration grade |
+| 1+ help offer | Documented message | Collaboration grade |
+| Ceremony attendance | Meeting notes | Participation grade |
+| Daily board updates | Card movement | Professionalism grade |
+
+Students should screenshot/document these activities. Peer evaluation at
+semester end will reference this evidence.
+
+**Why This Is Explicit:** "Collaboration" is too abstract to grade. These
+are concrete, observable behaviors that indicate genuine teamwork.
 
 | Criterion | Excellent | Satisfactory | Needs Improvement |
 |-----------|-----------|--------------|-------------------|
