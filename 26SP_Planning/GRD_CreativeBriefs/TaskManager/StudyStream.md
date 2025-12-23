@@ -211,222 +211,85 @@ Your campaign must include:
 
 ### What StudyStream Is
 
-StudyStream is a **hybrid physical-digital task management system** designed specifically for the way college students actually work—scattered across dorm rooms, libraries, coffee shops, and campus, juggling multiple classes with different assignment systems.
+StudyStream is a **hybrid physical-digital task management system** designed specifically for college students juggling multiple classes, group projects, work schedules, and personal commitments. It combines a **wall-mounted or desk-standing interactive display board** with a **synchronized mobile/web app**, creating a system that’s always visible at home and always accessible on the go.
 
-It combines a **wall-mounted or desk-standing interactive display board** with a **synchronized mobile/web app**, creating a task management system that’s always visible at home and always accessible on the go.
-
-### Physical Components
+### Physical & Digital Components
 
 **Interactive Display Board:**
 
-- 18” × 24” digital display in landscape or portrait orientation
-- Mounts on wall (dorm-safe mounting system) or stands on desk using included stand
-- Touchscreen interface for direct interaction
-- Always-on low-power display (e-ink technology = no glare, readable in any lighting)
-- Visual layout shows all active assignments, grouped by class or by due date
-- Updates in real-time when changes made on app
+- 18” × 24” digital display (landscape or portrait)
+- Wall-mounted (dorm-safe) or desk stand
+- Touchscreen with stylus input
+- E-ink technology (no glare, low power, readable in any lighting)
+- Real-time sync with app
 
-**Smart Colored Assignment Pins:**
+**Smart Colored Pins:**
 
-- Set of 8 color-coded pins representing classes or categories
-- Students assign colors to classes during setup (pin = class)
-- Magnetically attach to board to “tag” assignments to specific classes
-- When pin placed on assignment, that assignment gets tagged with the associated class color
-- Visual system: see at a glance which classes have heavy workload this week
+- 8 color-coded magnetic pins representing classes
+- Tag assignments to classes for visual organization
+- See at a glance which classes have heavy workload
 
-**Stylus:**
-
-- Allows handwritten input directly on display board
-- Quick-add assignments by writing directly on board
-- Annotate assignments with notes
-- Check off completed items with satisfying tactile interaction
-
-**Power & Connectivity:**
-
-- Plugs into standard outlet or USB-C power
-- Connects to WiFi for cloud sync
-- Works offline (syncs when reconnected)
-
-### Digital Components
-
-**Mobile App (iOS/Android):**
+**Mobile & Web Apps:**
 
 - Full access to all assignments and tasks
-- Add/edit/complete assignments on the go
-- Receive notifications for upcoming due dates
-- Photo syllabus pages to auto-extract assignment due dates (OCR technology)
-- Share group project task lists with classmates
-
-**Web App (Desktop/Laptop):**
-
-- Larger screen interface for planning sessions
-- Batch-add assignments from syllabi
-- Print-friendly views for backup planning
-- Calendar export options (integrate with Google Calendar, Outlook, etc.)
-
-**Cloud Sync:**
-
-- All devices sync bidirectionally in real-time
-- Complete assignment on phone → display board updates instantly
-- Add assignment on board → appears in app immediately
-- Change due date anywhere → updates everywhere
+- Syllabus scanning (OCR technology extracts due dates)
+- Share group project task lists via link (no account needed for teammates)
+- Cloud sync across all devices
 
 ### Core Features
 
-**For Individual Course Management:**
+**Individual Course Management:**
 
-- **Assignment Tracking:** Title, due date, due time, estimated work hours, completion status
-- **Class Organization:** Color-code by class, see all assignments per class
-- **Priority Flagging:** Mark high-stakes assignments (finals, major projects)
-- **Recurring Tasks:** Set up weekly readings, discussion posts, lab reports
-- **Attachment Support:** Link to Canvas pages, Google Docs, PDFs
-- **Task Breakdown:** Break large projects into subtasks and milestones (research paper → choose topic → find sources → create outline → write draft → revise)
-- **Time-Blocking:** Schedule specific work sessions for tasks (Monday 3-5pm: research sources for biology paper)
-- **Progress States:** Track progress beyond done/not done (not started / in progress / complete)
+- Assignment tracking (title, due date/time, estimated hours, completion status)
+- Class organization (color-coded by class)
+- Priority flagging for high-stakes assignments
+- Recurring tasks (weekly readings, discussion posts)
+- Task breakdown (large projects → subtasks → milestones)
+- Time-blocking (schedule specific work sessions)
+- Progress states (not started / in progress / complete)
+- Attachment links (Canvas, Google Docs, PDFs)
 
-**For Group Projects:**
+**Group Project Collaboration:**
 
-- **Shared Task Lists:** Create group project with teammates (they don’t need StudyStream—works via shared link)
-- **Task Assignment:** Divide project into tasks, assign to group members
-- **Progress Visibility:** See what teammates have completed
-- **Deadline Coordination:** Group sees all individual due dates to avoid scheduling conflicts
-- **Study Group Scheduling:** Find mutual availability among classmates for study sessions or group meetings
+- Shared task lists accessible via link (teammates don’t need StudyStream)
+- Task assignment with visible ownership
+- Progress tracking (see what teammates completed)
+- Study group scheduling (find mutual availability)
+- Deadline coordination
 
-**View Modes (Display Board & App):**
+**Proactive Management:**
 
-1. **Today View:** What’s due today, what needs attention now
-1. **Week View:** Upcoming 7 days, visual density of workload
-1. **By Class View:** See all assignments for one class (useful during syllabus week or before finals)
-1. **Calendar Month View:** Traditional calendar layout with assignment dots
-1. **Group Projects View:** All active group projects and task status
-1. **Time-Block View:** See scheduled work sessions alongside deadlines
+- Conflict detection (warns about multiple deadlines same day)
+- Visual workload density (color-coded week intensity: green/yellow/red)
+- Overload alerts (flags unsustainable weeks in advance)
+- Time-block reminders
+- Customizable notifications
 
-**Smart Features:**
+**View Modes:**
 
-**Conflict Detection & Alerts:**
+- Today, Week, Month Calendar, By Class, Group Projects, Time-Block
 
-- Warns when multiple major assignments due same day
-- Flags overloaded weeks before they arrive
-- Suggests earlier start dates based on estimated work hours
-- Alerts when group project deadlines conflict with individual due dates
-- Identifies scheduling conflicts between work shifts and study sessions
+### Why This Matters for Students
 
-**Visual Density Warnings:**
+**The Current Problem:**
 
-- Display board and app show visual “heat” when week is overloaded
-- Color-coded workload intensity (light week = green, heavy week = yellow, unsustainable week = red)
-- Proactive alerts: “Next week looks intense—consider starting X assignment early”
+College students manage 4-6 classes simultaneously, each with its own LMS page, communication style, and assignment system. Add work schedules and personal commitments, and you’re tracking 50-100+ deadline items across fragmented platforms: Canvas (checked obsessively out of anxiety), email announcements, physical syllabi (often lost), group text chains, shared Google Docs, phone calendars.
 
-**Notification System:**
+What breaks: assignments fall through cracks, group projects suffer from “I thought you were doing that” confusion, students don’t realize a week is overloaded until they’re drowning in it, large projects feel paralyzing with no clear starting point.
 
-- Customizable reminders (1 day before, 3 days before, 1 week before)
-- “Don’t forget” nudges for assignments without progress
-- Group project notifications when teammates complete tasks
-- Sync alerts if devices haven’t connected recently
-- Time-block reminders (notification when scheduled work session begins)
+**How StudyStream Addresses This:**
 
-**Syllabus Scanning (App Feature):**
+**Visibility Without Effort:** The display board is always visible in your living space—no opening apps, no checking five different platforms. You see your complete workload every time you’re home. The mobile app travels with you to class, work, and the library.
 
-- Take photo of syllabus assignment table
-- OCR extracts assignment names and due dates
-- Batch-import into StudyStream with one tap
-- Manual editing for accuracy
+**Proactive, Not Reactive:** Unlike LMS calendars that require you to remember to check them, StudyStream warns you two weeks in advance that you have three exams and a lab report due within 48 hours. Visual density warnings show overloaded weeks before you’re in them.
 
-### Why Physical + Digital Matters for Students
+**Whole-Life Integration:** LMS calendars only know academic deadlines. StudyStream integrates work shifts, study sessions, personal commitments—one system for everything students juggle, not separate calendars fighting for attention.
 
-**The Visibility Problem:**
-Phone apps get buried. Desktop calendars get minimized. Physical planners get left in backpacks.
+**Executive Function Support:** Task breakdown transforms “write research paper” (paralyzing) into “choose topic” → “find 5 sources” → “create outline” (manageable). Time-blocking connects deadlines to actual scheduled work time, preventing “I have a week” time-blindness.
 
-**StudyStream’s Solution:**
-The display board is **always visible** in your living space. Mounted on the dorm wall or standing on your desk, you see your workload every time you’re home. No opening apps, no checking calendars, no wondering if you’re forgetting something.
+**Group Project Clarity:** Shared task lists with visible ownership eliminate “who’s doing what?” confusion. Teammates see responsibilities and progress without StudyStream accounts. No more being the “group mom” sending reminder texts.
 
-**The Portability Problem:**
-Physical planners don’t come to class, work, or the library.
-
-**StudyStream’s Solution:**
-The app is always in your pocket. Add assignments during class, check deadlines between work shifts, update group tasks from the library. Physical board syncs automatically when you’re home.
-
-**The Overwhelm Problem:**
-Students manage 4-6 classes, each with 10-15 assignments per semester, often with work schedules and personal commitments added in. That’s 50-100+ deadline items to track. Phone notifications become noise. Written planners require constant maintenance.
-
-**StudyStream’s Solution:**
-Automated conflict detection, visual density warnings, task breakdown tools, and always-on display reduce cognitive load. You don’t have to remember to check—you see it. You don’t have to figure out where to start—break projects into manageable steps.
-
-### The Problem StudyStream Solves
-
-**Current Student Reality:**
-
-College students manage academic information across fragmented systems:
-
-- **Per-class LMS pages** (Canvas, Blackboard, Moodle) - each professor uses differently
-- **Email announcements** about assignment changes
-- **Physical syllabi** handed out first day (often lost by week 3)
-- **Group text chains** for project coordination
-- **Shared Google Docs** for collaborative work
-- **Phone calendars** for due dates (if they remember to enter them)
-- **Mental load** of “I feel like I’m forgetting something”
-
-**What Breaks:**
-
-- Assignments fall through cracks between systems
-- Group projects suffer from “I thought you were doing that”
-- Students don’t realize a week is overloaded until they’re in it
-- Due date changes get missed
-- Stress compounds because there’s no single source of truth
-- Large projects feel overwhelming with no clear starting point
-- Time management fails because deadlines ≠ scheduled work time
-
-**StudyStream’s Solution:**
-
-ONE system that aggregates everything:
-
-- All classes, all assignments, always visible
-- Group project clarity—everyone sees task ownership
-- Proactive workload warnings before hell week arrives
-- Physical presence = can’t ignore it like phone notifications
-- Mobile access = can’t forget it like paper planners
-- Task breakdown = overwhelming projects become manageable steps
-- Time-blocking = deadlines connected to actual scheduled work sessions
-- Study group coordination = find time to work together without endless text threads
-
-Students get **clarity** (see everything), **control** (manage everything in one place), **capability** (break down overwhelming tasks), and **calm** (reduce anxiety about forgetting).
-
-### How StudyStream Differs from LMS Calendars
-
-Students already have access to Canvas/Blackboard calendars that show assignments across courses. Here’s why StudyStream is different:
-
-**LMS Calendars are Reactive; StudyStream is Proactive:**
-
-- LMS shows you what’s due when you check it
-- StudyStream warns you about conflicts and overloaded weeks before they arrive
-- LMS requires you to remember to look; StudyStream is always visible
-
-**LMS is Academic-Only; StudyStream is Whole-Life:**
-
-- LMS only knows about coursework
-- StudyStream integrates work schedules, personal commitments, study sessions
-- Students need ONE system, not “school calendar + work calendar + personal calendar”
-
-**LMS Shows Deadlines; StudyStream Plans Work:**
-
-- LMS tells you when things are due
-- StudyStream helps you schedule WHEN you’ll actually DO the work (time-blocking)
-- LMS doesn’t break projects into steps; StudyStream does (task breakdown)
-
-**LMS is Digital-Only; StudyStream is Ambient:**
-
-- LMS requires logging in to check
-- StudyStream display board is always visible in your living space
-- Physical presence = reduced anxiety about “what am I forgetting?”
-
-**LMS Doesn’t Do Group Projects Well; StudyStream Does:**
-
-- LMS has group submission portals but no task division tools
-- StudyStream creates shared task lists with visible ownership and progress
-- Group members without StudyStream can still access shared project via link
-
-**The Strategic Positioning:**
-StudyStream isn’t replacing Canvas—it’s filling the gaps Canvas can’t address. LMS is where assignments live institutionally; StudyStream is where students actually manage their lives.
+**Different from Canvas:** StudyStream doesn’t replace your LMS—it fills the gaps. Canvas is where assignments live institutionally; StudyStream is where you actually manage your life. It’s proactive (warns about conflicts), integrated (work + school + life), supportive (breaks down overwhelming projects), and ambient (always visible, reduces anxiety).
 
 -----
 
