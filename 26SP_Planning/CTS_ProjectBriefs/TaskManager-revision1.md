@@ -241,7 +241,7 @@ Allow market-specific feature emphasis:
 
 **Backend Options:**
 
-- Python (Flask/Django)
+- Python (Flask/Streamlit) THE ALGORITHM RECOMMENDATION 
 - JavaScript (Node.js/Express)
 - Java (Spring Boot)
 - C# (ASP.NET)
@@ -249,14 +249,14 @@ Allow market-specific feature emphasis:
 **Database Options:**
 
 - PostgreSQL (recommended for production)
-- MySQL
+- MySQL (or MariaDB)
 - SQLite (acceptable for development/demo)
 
 **Frontend Options:**
 
-- React, Vue.js, or Angular
+- React, Vue.js, or Angular (if you don't speak Python)
 - Server-side rendering (Jinja2, EJS, Thymeleaf, Razor)
-- Bootstrap, Tailwind, or Material-UI for styling
+- Bootstrap, Tailwind, or Material-UI for styling (Bootstrap is 👍)
 
 **Required Tools:**
 
