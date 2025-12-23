@@ -1,0 +1,341 @@
+# Task Management Platform - Capstone
+
+Content is user-generated and unverified.
+Programming Project Brief
+Task/Project Management Platform - Spring 2026 Capstone
+Project Overview
+Platform Name: Task/Project Management Platform (Core System)
+
+Project Duration: 16 weeks (Spring Semester 2026)
+
+Team Structure:
+
+3-5 Programming students per team
+1 Database student (support role) per team
+Scrum methodology
+Deliverable: Minimum Viable Product (MVP) - A functional task and project management platform with core features operational
+
+The Challenge
+Build a flexible, white-label task management platform that can serve multiple distinct markets through customized branding and configuration. Your platform will be the universal technical foundation that powers task management solutions for families, students, freelancers, event planners, construction workers, and corporate teams.
+
+Think of it this way: Shopify is one e-commerce platform that serves jewelry makers, clothing brands, and software companies. Your platform does the same thing for task management—one technical solution, multiple market applications.
+
+White-Label Market Applications
+Design students will be creating market-specific branding campaigns for these six applications of your platform:
+
+1. FamilyHub - Family Task Coordinator
+Target Users: Parents managing household responsibilities
+Use Case: Coordinate chores, appointments, family schedules, and shared to-do lists
+Physical Product: Magnetic command center board with NFC task cards
+
+2. StudyStream - Student Assignment Planner
+Target Users: College students balancing coursework and work
+Use Case: Track assignments, deadlines, group projects, and study schedules
+Physical Product: Desk organizer with integrated timer/alarm
+
+3. FreelanceFlow - Freelance Project Manager
+Target Users: Independent contractors juggling multiple clients
+Use Case: Manage client projects, deliverables, invoices, and time tracking
+Physical Product: Invoice kit with branded stamps and templates
+
+4. EventPro - Event Planning System
+Target Users: Wedding and event planners
+Use Case: Coordinate vendors, timelines, budgets, and event checklists
+Physical Product: Planning kit with timeline cards and stickers
+
+5. RenovateRight - Home Project Tracker
+Target Users: Homeowners managing renovation projects
+Use Case: Track contractors, budgets, materials, and project milestones
+Physical Product: Project binder with measuring tools and tracking sheets
+
+6. TeamFlow™ - Agile Productivity Orchestrator (Satirical)
+Target Users: Corporate teams (with dystopian productivity tracking twist)
+Use Case: Sprint planning, velocity tracking, "optimization" metrics
+Physical Product: Physical scrum board with RFID task cards
+
+Why This Matters
+Universal Features Are Your Goal:
+
+A "task" works the same whether it's a chore, an assignment, a deliverable, or a vendor call
+Project organization applies to family members, clients, event venues, or construction rooms
+Due dates, priorities, and status tracking are universal needs
+Market-Specific Terminology Can Vary:
+
+Tasks → Chores (family), Assignments (students), Deliverables (freelance), Action Items (events), Jobs (renovation)
+Projects → Family Members (family), Classes (students), Clients (freelance), Events (planning), Rooms (renovation)
+Your Technical Challenge: Build a platform flexible enough that ONE codebase serves all six markets with minimal modification—just configuration and theming changes.
+
+Core Technical Requirements
+Minimum Viable Product (MVP) Scope
+1. User Management
+User registration and secure authentication
+Basic user profiles (name, email, role)
+Team/workspace creation and management
+Role-based access (Admin, Member)
+2. Task Management (CRUD Operations)
+Task Fields:
+
+Title (required)
+Description (optional, text or rich text)
+Due date (optional)
+Priority (Low, Medium, High)
+Status (To Do, In Progress, Complete, Archived)
+Assigned to (team member)
+Project/Category association
+Task Operations:
+
+Create, read, update, delete
+Status updates
+Reassignment capability
+Archive/restore functionality
+3. Project/Category Organization
+Create projects or categories for grouping tasks
+Assign tasks to projects
+View all tasks within a project
+Track project-level progress (percentage complete)
+Project status management (Active, Archived)
+4. Dashboard & Views
+Main Dashboard:
+
+User's assigned tasks overview
+Tasks grouped by status
+Upcoming deadlines (next 7 days)
+Overdue tasks highlighted
+Quick-add task functionality
+Project View:
+
+All tasks within selected project
+Project progress visualization
+Project details and description
+List Views:
+
+Sortable task lists (by due date, priority, status, assignee)
+Filterable displays (status, priority, project, assigned user)
+Search functionality
+5. Notifications (Basic)
+Visual indicators for overdue tasks
+Task assignment notifications
+Optional email alerts for approaching deadlines
+Database Requirements
+Your database team member will design and implement:
+
+Required Tables/Entities
+Users
+
+User authentication and profile data
+Workspace membership tracking
+Workspaces
+
+Team/organization containers
+Multi-user collaboration spaces
+Projects
+
+Task organization categories
+Progress tracking
+Status management
+Tasks
+
+Core task data and metadata
+Assignment relationships
+Status and priority tracking
+Timestamp tracking (created, updated, completed)
+Database Responsibilities
+Design normalized schema with proper relationships
+Implement foreign key constraints and indexes
+Optimize queries for performance
+Ensure data integrity and validation
+Create sample/test data for demonstrations
+Document schema with ERD (Entity Relationship Diagram)
+White-Label Flexibility Requirements
+1. Configurable Terminology
+Structure your code to allow easy terminology substitution:
+
+Use configuration files or database tables for display terms
+Separate presentation layer from business logic
+Example: config.terminology.task_singular → "Task" / "Chore" / "Assignment" / "Deliverable"
+2. Themeable Interface
+Support customizable branding:
+
+CSS variables for color schemes (primary, secondary, accent)
+Logo/branding image placeholders
+Configurable UI element styling
+Font/typography flexibility
+3. Feature Toggles (Stretch Goal)
+Allow market-specific feature emphasis:
+
+Configuration-based feature enabling/disabling
+Conditional UI rendering based on workspace type
+Market-specific default settings
+Technology Stack (Recommended)
+Backend Options:
+
+Python (Flask/Django)
+JavaScript (Node.js/Express)
+Java (Spring Boot)
+C# (ASP.NET)
+Database Options:
+
+PostgreSQL (recommended for production)
+MySQL
+SQLite (acceptable for development/demo)
+Frontend Options:
+
+React, Vue.js, or Angular
+Server-side rendering (Jinja2, EJS, Thymeleaf, Razor)
+Bootstrap, Tailwind, or Material-UI for styling
+Required Tools:
+
+Git/GitHub for version control
+Project management tool (GitHub Projects, Jira, Trello)
+API testing tool (Postman, Insomnia)
+Sprint Timeline & Deliverables
+Sprint 1-2 (Weeks 1-4): Foundation
+Project setup and architecture planning
+Database schema design and implementation
+User authentication system
+Basic UI framework
+Deliverable: Users can register, login, view empty dashboard
+Sprint 3-4 (Weeks 5-8): Core Functionality
+Task CRUD operations
+Project organization
+Task assignment and status management
+Dashboard views and navigation
+Deliverable: Functional task management system
+Sprint 5-6 (Weeks 9-12): Enhanced Features
+Filtering, sorting, and search
+Notifications and alerts
+UI/UX refinement
+Performance optimization
+Deliverable: Feature-complete platform with polished interface
+Sprint 7-8 (Weeks 13-16): Polish & Presentation
+Final testing and bug fixes
+Documentation completion
+Demo preparation
+Optional: Theme/branding integration
+Deliverable: Production-ready MVP with complete documentation
+Collaboration with Design Students
+Overview: Graphic design students are creating complete brand campaigns for the six white-label applications of your platform. They work individually (not in teams) and complete their projects in 8 weeks.
+
+Week 1-2: Joint Kickoff
+Meet design students assigned to your platform
+Present your technical approach and planned features
+Participate in collaborative brainstorming about user needs across different markets
+Establish communication channels
+Weeks 2-8: Ongoing Communication
+Design students may contact you with questions:
+
+Feature capabilities and constraints
+Technical feasibility of ideas
+Platform functionality for their specific market
+This helps both groups:
+
+They learn about technical constraints
+You learn about user needs in different markets
+Their questions may reveal features you hadn't considered
+Week 8: Design Delivery
+Design students present their completed campaigns and deliver:
+
+Logo files and brand guidelines
+Color schemes and typography specifications
+Style guides for brand application
+Marketing materials showing market positioning
+What you can do with this (optional but recommended):
+
+Implement one brand theme to demonstrate white-label capability
+Use their materials in your final presentation
+Show how one technical platform serves multiple markets
+Final Deliverables & Evaluation
+1. Working Software (70%)
+Functional MVP deployed or running locally
+Core features operational and tested
+Stable, reliable performance during demonstration
+Database properly structured with test data
+2. Code Repository (10%)
+Well-organized GitHub repository
+Clear commit history showing development progress
+README with setup instructions
+Proper .gitignore configuration
+Logical code structure and organization
+3. Documentation (10%)
+Technical Documentation:
+
+System architecture diagram
+Database schema (ERD)
+API documentation (if applicable)
+Setup and installation guide
+Technology stack explanation
+User Documentation:
+
+Basic user guide
+Feature explanations
+FAQ/troubleshooting
+4. Final Presentation (10%)
+15-20 minute presentation including:
+
+Problem statement and solution overview
+Technical architecture explanation
+Live demonstration of core features
+White-label flexibility demonstration
+Challenges overcome and lessons learned
+Q&A demonstrating understanding of your implementation
+Success Metrics
+Your MVP succeeds if it can:
+
+✅ Support 5-10 concurrent users without performance issues
+✅ Handle 100+ tasks across multiple projects reliably
+✅ Complete task creation, assignment, and status update in under 30 seconds
+✅ Provide clear visibility of task status, deadlines, and progress
+✅ Demonstrate theming/white-label potential
+✅ Run through a 15-minute demo without errors
+✅ Be set up by another developer following your documentation
+
+Professional Development Goals
+Beyond technical skills, this project teaches:
+
+Systems Thinking: Building platforms, not point solutions
+User-Centered Design: Understanding that different users have different needs
+Cross-Disciplinary Collaboration: Working with designers who think differently than developers
+Trade-Off Management: Prioritizing ruthlessly within time constraints
+Market Awareness: Technical capability alone doesn't create value—it must solve real problems
+
+Questions to Guide Your Development
+What makes this more useful than a spreadsheet?
+How do you balance power/flexibility with simplicity/ease-of-use?
+What's the minimum information needed to make a task actionable?
+How does your platform scale when a user creates 1000+ tasks?
+What happens when features conflict? (e.g., "simple" vs. "powerful")
+How do you help users actually complete tasks, not just track them?
+What would make YOUR platform the one you'd choose to use?
+Resources
+Task Management Apps to Study:
+
+Trello, Asana, Todoist, Microsoft To Do, Any.do, ClickUp
+Technical Resources:
+
+REST API design tutorials
+Database normalization guides
+Scrum/Agile methodology documentation
+Your chosen framework's documentation
+Getting Help:
+
+Instructor office hours
+Team standups and sprint reviews
+Online documentation and tutorials (cite your sources)
+Design student partners (for user perspective)
+Final Notes
+You're building something that could genuinely be useful. The best capstone projects are ones where the team thinks "we should actually keep working on this."
+
+Focus on:
+
+Core functionality that works reliably
+Clean, maintainable code
+Thoughtful architecture that allows flexibility
+Understanding WHY certain features matter to users
+One technical solution. Multiple markets. That's the power of platform thinking.
+
+Build it well.
+
+Document Version: 1.0
+Spring 2026 Capstone Project
+Task/Project Management Platform
+
