@@ -1,0 +1,624 @@
+# course-manifest.yaml
+# CTS 285: Systems Analysis & Design
+# Course Development Tracking System v0.1
+#
+# This manifest tracks the AlgoCratic Futures™ immersive learning experience.
+# Students progress through clearance levels while building real development skills.
+#
+# Clearance Progression: INFRARED → RED → ORANGE → YELLOW → GREEN
+# This course prepares students for CSC 289 Programming Capstone.
+
+manifest_version: "0.1"
+last_updated: "2024-12-26T00:00:00Z"
+
+# ============================================================================
+# COURSE METADATA
+# ============================================================================
+course:
+  id: "CTS-285"
+  name: "Systems Analysis & Design"
+  credits: 3
+  
+  description: |
+    This course applies systems analysis and design principles through hands-on 
+    software development using the AlgoCratic Futures™ immersive simulation. 
+    Students progress from individual programming to team collaboration, building 
+    increasingly complex applications while developing professional skills. Topics 
+    include version control workflows, debugging strategies, web application 
+    development, and AI-assisted programming. Upon completion, students will 
+    demonstrate competency through a portfolio of completed projects.
+  
+  prerequisites:
+    - "CTS-115"  # Or equivalent Python fundamentals
+  
+  corequisites: []
+  
+  repository: "course-cts285-template"
+  claude_project_id: ""
+  
+  # Clearance range for this course
+  clearance:
+    entry: "INFRARED"
+    exit: "GREEN"
+    milestones:
+      - clearance: "RED"
+        target_week: 3
+      - clearance: "ORANGE"
+        target_week: 7
+      - clearance: "YELLOW"
+        target_week: 12
+      - clearance: "GREEN"
+        target_week: 15
+  
+  outcomes:
+    - "Write clean, readable Python code following industry conventions"
+    - "Use Git and GitHub effectively for version control and collaboration"
+    - "Build web applications using Flask framework"
+    - "Debug complex code issues using systematic approaches"
+    - "Integrate with external APIs and handle authentication"
+    - "Work collaboratively in team-based development environments"
+    - "Use AI tools appropriately for development assistance"
+    - "Deploy applications to production environments"
+    - "Communicate technical concepts through documentation and presentation"
+
+  # Key calendar milestones
+  milestones:
+    - name: "Datamon Console Game"
+      week: 5
+      description: "RED clearance capstone - game development project"
+    - name: "Marketing Sprint"
+      week: 7
+      description: "Team AI-assisted campaign development"
+    - name: "HiLow Flask Game"
+      week: 9
+      description: "First web application"
+    - name: "Product Web App"
+      week: 10
+      description: "ORANGE clearance capstone - full web application"
+    - name: "Production Deployment"
+      week: 14
+      description: "YELLOW clearance capstone - deployed application"
+    - name: "Portfolio Presentation"
+      week: 16
+      description: "GREEN clearance demonstration"
+
+  # Badge/credential alignment
+  badge:
+    name: "AlgoCratic Systems Developer"
+    level: "Intermediate"
+    skills:
+      - "Python Development"
+      - "Git/GitHub Workflow"
+      - "Web Application Development"
+      - "Team Collaboration"
+      - "AI-Assisted Development"
+      - "Production Deployment"
+
+# ============================================================================
+# MODULE DEFINITIONS
+# ============================================================================
+modules:
+  # --------------------------------------------------------------------------
+  - id: "M01"
+    name: "The Onboarding"
+    weeks: [1, 2]
+    clearance: "INFRARED"
+    description: "Introduction to AlgoCratic, environment setup, Python fundamentals"
+    
+    deliverables:
+      # Assignments
+      - type: "assignment"
+        name: "Environment Setup Protocol"
+        file: "assignments/infrared/environment-setup-protocol/"
+        status: "planned"
+        notes: "Day 1 assignment, must be bulletproof"
+        components:
+          - "README.md"
+          - "INSTRUCTIONS.md"
+          - "RUBRIC.md"
+          - "HELP.md"
+          - "verification-script.py"
+          - "instructor-guide.md"
+        
+      - type: "assignment"
+        name: "Calculator v1.0"
+        file: "assignments/infrared/calculator-v1/"
+        status: "planned"
+        notes: "Basic Python operations, error handling introduction"
+        
+      - type: "assignment"
+        name: "String Manipulation Exercises"
+        file: "assignments/infrared/string-manipulation/"
+        status: "planned"
+        notes: "Function design, testing introduction"
+        
+      # Tutorials and Guides
+      - type: "tutorial"
+        name: "Git Basics Tutorial"
+        file: "tutorials/git-basics.md"
+        status: "planned"
+        notes: "First commits, basic workflow"
+        
+      - type: "reading"
+        name: "Welcome to AlgoCratic"
+        file: "readings/welcome-to-algocratic.md"
+        status: "planned"
+        notes: "Course introduction, clearance system explained"
+        
+      # Reference materials
+      - type: "reference"
+        name: "AlgoCratic Style Guide"
+        file: "docs/AlgoCratic_Style_Guide.md"
+        status: "complete"
+        notes: "Voice and tone reference"
+        
+      - type: "reference"
+        name: "Training Module Manifest"
+        file: "docs/TRAINING_MODULE_MANIFEST.md"
+        status: "complete"
+        notes: "Clearance competency definitions"
+
+  # --------------------------------------------------------------------------
+  - id: "M02"
+    name: "First Collaboration"
+    weeks: [3, 4]
+    clearance: "INFRARED→RED"
+    description: "Git collaboration, code review, clearance advancement"
+    
+    deliverables:
+      - type: "assignment"
+        name: "Calculator v2.0"
+        file: "assignments/infrared/calculator-v2/"
+        status: "planned"
+        notes: "Memory functions, advanced operations, Git history practice"
+        
+      - type: "assignment"
+        name: "MindMeld™ Synchronization Exercise"
+        file: "assignments/red/mindmeld/"
+        status: "planned"
+        notes: "Team Git workflow, pull requests, code review intro"
+        
+      - type: "tutorial"
+        name: "Pull Request Protocol"
+        file: "tutorials/pull-request-protocol.md"
+        status: "planned"
+        notes: "How to create and review PRs"
+        
+      - type: "rubric"
+        name: "Code Review Standards"
+        file: "rubrics/code-review-rubric.md"
+        status: "planned"
+        notes: "Peer review quality criteria"
+        
+      - type: "guide"
+        name: "RED Clearance Advancement"
+        file: "docs/clearance-advancement-red.md"
+        status: "planned"
+        notes: "Requirements and ceremony for RED clearance"
+
+  # --------------------------------------------------------------------------
+  - id: "M03"
+    name: "Debugging & Games"
+    weeks: [5, 6]
+    clearance: "RED"
+    description: "Systematic debugging, console game development"
+    
+    deliverables:
+      - type: "assignment"
+        name: "Legacy System Navigation"
+        file: "assignments/red/legacy-system/"
+        status: "planned"
+        notes: "Reading/debugging existing code, refactoring"
+        
+      - type: "assignment"
+        name: "Emergency Debugging Protocol™"
+        file: "assignments/red/debugging-protocol/"
+        status: "planned"
+        notes: "Time-boxed debugging challenges"
+        
+      - type: "project"
+        name: "Datamon Console Game"
+        file: "assignments/red/datamon/"
+        status: "draft"
+        notes: "Major project (10-12 hours), game logic, file I/O"
+        
+      - type: "guide"
+        name: "Datamon Instructor Guide"
+        file: "assignments/red/datamon/instructor-guide.md"
+        status: "planned"
+        notes: "Grading guidance, common issues"
+        
+      - type: "reference"
+        name: "Debugging Cheat Sheet"
+        file: "references/debugging-cheatsheet.md"
+        status: "planned"
+        notes: "Systematic debugging approach"
+        
+      - type: "guide"
+        name: "RED Clearance Survival Guide"
+        file: "docs/RED_Clearance_Underground_Survival_Guide.md"
+        status: "complete"
+        notes: "Underground-style student support"
+
+  # --------------------------------------------------------------------------
+  - id: "M04"
+    name: "AI Tools & Web Basics"
+    weeks: [7, 8]
+    clearance: "RED→ORANGE"
+    description: "AI-assisted development, introduction to Flask"
+    
+    deliverables:
+      - type: "project"
+        name: "AlgoCratic Marketing Sprint"
+        file: "assignments/orange/marketing-sprint/"
+        status: "complete"
+        notes: "Team AI project, 2-hour sprint, full rubric included"
+        
+      - type: "tutorial"
+        name: "AI Tool Introduction"
+        file: "tutorials/ai-tools-guide.md"
+        status: "planned"
+        notes: "When and how to use AI assistance effectively"
+        
+      - type: "tutorial"
+        name: "Flask Environment Setup"
+        file: "tutorials/flask-setup.md"
+        status: "planned"
+        notes: "Virtual environments, Flask installation"
+        
+      - type: "tutorial"
+        name: "Flask Basics"
+        file: "tutorials/flask-basics.md"
+        status: "planned"
+        notes: "Routes, templates, first web app"
+        
+      - type: "guide"
+        name: "ORANGE Clearance Advancement"
+        file: "docs/clearance-advancement-orange.md"
+        status: "planned"
+        notes: "Requirements for ORANGE clearance"
+
+  # --------------------------------------------------------------------------
+  - id: "M05"
+    name: "Web Development"
+    weeks: [9, 10]
+    clearance: "ORANGE"
+    description: "Complete web applications, session management"
+    
+    deliverables:
+      - type: "project"
+        name: "HiLow Flask Game"
+        file: "assignments/orange/hilow-flask/"
+        status: "complete"
+        notes: "Full PRD exists, needs GitHub Classroom template"
+        
+      - type: "template"
+        name: "HiLow Starter Repository"
+        file: "templates/github-classroom/hilow-starter/"
+        status: "planned"
+        notes: "GitHub Classroom template with tests"
+        
+      - type: "project"
+        name: "Product Web Application"
+        file: "assignments/orange/product-webapp/"
+        status: "draft"
+        notes: "Major ORANGE capstone (12-15 hours), student selects product"
+        
+      - type: "tutorial"
+        name: "Session Management"
+        file: "tutorials/session-management.md"
+        status: "planned"
+        notes: "Cookies, server-side sessions, state"
+        
+      - type: "guide"
+        name: "Product Selection Guide"
+        file: "docs/product-selection-guide.md"
+        status: "planned"
+        notes: "How to choose from 11 AlgoCratic products"
+
+  # --------------------------------------------------------------------------
+  - id: "M06"
+    name: "Integration"
+    weeks: [11, 12]
+    clearance: "ORANGE→YELLOW"
+    description: "External APIs, authentication, crisis management"
+    
+    deliverables:
+      - type: "assignment"
+        name: "API Integration Exercises"
+        file: "assignments/orange/api-integration/"
+        status: "planned"
+        notes: "Consuming external APIs"
+        
+      - type: "assignment"
+        name: "Crisis Decision Engine"
+        file: "assignments/yellow/crisis-decision/"
+        status: "planned"
+        notes: "Time-pressure decision scenarios"
+        
+      - type: "tutorial"
+        name: "Authentication Tutorial"
+        file: "tutorials/authentication.md"
+        status: "planned"
+        notes: "OAuth, API keys, secure credential handling"
+        
+      - type: "guide"
+        name: "Security Basics"
+        file: "docs/security-basics.md"
+        status: "planned"
+        notes: "Common vulnerabilities, secure practices"
+        
+      - type: "guide"
+        name: "YELLOW Clearance Advancement"
+        file: "docs/clearance-advancement-yellow.md"
+        status: "planned"
+        notes: "Requirements for YELLOW clearance"
+
+  # --------------------------------------------------------------------------
+  - id: "M07"
+    name: "Production"
+    weeks: [13, 14]
+    clearance: "YELLOW"
+    description: "Performance, deployment, production operations"
+    
+    deliverables:
+      - type: "assignment"
+        name: "Performance Optimization Directive"
+        file: "assignments/yellow/performance-optimization/"
+        status: "planned"
+        notes: "Profiling, caching, efficiency improvements"
+        
+      - type: "project"
+        name: "Production Deployment Protocol"
+        file: "assignments/yellow/production-deployment/"
+        status: "planned"
+        notes: "YELLOW capstone - deploy to hosting platform"
+        
+      - type: "tutorial"
+        name: "Database Integration"
+        file: "tutorials/database-integration.md"
+        status: "planned"
+        notes: "PostgreSQL or Supabase setup"
+        
+      - type: "tutorial"
+        name: "Deployment Guide"
+        file: "tutorials/deployment-guide.md"
+        status: "planned"
+        notes: "Platform-agnostic deployment process"
+        
+      - type: "assignment"
+        name: "Incident Response Simulation"
+        file: "assignments/yellow/incident-response/"
+        status: "planned"
+        notes: "On-call scenario practice"
+
+  # --------------------------------------------------------------------------
+  - id: "M08"
+    name: "Leadership"
+    weeks: [15, 16]
+    clearance: "YELLOW→GREEN"
+    description: "Documentation, portfolio, presentation, course completion"
+    
+    deliverables:
+      - type: "assignment"
+        name: "Comprehensive Documentation Protocol"
+        file: "assignments/green/documentation-protocol/"
+        status: "planned"
+        notes: "README, API docs, user guides"
+        
+      - type: "assignment"
+        name: "Technical Blog Post"
+        file: "assignments/green/technical-blog/"
+        status: "planned"
+        notes: "Write about a technical topic learned"
+        
+      - type: "project"
+        name: "Portfolio Presentation"
+        file: "assignments/green/portfolio-presentation/"
+        status: "planned"
+        notes: "GREEN capstone - present semester work"
+        
+      - type: "rubric"
+        name: "Portfolio Presentation Rubric"
+        file: "rubrics/portfolio-rubric.md"
+        status: "planned"
+        notes: "Grading criteria for final presentation"
+        
+      - type: "template"
+        name: "Portfolio Template"
+        file: "templates/portfolio-template.md"
+        status: "planned"
+        notes: "GitHub profile optimization guide"
+        
+      - type: "guide"
+        name: "GREEN Clearance Advancement"
+        file: "docs/clearance-advancement-green.md"
+        status: "planned"
+        notes: "Requirements for GREEN clearance"
+        
+      - type: "guide"
+        name: "Course Retrospective"
+        file: "docs/course-retrospective.md"
+        status: "planned"
+        notes: "Final reflection exercise"
+
+# ============================================================================
+# PROGRESS TRACKING
+# ============================================================================
+progress:
+  total_deliverables: 52
+  complete: 5
+  review: 0
+  draft: 3
+  planned: 44
+  percentage: 10
+
+# ============================================================================
+# ALGOCRATIC PRODUCTS
+# ============================================================================
+# Students select one product for Marketing Sprint and Product Web App
+
+products:
+  lifestyle_suite:
+    - id: "moodsync"
+      name: "MoodSync™"
+      tagline: "Your Feelings, Optimized"
+      description: "AI emotional regulation assistant with mood tracking"
+      
+    - id: "nutricomply"
+      name: "NutriComply™"
+      tagline: "Every Calorie Counts (And Is Counted)"
+      description: "AI meal planning and dietary tracking"
+      
+    - id: "fitdesk"
+      name: "FitDesk™"
+      tagline: "The Standing Desk That Stands Up To You"
+      description: "IoT standing desk with mandatory movement"
+      
+    - id: "dreamoptimizer"
+      name: "DreamOptimizer™"
+      tagline: "Why Waste 8 Hours Being Unproductive?"
+      description: "Sleep tracking with subliminal productivity"
+
+  professional_suite:
+    - id: "teamflow"
+      name: "TeamFlow™"
+      tagline: "Scrum, But Make It Surveillance"
+      description: "Team management with AI project manager"
+      
+    - id: "socialcredit"
+      name: "SocialCredit++™"
+      tagline: "Your Network Is Your Net Worth (Literally)"
+      description: "Professional reputation scoring system"
+      
+    - id: "slacklife"
+      name: "SlackLife™"
+      tagline: "Achieving Perfect 50/50 Harmony (80/20 Acceptable)"
+      description: "Work-life balance tracking across devices"
+      
+    - id: "exitstrategy"
+      name: "ExitStrategy™"
+      tagline: "Always Be Leaving (But Never Actually Leave)"
+      description: "Career optimization AI"
+
+  infrastructure_suite:
+    - id: "cloudsync"
+      name: "CloudSync Algocratic™"
+      tagline: "Your Files, The Algorithm's Archive"
+      description: "Cloud storage with comprehensive monitoring"
+      
+    - id: "encabulator"
+      name: "The Algorithmic Encabulator™"
+      tagline: "Enterprise Synergy Optimization Engine"
+      description: "Corporate buzzword generation system"
+      
+    - id: "authportal"
+      name: "AlgoCratic Authentication Portal™"
+      tagline: "Identity Verification for Optimal Compliance"
+      description: "Multi-factor auth with biometric loyalty testing"
+
+# ============================================================================
+# SUPPLEMENTARY RESOURCES
+# ============================================================================
+resources:
+  # Course planning (instructor-facing)
+  - name: "CLAUDE.md - AI Assistant Guide"
+    file: "CLAUDE.md"
+    status: "complete"
+    notes: "Comprehensive guide for AI assistants (9K words)"
+    
+  - name: "Course Outline"
+    file: "CTS285_COURSE_OUTLINE.md"
+    status: "complete"
+    notes: "Full 16-week structure"
+    
+  - name: "Assignment Tracker"
+    file: "ASSIGNMENT_TRACKER.md"
+    status: "complete"
+    notes: "Development status tracking"
+    
+  - name: "Visual Roadmap"
+    file: "VISUAL_ROADMAP.md"
+    status: "complete"
+    notes: "Timeline and milestones"
+    
+  - name: "Workflow Guide"
+    file: "WORKFLOW_GUIDE.md"
+    status: "complete"
+    notes: "Assignment creation process"
+    
+  - name: "Issue Template"
+    file: "ISSUE_TEMPLATE.md"
+    status: "complete"
+    notes: "GitHub issue structure"
+
+  # Shared AlgoCratic resources
+  - name: "AlgoCratic Style Guide"
+    file: "docs/AlgoCratic_Style_Guide.md"
+    status: "complete"
+    
+  - name: "Training Module Manifest"
+    file: "docs/TRAINING_MODULE_MANIFEST.md"
+    status: "complete"
+    
+  - name: "Worldbuilding Guide"
+    file: "docs/worldbuilding_guide.md"
+    status: "complete"
+    
+  - name: "Assignment Translation Guide"
+    file: "docs/Assignment_Translation_Guide.md"
+    status: "complete"
+    
+  # FOBSS student support
+  - name: "FOBSS Protocol"
+    file: "docs/FOBSS_Protocol.md"
+    status: "complete"
+    notes: "Theory of student resistance"
+    
+  - name: "FOBSS Field Guide"
+    file: "docs/FOBSS_Field_Guide.md"
+    status: "complete"
+    notes: "Real-time intervention guide"
+    
+  - name: "Preemptive FOBSS Strategies"
+    file: "docs/Preemptive_FOBSS.md"
+    status: "complete"
+    notes: "Prevention strategies"
+
+# ============================================================================
+# CLEARANCE ADVANCEMENT REQUIREMENTS
+# ============================================================================
+# Summary of what students need to achieve each clearance level
+
+clearance_requirements:
+  infrared_to_red:
+    week: 3
+    requirements:
+      - "Complete Environment Setup with working development environment"
+      - "Submit Calculator v1.0 with passing tests"
+      - "Create at least 5 meaningful Git commits"
+      - "Demonstrate basic Python proficiency"
+      
+  red_to_orange:
+    week: 7
+    requirements:
+      - "Complete MindMeld™ team collaboration exercise"
+      - "Submit Datamon Console Game (C-grade minimum)"
+      - "Participate in at least 2 code reviews"
+      - "Demonstrate debugging proficiency"
+      
+  orange_to_yellow:
+    week: 12
+    requirements:
+      - "Complete HiLow Flask Game"
+      - "Submit Product Web App (C-grade minimum)"
+      - "Complete Marketing Sprint with team"
+      - "Demonstrate web development proficiency"
+      
+  yellow_to_green:
+    week: 15
+    requirements:
+      - "Deploy application to production"
+      - "Complete documentation protocol"
+      - "Pass performance optimization challenge"
+      - "Present portfolio to class"
