@@ -1,0 +1,1288 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spring 2026 Capstone Orientation | AlgoCratic Futures™</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-main: #0a0a10;
+      --bg-grid: #1a1a2e;
+      --phosphor: #00ff41;
+      --phosphor-dim: #00aa2a;
+      --amber: #ffbf00;
+      --amber-dim: #cc9900;
+      --error: #ff4136;
+      --clearance-orange: #DD4111;
+      --clearance-yellow: #F1A512;
+      --text-dim: #4a4a5e;
+      --text-muted: #6a6a7e;
+    }
+
+```
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'IBM Plex Mono', 'Courier New', monospace;
+  background: var(--bg-main);
+  color: var(--phosphor);
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Grid background */
+.grid-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    repeating-linear-gradient(0deg, var(--bg-grid) 0, transparent 1px, transparent 40px, var(--bg-grid) 41px),
+    repeating-linear-gradient(90deg, var(--bg-grid) 0, transparent 1px, transparent 40px, var(--bg-grid) 41px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Scanline effect */
+.scanlines {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.15) 0px,
+    rgba(0, 0, 0, 0.15) 1px,
+    transparent 1px,
+    transparent 2px
+  );
+  pointer-events: none;
+  z-index: 1000;
+  opacity: 0.3;
+}
+
+/* CRT flicker */
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  92% { opacity: 1; }
+  93% { opacity: 0.8; }
+  94% { opacity: 1; }
+}
+
+.crt-flicker {
+  animation: flicker 8s infinite;
+}
+
+/* Presentation container */
+.presentation {
+  position: relative;
+  z-index: 1;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header */
+.header {
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--bg-grid);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(10, 10, 16, 0.9);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.algo-face {
+  font-size: 0.7rem;
+  line-height: 1.1;
+  color: var(--amber);
+}
+
+.logo-text {
+  font-size: 0.9rem;
+  color: var(--amber);
+  letter-spacing: 0.1em;
+}
+
+.slide-counter {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* Slide area */
+.slides-container {
+  flex: 1;
+  position: relative;
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 3rem 4rem;
+  display: none;
+  flex-direction: column;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.slide.active {
+  display: flex;
+  opacity: 1;
+}
+
+.slide-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--amber);
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  text-shadow: 0 0 20px rgba(255, 191, 0, 0.3);
+}
+
+.slide-subtitle {
+  font-size: 1.1rem;
+  color: var(--phosphor-dim);
+  margin-top: -1.5rem;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.slide-content {
+  flex: 1;
+  display: flex;
+  gap: 3rem;
+  overflow: hidden;
+}
+
+.content-left, .content-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.content-full {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ASCII art container */
+.ascii-art {
+  font-size: 0.65rem;
+  line-height: 1.2;
+  white-space: pre;
+  color: var(--phosphor);
+  text-shadow: 0 0 10px rgba(0, 255, 65, 0.5);
+  margin: 1rem 0;
+}
+
+.ascii-art.amber {
+  color: var(--amber);
+  text-shadow: 0 0 10px rgba(255, 191, 0, 0.5);
+}
+
+.ascii-art.large {
+  font-size: 0.8rem;
+}
+
+.ascii-art.small {
+  font-size: 0.55rem;
+}
+
+/* Text styles */
+.highlight {
+  color: var(--amber);
+  font-weight: 600;
+}
+
+.dim {
+  color: var(--text-muted);
+}
+
+.error {
+  color: var(--error);
+}
+
+p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+  font-size: 1rem;
+}
+
+.big-text {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.huge-text {
+  font-size: 2.5rem;
+  line-height: 1.3;
+  color: var(--amber);
+  text-shadow: 0 0 30px rgba(255, 191, 0, 0.4);
+}
+
+ul {
+  list-style: none;
+  margin: 1rem 0;
+}
+
+ul li {
+  padding: 0.5rem 0;
+  padding-left: 2rem;
+  position: relative;
+  line-height: 1.6;
+}
+
+ul li::before {
+  content: '>';
+  position: absolute;
+  left: 0;
+  color: var(--amber);
+}
+
+/* Table styles */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.9rem;
+}
+
+.data-table th {
+  text-align: left;
+  padding: 0.75rem;
+  border-bottom: 2px solid var(--amber);
+  color: var(--amber);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-size: 0.8rem;
+}
+
+.data-table td {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--bg-grid);
+}
+
+/* Card boxes */
+.archetype-card {
+  background: rgba(26, 26, 46, 0.5);
+  border: 1px solid var(--bg-grid);
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.archetype-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--amber);
+}
+
+.archetype-name {
+  font-size: 1.2rem;
+  color: var(--amber);
+  margin-bottom: 0.5rem;
+}
+
+.archetype-behavior {
+  color: var(--error);
+  font-size: 0.9rem;
+  margin-bottom: 0.75rem;
+}
+
+.archetype-fix {
+  color: var(--phosphor);
+  font-size: 0.9rem;
+}
+
+/* Navigation */
+.nav {
+  padding: 1rem 2rem;
+  border-top: 1px solid var(--bg-grid);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(10, 10, 16, 0.9);
+}
+
+.nav-btn {
+  background: transparent;
+  border: 1px solid var(--phosphor);
+  color: var(--phosphor);
+  padding: 0.5rem 1.5rem;
+  font-family: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  transition: all 0.2s ease;
+}
+
+.nav-btn:hover {
+  background: var(--phosphor);
+  color: var(--bg-main);
+  box-shadow: 0 0 20px rgba(0, 255, 65, 0.4);
+}
+
+.nav-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.nav-hint {
+  color: var(--text-dim);
+  font-size: 0.8rem;
+}
+
+/* Progress bar */
+.progress-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  background: var(--amber);
+  transition: width 0.3s ease;
+  box-shadow: 0 0 10px var(--amber);
+}
+
+/* Blink animation */
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.blink {
+  animation: blink 1s infinite;
+}
+
+/* Typing effect */
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.typing {
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 2s steps(40);
+}
+
+/* Glow pulse */
+@keyframes glow-pulse {
+  0%, 100% { text-shadow: 0 0 10px currentColor; }
+  50% { text-shadow: 0 0 30px currentColor, 0 0 50px currentColor; }
+}
+
+.glow-pulse {
+  animation: glow-pulse 2s ease-in-out infinite;
+}
+
+/* Hierarchy diagram specific */
+.hierarchy-item {
+  display: flex;
+  align-items: center;
+  margin: 0.75rem 0;
+  font-size: 1.1rem;
+}
+
+.hierarchy-num {
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 2px solid var(--amber);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 1rem;
+  font-weight: 700;
+  color: var(--amber);
+}
+
+.hierarchy-item.highlight-row .hierarchy-num {
+  background: var(--amber);
+  color: var(--bg-main);
+}
+
+/* Centered content layout */
+.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 100%;
+}
+
+/* Two column equal */
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  height: 100%;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Platform cards */
+.platform-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.platform-card {
+  background: rgba(26, 26, 46, 0.5);
+  border: 1px solid var(--bg-grid);
+  padding: 1.25rem;
+}
+
+.platform-card h3 {
+  color: var(--amber);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.platform-card p {
+  font-size: 0.85rem;
+  color: var(--phosphor-dim);
+  margin-bottom: 0;
+}
+
+/* Checklist */
+.checklist {
+  list-style: none;
+}
+
+.checklist li {
+  padding-left: 2rem;
+}
+
+.checklist li::before {
+  content: '[ ]';
+  color: var(--amber);
+}
+
+.checklist li.checked::before {
+  content: '[✓]';
+  color: var(--phosphor);
+}
+
+/* Week timeline */
+.timeline {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.timeline-week {
+  flex: 1;
+  border-left: 2px solid var(--amber);
+  padding-left: 1rem;
+}
+
+.timeline-week h4 {
+  color: var(--amber);
+  margin-bottom: 0.5rem;
+}
+
+.timeline-week ul {
+  font-size: 0.85rem;
+}
+
+.timeline-week ul li {
+  padding: 0.25rem 0;
+}
+```
+
+  </style>
+</head>
+<body>
+  <div class="grid-bg"></div>
+  <div class="scanlines"></div>
+
+  <div class="presentation crt-flicker">
+    <header class="header">
+      <div class="logo">
+        <pre class="algo-face">┌──◇──┐
+│◇   ◇│
+│  ◡  │
+└─────┘</pre>
+        <span class="logo-text">ALGOCRATIC FUTURES™ EDUCATIONAL DIVISION</span>
+      </div>
+      <div class="slide-counter">
+        SLIDE <span id="current-slide">1</span> OF <span id="total-slides">14</span>
+      </div>
+    </header>
+
+```
+<div class="slides-container">
+  <!-- SLIDE 1: Title -->
+  <section class="slide active" data-slide="1">
+    <div class="content-full">
+      <div class="center-content">
+        <pre class="ascii-art amber large">
+╔═══════════════════════════════════════════════════════════════╗
+║                                                               ║
+║   ███████╗██████╗ ██████╗ ██╗███╗   ██╗ ██████╗               ║
+║   ██╔════╝██╔══██╗██╔══██╗██║████╗  ██║██╔════╝               ║
+║   ███████╗██████╔╝██████╔╝██║██╔██╗ ██║██║  ███╗              ║
+║   ╚════██║██╔═══╝ ██╔══██╗██║██║╚██╗██║██║   ██║              ║
+║   ███████║██║     ██║  ██║██║██║ ╚████║╚██████╔╝              ║
+║   ╚══════╝╚═╝     ╚═╝  ╚═╝╚═╝╚═╝  ╚═══╝ ╚═════╝               ║
+║                                                               ║
+║               2 0 2 6   C A P S T O N E                       ║
+║                                                               ║
+╚═══════════════════════════════════════════════════════════════╝
+        </pre>
+        <p class="big-text" style="margin-top: 2rem;">
+          CSC 289 Programming Capstone Project Orientation
+        </p>
+        <p class="dim" style="margin-top: 1rem;">
+          Press <span class="highlight">→</span> or <span class="highlight">SPACE</span> to begin
+        </p>
+        <p class="dim blink" style="margin-top: 2rem; font-size: 0.8rem;">
+          THE ALGORITHM IS LOADING YOUR FUTURE...
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 2: The Uncomfortable Truth -->
+  <section class="slide" data-slide="2">
+    <h1 class="slide-title">The Uncomfortable Truth</h1>
+    <div class="slide-content two-col">
+      <div class="col">
+        <pre class="ascii-art">
+```
+
+╔══════════════════════════════════╗
+║   WHY TEAMS FAIL                 ║
+╠══════════════════════════════════╣
+║                                  ║
+║   Technical Problems?            ║
+║   ┌─────────────────────────┐    ║
+║   │ Problem → Solution      │    ║
+║   │ (Linear, Solvable)      │    ║
+║   └─────────────────────────┘    ║
+║                                  ║
+║   Communication Problems?        ║
+║   ┌─────────────────────────┐    ║
+║   │ Problem → Problem²      │    ║
+║   │         → Problem³      │    ║
+║   │         → COLLAPSE      │    ║
+║   └─────────────────────────┘    ║
+║                                  ║
+╚══════════════════════════════════╝
+</pre>
+<p class="big-text highlight" style="margin-top: 1rem;">
+Teams fail on communication,<br>not technical skill.
+</p>
+<p class="dim">Every. Single. Time.</p>
+</div>
+<div class="col">
+<p class="big-text">Your job is not to write code.</p>
+<p class="big-text">Your job is to <span class="highlight">ship a product</span>.</p>
+<p style="margin-top: 2rem;">Code is one tool.</p>
+<p>Communication, planning, and compromise are the others.</p>
+<pre class="ascii-art" style="margin-top: 2rem;">
+┌─────────────────────────────────┐
+│                                 │
+│   SUCCESS = f(team dynamics)    │
+│                                 │
+│   NOT                           │
+│                                 │
+│   SUCCESS = f(coding skill)     │
+│                                 │
+└─────────────────────────────────┘
+</pre>
+</div>
+</div>
+</section>
+
+```
+  <!-- SLIDE 3: The Hierarchy -->
+  <section class="slide" data-slide="3">
+    <h1 class="slide-title">The Hierarchy of Success</h1>
+    <p class="slide-subtitle">Notice what's first. Notice what's last.</p>
+    <div class="slide-content two-col">
+      <div class="col">
+        <pre class="ascii-art large">
+                ▲
+               ╱ ╲
+              ╱   ╲
+             ╱  4  ╲
+            ╱───────╲
+           ╱    3    ╲
+          ╱───────────╲
+         ╱      2      ╲
+        ╱───────────────╲
+       ╱        1        ╲
+      ╱═══════════════════╲
+     ▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔▔
+     
+1 = COMMUNICATION (foundation)
+2 = PROCESS
+3 = PLANNING
+4 = TECHNICAL EXECUTION
+        </pre>
+      </div>
+      <div class="col" style="justify-content: center;">
+        <div class="hierarchy-item highlight-row">
+          <div class="hierarchy-num">1</div>
+          <div><span class="highlight">COMMUNICATION</span><br><span class="dim">Can your team exchange information reliably?</span></div>
+        </div>
+        <div class="hierarchy-item">
+          <div class="hierarchy-num">2</div>
+          <div><span class="highlight">PROCESS</span><br><span class="dim">Does your team have shared workflows?</span></div>
+        </div>
+        <div class="hierarchy-item">
+          <div class="hierarchy-num">3</div>
+          <div><span class="highlight">PLANNING</span><br><span class="dim">Does your team know what "done" looks like?</span></div>
+        </div>
+        <div class="hierarchy-item">
+          <div class="hierarchy-num">4</div>
+          <div><span class="highlight">TECHNICAL EXECUTION</span><br><span class="dim">Can your team build things?</span></div>
+        </div>
+        <p style="margin-top: 2rem; color: var(--error);">
+          Technical execution is <strong>fourth</strong>. Not first. Fourth.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 4: The Four Platforms -->
+  <section class="slide" data-slide="4">
+    <h1 class="slide-title">The Four Platforms</h1>
+    <p class="slide-subtitle">One platform, six faces. Real architecture for real learning.</p>
+    <div class="slide-content">
+      <div class="platform-grid" style="width: 100%;">
+        <div class="platform-card">
+          <h3>📋 TASK MANAGEMENT</h3>
+          <p><strong>Challenge:</strong> Multi-tenant workspaces, permission models</p>
+          <p><strong>Learn:</strong> Role-based access control, data isolation</p>
+          <p><strong>AlgoCratic:</strong> TeamFlow™ ("Scrum, but surveillance")</p>
+        </div>
+        <div class="platform-card">
+          <h3>🛒 E-COMMERCE STOREFRONT</h3>
+          <p><strong>Challenge:</strong> Transaction integrity, inventory management</p>
+          <p><strong>Learn:</strong> ACID compliance, state machines</p>
+          <p><strong>AlgoCratic:</strong> ComplianceCart™ ("Mandatory purchasing")</p>
+        </div>
+        <div class="platform-card">
+          <h3>🎯 RECOMMENDATION ENGINE</h3>
+          <p><strong>Challenge:</strong> Preference modeling, similarity algorithms</p>
+          <p><strong>Learn:</strong> Collaborative filtering, data structures</p>
+          <p><strong>AlgoCratic:</strong> PreferenceOptimizer™ ("Your choices, aligned")</p>
+        </div>
+        <div class="platform-card">
+          <h3>💓 HEALTH & WELLNESS TRACKER</h3>
+          <p><strong>Challenge:</strong> Time-series data, privacy requirements</p>
+          <p><strong>Learn:</strong> Temporal queries, HIPAA awareness</p>
+          <p><strong>AlgoCratic:</strong> BiometricCompliance™ ("Wellness... or else")</p>
+        </div>
+      </div>
+    </div>
+    <p style="text-align: center; margin-top: 1rem; color: var(--text-muted);">
+      Each platform powers 5 market applications + 1 satirical variant = 6 white-labels
+    </p>
+  </section>
+
+  <!-- SLIDE 5: Collaboration Minimum -->
+  <section class="slide" data-slide="5">
+    <h1 class="slide-title">The Collaboration Minimum</h1>
+    <p class="slide-subtitle">This is not optional. This is graded.</p>
+    <div class="slide-content two-col">
+      <div class="col">
+        <pre class="ascii-art">
+```
+
+╔════════════════════════════════════╗
+║   THE ALGORITHM™ TRACKS:           ║
+╠════════════════════════════════════╣
+║                                    ║
+║   [▓▓▓▓▓▓▓▓░░] PR Reviews          ║
+║   [▓▓▓▓▓░░░░░] Help Requested      ║
+║   [▓▓▓▓▓▓▓░░░] Help Offered        ║
+║   [▓▓▓▓▓▓▓▓▓▓] Attendance          ║
+║   [▓▓▓▓▓▓░░░░] Task Updates        ║
+║                                    ║
+╚════════════════════════════════════╝
+</pre>
+<p style="margin-top: 1.5rem; color: var(--error); font-weight: 600;">
+“I helped but didn’t document it”
+</p>
+<p>is indistinguishable from</p>
+<p style="color: var(--error); font-weight: 600;">
+“I didn’t help.”
+</p>
+</div>
+<div class="col">
+<table class="data-table">
+<thead>
+<tr>
+<th>Action</th>
+<th>Per Sprint</th>
+<th>Evidence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Review PRs</td>
+<td class="highlight">2+</td>
+<td>GitHub history</td>
+</tr>
+<tr>
+<td>Ask for help</td>
+<td class="highlight">1+</td>
+<td>Slack/Discord</td>
+</tr>
+<tr>
+<td>Offer help</td>
+<td class="highlight">1+</td>
+<td>Slack/Discord</td>
+</tr>
+<tr>
+<td>Attend ceremonies</td>
+<td class="highlight">ALL</td>
+<td>Meeting notes</td>
+</tr>
+<tr>
+<td>Update tasks</td>
+<td class="highlight">DAILY</td>
+<td>Board movement</td>
+</tr>
+</tbody>
+</table>
+<p style="margin-top: 1.5rem; padding: 1rem; border: 1px dashed var(--amber); background: rgba(255,191,0,0.05);">
+📸 <strong>Document everything.</strong> Screenshot PR reviews. Save messages.
+When peer evaluation happens, you need receipts.
+</p>
+</div>
+</div>
+</section>
+
+```
+  <!-- SLIDE 6: Failure Archetypes Intro -->
+  <section class="slide" data-slide="6">
+    <h1 class="slide-title">The Five Failure Archetypes</h1>
+    <p class="slide-subtitle">Everyone—including you—can fall into these under stress.</p>
+    <div class="slide-content">
+      <div class="content-full">
+        <pre class="ascii-art large">
+ 👻                 🦸                 🎭                 🌈
+```
+
+┌─────┐           ┌─────┐           ┌─────┐           ┌─────┐
+│     │           │     │           │     │           │     │
+│ THE │           │ THE │           │ THE │           │ THE │
+│GHOST│           │HERO │           │CRITIC           │OPTIM│
+│     │           │     │           │     │           │ IST │
+└─────┘           └─────┘           └─────┘           └─────┘
+Vanishes          Does it           Finds all         “Almost
+without           all, trusts       problems,         done!”
+trace             no one            builds none       (It’s not)
+</pre>
+<p class="big-text" style="margin-top: 2rem;">
+Recognizing the pattern early allows intervention <span class="highlight">before crisis</span>.
+</p>
+<p style="margin-top: 1rem;">
+The first step is self-awareness. The second is team awareness.
+</p>
+</div>
+</div>
+</section>
+
+```
+  <!-- SLIDE 7: Ghost & Hero -->
+  <section class="slide" data-slide="7">
+    <h1 class="slide-title">Archetypes: Ghost & Hero</h1>
+    <div class="slide-content two-col">
+      <div class="col">
+        <pre class="ascii-art">
+  👻 THE GHOST
+┌──────────────────────────┐
+│  ░░░░░░░░░░░░░░░░░░░░░░  │
+│  ░░ Last seen: 5 days ░░  │
+│  ░░ Messages: unread  ░░  │
+│  ░░ Commits: 0        ░░  │
+│  ░░░░░░░░░░░░░░░░░░░░░░  │
+└──────────────────────────┘
+        </pre>
+        <div class="archetype-card">
+          <div class="archetype-name">👻 THE GHOST</div>
+          <div class="archetype-behavior">Stops responding, misses meetings, disappears</div>
+          <div class="archetype-fix">
+            <strong>Intervention:</strong><br>
+            • Reach out 1-on-1 with <em>concern</em>, not accusation<br>
+            • Reduce their scope to something achievable<br>
+            • <span class="highlight">Escalate after 1 week</span>
+          </div>
+        </div>
+        <p class="dim" style="font-size: 0.85rem;">
+          Usually: overwhelmed, anxious, or external crisis.<br>
+          They need help, not judgment.
+        </p>
+      </div>
+      <div class="col">
+        <pre class="ascii-art">
+  🦸 THE HERO
+┌──────────────────────────┐
+│   Commits: 847          │
+│   PRs merged: ALL       │
+│   Code rewritten: 100%  │
+│   Trust in team: 0%     │
+│   Burnout ETA: 3 weeks  │
+└──────────────────────────┘
+        </pre>
+        <div class="archetype-card">
+          <div class="archetype-name">🦸 THE HERO</div>
+          <div class="archetype-behavior">Does everything, rewrites others' code, can't delegate</div>
+          <div class="archetype-fix">
+            <strong>Intervention:</strong><br>
+            • Thank them genuinely<br>
+            • Set boundaries: "I need to do this myself to learn"<br>
+            • Redirect to documentation/architecture
+          </div>
+        </div>
+        <p class="dim" style="font-size: 0.85rem;">
+          Usually: anxiety about quality, difficulty trusting.<br>
+          They mean well but create dependency.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 8: Critic & Optimist -->
+  <section class="slide" data-slide="8">
+    <h1 class="slide-title">Archetypes: Critic & Optimist</h1>
+    <div class="slide-content two-col">
+      <div class="col">
+        <pre class="ascii-art">
+  🎭 THE CRITIC
+┌──────────────────────────┐
+│  "This won't scale"     │
+│  "Bad architecture"     │
+│  "Should use GraphQL"   │
+│  "Not production-ready" │
+│  ───────────────────    │
+│  Code contributed: 0    │
+└──────────────────────────┘
+        </pre>
+        <div class="archetype-card">
+          <div class="archetype-name">🎭 THE CRITIC</div>
+          <div class="archetype-behavior">Identifies every problem, proposes no solutions</div>
+          <div class="archetype-fix">
+            <strong>Intervention:</strong><br>
+            • "Good point—can you implement the alternative?"<br>
+            • Redirect critical energy to code review<br>
+            • Problems you find = problems you solve
+          </div>
+        </div>
+        <p class="dim" style="font-size: 0.85rem;">
+          Usually: fear of failure as analysis paralysis.<br>
+          Making them responsible channels critique into action.
+        </p>
+      </div>
+      <div class="col">
+        <pre class="ascii-art">
+  🌈 THE OPTIMIST
+┌──────────────────────────┐
+│   Status: "Almost done!" │
+│   Actual: 15% complete   │
+│   ────────────────────   │
+│   Status: "Just testing" │
+│   Actual: hasn't started │
+│   ────────────────────   │
+│   Status: "Minor issues" │
+│   Actual: on fire 🔥     │
+└──────────────────────────┘
+        </pre>
+        <div class="archetype-card">
+          <div class="archetype-name">🌈 THE OPTIMIST</div>
+          <div class="archetype-behavior">Everything's "almost done" (it's not)</div>
+          <div class="archetype-fix">
+            <strong>Intervention:</strong><br>
+            • Double their time estimates automatically<br>
+            • Require working demos, not promises<br>
+            • Check in more frequently
+          </div>
+        </div>
+        <p class="dim" style="font-size: 0.85rem;">
+          Usually: difficulty estimating complexity.<br>
+          Frequent verification catches drift early.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 9: Vertical Slices -->
+  <section class="slide" data-slide="9">
+    <h1 class="slide-title">Vertical Slices, Not Horizontal Layers</h1>
+    <div class="slide-content two-col">
+      <div class="col">
+        <p class="error" style="font-size: 1.2rem; margin-bottom: 1rem;">❌ THE WRONG WAY</p>
+        <pre class="ascii-art">
+Week 1-4:  DATABASE LAYER
+╔══════════════════════════════╗
+║ ████████████████████████████ ║
+║ Beautiful schemas!           ║
+║ Perfect indexes!             ║
+║ No one can see it!           ║
+╚══════════════════════════════╝
+
+Week 5-8:  API LAYER
+╔══════════════════════════════╗
+║ ████████████████████████████ ║
+║ RESTful perfection!          ║
+║ Still no UI!                 ║
+╚══════════════════════════════╝
+
+Week 9-16: UI LAYER
+╔══════════════════════════════╗
+║ ░░░░░░░░░░░░░░░░░░░░░░░░░░░░ ║
+║ Ran out of time...           ║
+╚══════════════════════════════╝
+        </pre>
+      </div>
+      <div class="col">
+        <p class="highlight" style="font-size: 1.2rem; margin-bottom: 1rem;">✓ THE RIGHT WAY</p>
+        <pre class="ascii-art">
+Sprint 1: USER CAN REGISTER
+┌──────┬──────┬──────┐
+│  UI  │  API │  DB  │  ← Thin but COMPLETE
+└──────┴──────┴──────┘
+
+Sprint 2: USER CAN CREATE TASK  
+┌──────┬──────┬──────┐
+│  UI  │  API │  DB  │  ← Another slice
+└──────┴──────┴──────┘
+
+Sprint 3: USER CAN VIEW TASKS
+┌──────┬──────┬──────┐
+│  UI  │  API │  DB  │  ← Getting thicker
+└──────┴──────┴──────┘
+
+...and so on...
+        </pre>
+        <p class="big-text" style="margin-top: 2rem;">
+          <span class="highlight">The Test:</span> Can a human use it?
+        </p>
+        <p>If yes, it counts. If no, it doesn't—no matter how good the code is.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 10: Escalation -->
+  <section class="slide" data-slide="10">
+    <h1 class="slide-title">Escalation Is Not Snitching</h1>
+    <div class="slide-content two-col">
+      <div class="col">
+        <pre class="ascii-art large">
+╔═══════════════════════════════╗
+║                               ║
+║   INSTRUCTOR HAS:             ║
+║   ├── Accommodations          ║
+║   ├── Extensions              ║
+║   ├── Counseling referrals    ║
+║   ├── Authority to restructure║
+║   └── Experience with this    ║
+║                               ║
+╠═══════════════════════════════╣
+║                               ║
+║   YOU HAVE:                   ║
+║   └── Resentment              ║
+║                               ║
+╚═══════════════════════════════╝
+        </pre>
+      </div>
+      <div class="col" style="justify-content: center;">
+        <p class="big-text">
+          If a teammate disappears for a week, <span class="highlight">tell the instructor immediately</span>.
+        </p>
+        <p style="margin: 2rem 0; padding: 1.5rem; border-left: 4px solid var(--amber); background: rgba(255,191,0,0.05);">
+          Covering for a struggling teammate doesn't help them—it enables the problem to 
+          compound until it's <span class="error">unsolvable</span>.
+        </p>
+        <p class="big-text highlight glow-pulse">
+          Escalation is how help arrives.
+        </p>
+        <p class="big-text" style="margin-top: 0.5rem;">
+          Silence is how problems become catastrophes.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 11: Week 1-2 -->
+  <section class="slide" data-slide="11">
+    <h1 class="slide-title">Your First Two Weeks</h1>
+    <p class="slide-subtitle">"We spent Week 1 on architecture" is how teams fail.</p>
+    <div class="slide-content">
+      <div class="timeline" style="width: 100%;">
+        <div class="timeline-week">
+          <h4>WEEK 1 (Non-Negotiable)</h4>
+          <ul class="checklist">
+            <li>Team contract signed (Day 5)</li>
+            <li>Communication channel created (Day 2)</li>
+            <li>First standup completed (Day 3)</li>
+            <li>First GitHub issue created (Day 5)</li>
+            <li>Dev environment working (Day 5)</li>
+          </ul>
+        </div>
+        <div class="timeline-week">
+          <h4>WEEK 2 (Non-Negotiable)</h4>
+          <ul class="checklist">
+            <li>First PR merged (even if trivial)</li>
+            <li>Something deployed (even "Hello World")</li>
+            <li>Design partners contacted</li>
+          </ul>
+        </div>
+      </div>
+      <pre class="ascii-art" style="margin-top: 2rem; text-align: center;">
+```
+
+WEEK 1                           WEEK 2
+═══════════════════════════════  ═══════════════════════════════
+│ Contract │ Channel │ Standup │ │ First PR │ Deployed │ Design │
+│  signed  │ created │  done   │ │  merged  │ ANYTHING │ contact│
+═══════════════════════════════  ═══════════════════════════════
+
+Interpersonal foundations FIRST.    Technical foundations SECOND.
+</pre>
+<p style="text-align: center; margin-top: 1rem; color: var(--amber);">
+You can’t design a database if you can’t talk to each other.
+</p>
+</div>
+</section>
+
+```
+  <!-- SLIDE 12: Instructor Meetings -->
+  <section class="slide" data-slide="12">
+    <h1 class="slide-title">Instructor Meeting Time</h1>
+    <p class="slide-subtitle">On days we don't meet in class...</p>
+    <div class="slide-content two-col">
+      <div class="col">
+        <pre class="ascii-art large">
+╔═══════════════════════════════╗
+║                               ║
+║   CLASS TIMESLOT              ║
+║   ════════════════            ║
+║                               ║
+║   On class days:              ║
+║   ┌─────────────────────┐     ║
+║   │   CLASS MEETS       │     ║
+║   └─────────────────────┘     ║
+║                               ║
+║   On non-class days:          ║
+║   ┌─────────────────────┐     ║
+║   │ TEAM MEETING TIME   │     ║
+║   │ with instructor     │     ║
+║   │ available           │     ║
+║   └─────────────────────┘     ║
+║                               ║
+╚═══════════════════════════════╝
+        </pre>
+      </div>
+      <div class="col" style="justify-content: center;">
+        <p class="big-text">
+          This is <span class="highlight">structured support time</span>, not optional office hours.
+        </p>
+        <table class="data-table" style="margin-top: 2rem;">
+          <thead>
+            <tr>
+              <th>Phase</th>
+              <th>Use This Time For</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Weeks 1-4</td>
+              <td>Get feet under you. Ask basic questions.</td>
+            </tr>
+            <tr>
+              <td>Weeks 5-10</td>
+              <td>Debug team dynamics. Architecture feedback.</td>
+            </tr>
+            <tr>
+              <td>Weeks 11-16</td>
+              <td>Crisis intervention. Demo practice.</td>
+            </tr>
+          </tbody>
+        </table>
+        <p style="margin-top: 2rem; padding: 1rem; border: 1px dashed var(--error); background: rgba(255,65,54,0.05);">
+          ⚠️ If your team is struggling and you haven't used this time, 
+          <strong>you left help on the table</strong>.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 13: Three Things -->
+  <section class="slide" data-slide="13">
+    <h1 class="slide-title">The Three Things That Actually Matter</h1>
+    <p class="slide-subtitle">If you remember nothing else from today.</p>
+    <div class="slide-content">
+      <div class="content-full">
+        <pre class="ascii-art amber large" style="margin-bottom: 2rem;">
+╔═══════════════════════════════════════════════════════════════════╗
+║                                                                   ║
+║   1. BE RESPONSIVE                                                ║
+║      Answer messages within 24 hours. Always.                     ║
+║                                                                   ║
+╠═══════════════════════════════════════════════════════════════════╣
+║                                                                   ║
+║   2. BE HONEST                                                    ║
+║      If stuck, say so. If overwhelmed, say so.                    ║
+║      If missing a deadline, say so BEFORE the deadline.           ║
+║                                                                   ║
+╠═══════════════════════════════════════════════════════════════════╣
+║                                                                   ║
+║   3. BE KIND                                                      ║
+║      Your teammates are stressed too.                             ║
+║      Assume good intent until proven otherwise.                   ║
+║                                                                   ║
+╚═══════════════════════════════════════════════════════════════════╝
+        </pre>
+        <p class="huge-text glow-pulse">
+          Teams that do these three things usually succeed.
+        </p>
+        <p class="big-text" style="margin-top: 1rem; color: var(--error);">
+          Teams that don't, don't.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SLIDE 14: Closing -->
+  <section class="slide" data-slide="14">
+    <div class="content-full">
+      <div class="center-content">
+        <pre class="ascii-art amber large">
+┌────────────────────────────────────────────────────────────────┐
+│                                                                │
+│      ╔══════════════════════════════════════════════════╗      │
+│      ║                                                  ║      │
+│      ║   THE ALGORITHM™ MEASURES COMMITS.               ║      │
+│      ║                                                  ║      │
+│      ║   YOUR TEAMMATES MEASURE CHARACTER.              ║      │
+│      ║                                                  ║      │
+│      ║   CHOOSE WISELY.                                 ║      │
+│      ║                                                  ║      │
+│      ╚══════════════════════════════════════════════════╝      │
+│                                                                │
+└────────────────────────────────────────────────────────────────┘
+        </pre>
+        <p class="dim" style="margin-top: 3rem; font-size: 1.2rem;">
+          frotz → plugh
+        </p>
+        <p class="dim" style="margin-top: 1rem;">
+          The Algorithm provides. The Algorithm observes.
+        </p>
+        <p class="highlight" style="margin-top: 0.5rem; font-size: 1.2rem;">
+          The Algorithm... hopes you succeed.
+        </p>
+        <p style="margin-top: 3rem; color: var(--text-muted); font-size: 0.9rem;">
+          ALGOCRATIC FUTURES™ EDUCATIONAL DIVISION<br>
+          Spring 2026 Capstone Orientation<br>
+          <span class="dim">Building Tomorrow's Workforce, Today™</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <div class="progress-bar" id="progress"></div>
+</div>
+
+<nav class="nav">
+  <button class="nav-btn" id="prev-btn" disabled>← Previous</button>
+  <span class="nav-hint">Use ← → arrow keys or spacebar to navigate</span>
+  <button class="nav-btn" id="next-btn">Next →</button>
+</nav>
+```
+
+  </div>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+    let currentSlide = 1;
+
+    const currentSlideEl = document.getElementById('current-slide');
+    const totalSlidesEl = document.getElementById('total-slides');
+    const prevBtn = document.getElementById('prev-btn');
+    const nextBtn = document.getElementById('next-btn');
+    const progressBar = document.getElementById('progress');
+
+    totalSlidesEl.textContent = totalSlides;
+
+    function showSlide(n) {
+      if (n < 1 || n > totalSlides) return;
+      
+      slides.forEach(slide => slide.classList.remove('active'));
+      document.querySelector(`[data-slide="${n}"]`).classList.add('active');
+      
+      currentSlide = n;
+      currentSlideEl.textContent = n;
+      
+      prevBtn.disabled = n === 1;
+      nextBtn.disabled = n === totalSlides;
+      
+      progressBar.style.width = `${(n / totalSlides) * 100}%`;
+    }
+
+    function nextSlide() {
+      if (currentSlide < totalSlides) showSlide(currentSlide + 1);
+    }
+
+    function prevSlide() {
+      if (currentSlide > 1) showSlide(currentSlide - 1);
+    }
+
+    prevBtn.addEventListener('click', prevSlide);
+    nextBtn.addEventListener('click', nextSlide);
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' || e.key === ' ') {
+        e.preventDefault();
+        nextSlide();
+      } else if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        prevSlide();
+      }
+    });
+
+    // Initialize
+    showSlide(1);
+  </script>
+
+</body>
+</html>
