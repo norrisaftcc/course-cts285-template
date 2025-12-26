@@ -10,7 +10,7 @@
 ## PROJECT OVERVIEW
 
 ### What This Is
-You're working on **AlgoCratic Futures™**, an immersive educational framework that teaches software development through satirical corporate dystopia. Think "1984 meets a coding bootcamp" - students progress through color-coded "clearance levels" while learning real programming skills.
+You're working on **AlgoCratic Futures™**, an immersive educational framework that teaches software development through satirical corporate dystopia. Think "1984 as a startup, meets a coding bootcamp" - students progress through color-coded "clearance levels" while learning real programming skills.
 
 ### Core Philosophy
 **95% genuine competence building + 5% satirical seasoning = memorable, effective learning**

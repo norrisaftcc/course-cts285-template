@@ -1,0 +1,433 @@
+# course-manifest.yaml
+# CSC 134: C++ Programming
+# Course Development Tracking System v0.1
+#
+# This manifest reflects the actual state of CSC 134 development
+# as of initial tracking system implementation.
+
+manifest_version: "0.1"
+last_updated: "2025-01-01T00:00:00Z"
+
+# ============================================================================
+# COURSE METADATA
+# ============================================================================
+course:
+  id: "CSC-134"
+  name: "C++ Programming"
+  credits: 3
+  
+  description: |
+    This course introduces object-oriented computer programming using the 
+    C++ programming language. Topics include input/output operations, 
+    iteration, arithmetic operations, arrays, pointers, filters, and other 
+    related topics. Upon completion, students should be able to design, 
+    code, test, and debug C++ language programs.
+  
+  prerequisites:
+    - "CSC-113"
+  
+  corequisites: []
+  
+  repository: "course-csc134-template"
+  claude_project_id: ""
+  
+  outcomes:
+    - "Design, code, test, and debug C++ programs"
+    - "Apply object-oriented programming principles"
+    - "Implement input validation and error handling"
+    - "Use standard library containers and algorithms"
+    - "Translate user requirements into functional programs"
+    - "Document code and explain design decisions"
+
+  # Badge/credential alignment
+  badge:
+    name: "Foundations of C++ Programming with Object-Oriented Principles"
+    level: "Introductory"
+    skills:
+      - "C++ Syntax and Control Structures"
+      - "Object-Oriented Programming"
+      - "Software Development Practices"
+      - "IDE and Debugger Use"
+      - "Program Design and Implementation"
+      - "Testing and Debugging"
+
+# ============================================================================
+# MODULE DEFINITIONS
+# ============================================================================
+modules:
+  # --------------------------------------------------------------------------
+  - id: "M01"
+    name: "Introduction & Environment Setup"
+    weeks: [1]
+    description: "C++ history, development environment, compilation, first program"
+    
+    deliverables:
+      - type: "reading"
+        name: "Chapter 1: Introduction to C++ Programming"
+        file: "module-01/readings/chapter-01.md"
+        status: "complete"
+        notes: "Covers history, core language vs libraries, program structure"
+        
+      - type: "tutorial"
+        name: "IDE Installation and Setup"
+        file: "module-01/tutorials/ide-setup.md"
+        status: "planned"
+        
+      - type: "lab"
+        name: "Environment Verification"
+        file: "module-01/labs/lab-01-setup.md"
+        status: "planned"
+        
+      - type: "reference"
+        name: "C++ Language Companion (Ch 1)"
+        file: "resources/cpp-language-companion.pdf"
+        status: "complete"
+        notes: "Gaddis companion text"
+
+  # --------------------------------------------------------------------------
+  - id: "M02"
+    name: "Input, Processing, and Output"
+    weeks: [2]
+    description: "Variables, data types, cin/cout, arithmetic, constants"
+    
+    deliverables:
+      - type: "reading"
+        name: "Chapter 2: Input, Processing, and Output"
+        file: "module-02/readings/chapter-02.md"
+        status: "complete"
+        notes: "Pizza Palace theme, comprehensive coverage"
+        
+      - type: "tutorial"
+        name: "Variables and Data Types"
+        file: "module-02/tutorials/variables.md"
+        status: "planned"
+        
+      - type: "tutorial"
+        name: "Input with cin and getline"
+        file: "module-02/tutorials/input.md"
+        status: "planned"
+        
+      - type: "lab"
+        name: "Pizza Calculator"
+        file: "module-02/labs/pizza-calculator.md"
+        status: "draft"
+        notes: "Rubric exists in project"
+        
+      - type: "rubric"
+        name: "Pizza Calculator Rubric"
+        file: "module-02/rubrics/pizza-rubric.md"
+        status: "complete"
+        
+      - type: "reference"
+        name: "C++ Language Companion (Ch 2)"
+        file: "resources/cpp-language-companion.pdf"
+        status: "complete"
+
+  # --------------------------------------------------------------------------
+  - id: "M03"
+    name: "Functions"
+    weeks: [3, 4]
+    description: "Function definition, parameters, return values, scope, prototypes"
+    
+    deliverables:
+      - type: "reading"
+        name: "Chapter 3: Functions"
+        file: "module-03/readings/chapter-03.md"
+        status: "complete"
+        notes: "Pro Chef metaphor, restaurant theme"
+        
+      - type: "tutorial"
+        name: "Module 02: Functions Guide"
+        file: "module-03/tutorials/functions-guide.md"
+        status: "complete"
+        notes: "Comprehensive module document exists"
+        
+      - type: "lab"
+        name: "Lab 3: Function Fundamentals"
+        file: "module-03/labs/lab-03.md"
+        status: "planned"
+        
+      - type: "lab"
+        name: "Lab 4: Pass by Reference"
+        file: "module-03/labs/lab-04.md"
+        status: "planned"
+        
+      - type: "project"
+        name: "Project 1: Restaurant System"
+        file: "module-03/projects/project-01.md"
+        status: "planned"
+        
+      - type: "reference"
+        name: "C++ Language Companion (Ch 3, 6)"
+        file: "resources/cpp-language-companion.pdf"
+        status: "complete"
+
+  # --------------------------------------------------------------------------
+  - id: "M04"
+    name: "Decision Structures"
+    weeks: [5, 6]
+    description: "if/else, switch, logical operators, nested conditions, validation"
+    
+    deliverables:
+      - type: "reading"
+        name: "Chapter 4: Decision Structures"
+        file: "module-04/readings/chapter-04.md"
+        status: "complete"
+        notes: "CYOA adventure theme"
+        
+      - type: "tutorial"
+        name: "Module 03: Decision Structures Guide"
+        file: "module-04/tutorials/decisions-guide.md"
+        status: "complete"
+        notes: "Full module document with schedule"
+        
+      - type: "lab"
+        name: "Lab 5: Basic Decisions"
+        file: "module-04/labs/lab-05.md"
+        status: "draft"
+        notes: "Referenced in module doc"
+        
+      - type: "lab"
+        name: "Lab 6: Advanced Decisions"
+        file: "module-04/labs/lab-06.md"
+        status: "draft"
+        notes: "Referenced in module doc"
+        
+      - type: "project"
+        name: "Project 1: Interactive Decision Program"
+        file: "module-04/projects/project-01-cyoa.md"
+        status: "draft"
+        notes: "Spec exists in module doc"
+        
+      - type: "reference"
+        name: "C++ Language Companion (Ch 4)"
+        file: "resources/cpp-language-companion.pdf"
+        status: "complete"
+
+  # --------------------------------------------------------------------------
+  - id: "M05"
+    name: "Loops"
+    weeks: [7, 8]
+    description: "while, for, do-while, nested loops, input validation, menus"
+    
+    deliverables:
+      - type: "reading"
+        name: "Chapter 5: Loops"
+        file: "module-05/readings/chapter-05.md"
+        status: "complete"
+        notes: "End Boss theme"
+        
+      - type: "tutorial"
+        name: "Module 04: Loops Guide (GameFAQs Style)"
+        file: "module-05/tutorials/loops-guide.md"
+        status: "complete"
+        notes: "Extensive guide with ASCII art"
+        
+      - type: "lab"
+        name: "Lab 7: Loop Fundamentals"
+        file: "module-05/labs/lab-07.md"
+        status: "complete"
+        notes: "M5LAB_A with instructor guide"
+        
+      - type: "lab"
+        name: "Lab 8: Menu Systems"
+        file: "module-05/labs/lab-08.md"
+        status: "draft"
+        
+      - type: "project"
+        name: "Project 2: Menu-Driven Game"
+        file: "module-05/projects/project-02.md"
+        status: "draft"
+        notes: "C grade milestone"
+        
+      - type: "reference"
+        name: "Lab 7 Cheat Sheet"
+        file: "module-05/reference/lab7-cheatsheet.md"
+        status: "complete"
+        
+      - type: "reference"
+        name: "Lab 7 Instructor Guide"
+        file: "module-05/reference/lab7-instructor.md"
+        status: "complete"
+        
+      - type: "reference"
+        name: "C++ Language Companion (Ch 5, 7, 11)"
+        file: "resources/cpp-language-companion.pdf"
+        status: "complete"
+
+  # --------------------------------------------------------------------------
+  - id: "M06"
+    name: "Arrays and Strings"
+    weeks: [9, 10]
+    description: "Arrays, traversal, STL algorithms, std::string, AI-assisted coding begins"
+    
+    deliverables:
+      - type: "reading"
+        name: "Chapter 6: Arrays"
+        file: "module-06/readings/chapter-06.md"
+        status: "planned"
+        
+      - type: "tutorial"
+        name: "Introduction to STL Algorithms"
+        file: "module-06/tutorials/stl-intro.md"
+        status: "planned"
+        
+      - type: "lab"
+        name: "Lab 9: Array Fundamentals"
+        file: "module-06/labs/lab-09.md"
+        status: "planned"
+        
+      - type: "lab"
+        name: "Lab 10: STL Algorithms"
+        file: "module-06/labs/lab-10.md"
+        status: "planned"
+        
+      - type: "homework"
+        name: "Party Management System"
+        file: "module-06/homework/party-arrays.md"
+        status: "planned"
+        notes: "RPG party stats with arrays"
+        
+      - type: "reference"
+        name: "C++ Language Companion (Ch 8, 9)"
+        file: "resources/cpp-language-companion.pdf"
+        status: "complete"
+
+  # --------------------------------------------------------------------------
+  - id: "M07"
+    name: "File I/O and Structs"
+    weeks: [11, 12]
+    description: "File streams, reading/writing, structured data, functional patterns"
+    
+    deliverables:
+      - type: "reading"
+        name: "Chapter 7: File I/O"
+        file: "module-07/readings/chapter-07.md"
+        status: "planned"
+        
+      - type: "tutorial"
+        name: "File Streams and Error Handling"
+        file: "module-07/tutorials/filestreams.md"
+        status: "planned"
+        
+      - type: "lab"
+        name: "Lab 11: Reading Files"
+        file: "module-07/labs/lab-11.md"
+        status: "planned"
+        
+      - type: "lab"
+        name: "Lab 12: Writing Files"
+        file: "module-07/labs/lab-12.md"
+        status: "planned"
+        
+      - type: "project"
+        name: "Project 3: Save System"
+        file: "module-07/projects/project-03.md"
+        status: "planned"
+        notes: "B grade milestone"
+        
+      - type: "reference"
+        name: "C++ Language Companion (Ch 10)"
+        file: "resources/cpp-language-companion.pdf"
+        status: "complete"
+
+  # --------------------------------------------------------------------------
+  - id: "M08"
+    name: "Introduction to OOP"
+    weeks: [13, 14, 15, 16]
+    description: "Classes, objects, encapsulation, constructors, composition, capstone"
+    
+    deliverables:
+      - type: "reading"
+        name: "Chapter 8: Classes and Objects"
+        file: "module-08/readings/chapter-08.md"
+        status: "planned"
+        
+      - type: "tutorial"
+        name: "Designing Classes"
+        file: "module-08/tutorials/class-design.md"
+        status: "planned"
+        
+      - type: "tutorial"
+        name: "Composition over Inheritance"
+        file: "module-08/tutorials/composition.md"
+        status: "planned"
+        notes: "SOLID principles integration"
+        
+      - type: "lab"
+        name: "Lab 13: First Classes"
+        file: "module-08/labs/lab-13.md"
+        status: "planned"
+        
+      - type: "lab"
+        name: "Lab 14: Class Relationships"
+        file: "module-08/labs/lab-14.md"
+        status: "planned"
+        
+      - type: "project"
+        name: "Project 4: OOP RPG"
+        file: "module-08/projects/project-04.md"
+        status: "planned"
+        notes: "A grade milestone"
+        
+      - type: "project"
+        name: "Capstone: Portfolio Defense"
+        file: "module-08/projects/capstone.md"
+        status: "planned"
+        notes: "Badge requirement"
+        
+      - type: "reference"
+        name: "C++ Language Companion (Ch 14)"
+        file: "resources/cpp-language-companion.pdf"
+        status: "complete"
+
+# ============================================================================
+# PROGRESS TRACKING
+# ============================================================================
+progress:
+  total_deliverables: 52
+  complete: 16
+  review: 0
+  draft: 7
+  planned: 29
+  percentage: 31
+
+# ============================================================================
+# SUPPLEMENTARY RESOURCES (Not module-specific)
+# ============================================================================
+resources:
+  - name: "C++ Language Companion (Full Text)"
+    file: "resources/cpp-language-companion.pdf"
+    status: "complete"
+    
+  - name: "C++ Style Guide"
+    file: "resources/style-guide.md"
+    status: "complete"
+    
+  - name: "CLAUDE.md - AI Assistant Instructions"
+    file: "CLAUDE.md"
+    status: "complete"
+    
+  - name: "Debugging Guide"
+    file: "resources/debugging-guide.md"
+    status: "complete"
+    
+  - name: "Spaghetti Code Recovery Guide"
+    file: "resources/spaghetti-recovery.md"
+    status: "complete"
+    
+  - name: "PBL Methodology Guide"
+    file: "docs/pbl-methodology.md"
+    status: "complete"
+    
+  - name: "Free Resources Compilation"
+    file: "docs/free-resources.md"
+    status: "complete"
+    
+  - name: "Badge Requirements"
+    file: "docs/badge-requirements.md"
+    status: "complete"
+    
+  - name: "Software Engineering Principles"
+    file: "docs/se-principles.md"
+    status: "complete"

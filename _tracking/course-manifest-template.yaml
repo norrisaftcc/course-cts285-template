@@ -1,0 +1,161 @@
+# course-manifest.yaml
+# Course Development Tracking System - Template v0.1
+# 
+# Instructions:
+# 1. Copy this file to the root of your course repository
+# 2. Replace all placeholder values (marked with REPLACE:)
+# 3. Define deliverables for each module
+# 4. Update status values as content is developed
+# 5. Keep progress section updated (or automate via tooling)
+
+manifest_version: "0.1"
+last_updated: "2025-01-01T00:00:00Z"  # REPLACE: Update when manifest changes
+
+# ============================================================================
+# COURSE METADATA
+# ============================================================================
+course:
+  id: "CSC-XXX"                         # REPLACE: Course number (e.g., CSC-134)
+  name: "Course Name"                   # REPLACE: Full course name
+  credits: 3                            # REPLACE: Credit hours
+  
+  description: |                        # REPLACE: Catalog description
+    Course description goes here. This should match the official
+    catalog description for the course.
+  
+  prerequisites:                        # REPLACE: List prerequisite course IDs
+    - "CSC-XXX"                         # Remove if no prerequisites
+  
+  corequisites: []                      # REPLACE: List corequisite course IDs
+  
+  repository: "course-cscXXX-template"  # REPLACE: GitHub repository name
+  claude_project_id: ""                 # Optional: Claude Project UUID if applicable
+  
+  # Learning outcomes - minimum 3 required
+  outcomes:                             # REPLACE: Course learning outcomes
+    - "Outcome 1"
+    - "Outcome 2"
+    - "Outcome 3"
+
+# ============================================================================
+# MODULE DEFINITIONS
+# ============================================================================
+# Each course must define exactly 8 modules.
+# Each module contains deliverables with tracked status.
+#
+# Deliverable types: tutorial, lab, homework, project, reading, 
+#                    rubric, slides, video, quiz, reference
+#
+# Status values: planned, draft, review, complete
+
+modules:
+  # --------------------------------------------------------------------------
+  - id: "M01"
+    name: "Module 1 Name"               # REPLACE
+    weeks: [1]                          # Which calendar weeks
+    description: "Brief description"    # REPLACE
+    
+    deliverables:
+      - type: "reading"
+        name: "Chapter 1"
+        file: "module-01/readings/chapter-01.md"
+        status: "planned"
+        
+      - type: "tutorial"
+        name: "Tutorial Name"
+        file: "module-01/tutorials/tutorial-01.md"
+        status: "planned"
+        
+      - type: "lab"
+        name: "Lab 1"
+        file: "module-01/labs/lab-01.md"
+        status: "planned"
+
+  # --------------------------------------------------------------------------
+  - id: "M02"
+    name: "Module 2 Name"
+    weeks: [2]
+    description: "Brief description"
+    
+    deliverables:
+      - type: "reading"
+        name: "Chapter 2"
+        file: "module-02/readings/chapter-02.md"
+        status: "planned"
+        
+      - type: "tutorial"
+        name: "Tutorial Name"
+        file: "module-02/tutorials/tutorial-01.md"
+        status: "planned"
+        
+      - type: "lab"
+        name: "Lab 2"
+        file: "module-02/labs/lab-02.md"
+        status: "planned"
+        
+      - type: "homework"
+        name: "Homework 1"
+        file: "module-02/homework/hw-01.md"
+        status: "planned"
+
+  # --------------------------------------------------------------------------
+  - id: "M03"
+    name: "Module 3 Name"
+    weeks: [3, 4]
+    description: "Brief description"
+    
+    deliverables: []                    # REPLACE: Add deliverables
+
+  # --------------------------------------------------------------------------
+  - id: "M04"
+    name: "Module 4 Name"
+    weeks: [5, 6]
+    description: "Brief description"
+    
+    deliverables: []
+
+  # --------------------------------------------------------------------------
+  - id: "M05"
+    name: "Module 5 Name"
+    weeks: [7, 8]
+    description: "Brief description"
+    
+    deliverables: []
+
+  # --------------------------------------------------------------------------
+  - id: "M06"
+    name: "Module 6 Name"
+    weeks: [9, 10]
+    description: "Brief description"
+    
+    deliverables: []
+
+  # --------------------------------------------------------------------------
+  - id: "M07"
+    name: "Module 7 Name"
+    weeks: [11, 12]
+    description: "Brief description"
+    
+    deliverables: []
+
+  # --------------------------------------------------------------------------
+  - id: "M08"
+    name: "Module 8 Name"
+    weeks: [13, 14, 15, 16]
+    description: "Brief description"
+    
+    deliverables: []
+
+# ============================================================================
+# PROGRESS TRACKING
+# ============================================================================
+# Update these counts as deliverables are completed.
+# Dashboard will use these for display; validation can check accuracy.
+
+progress:
+  total_deliverables: 0                 # Count of all deliverables across modules
+  complete: 0                           # Count with status: complete
+  review: 0                             # Count with status: review
+  draft: 0                              # Count with status: draft
+  planned: 0                            # Count with status: planned
+  percentage: 0                         # (complete / total_deliverables) * 100
