@@ -33,7 +33,7 @@ Three-agent analysis reveals **significant documentation maturity gaps** across 
 
 **CTS Project Briefs (Layer 2):**
 - Task Engine: TaskManagerAligned.md (673 lines) - EXEMPLARY
-- Commerce Tracking: FinacialTracker_overview.md (24 lines) - NEEDS EXPANSION
+- Commerce Tracking: FinancialTracker_overview.md (24 lines) - NEEDS EXPANSION
 - Recommendation: RecommendationEngine.md (30 lines) - NEEDS FULL REWRITE
 - Data Tracking: Biometric_HealthTracker.md (22 lines) - NEEDS FULL REWRITE
 
@@ -88,7 +88,7 @@ Three-agent analysis reveals **significant documentation maturity gaps** across 
 | Data | MoodSync | UNDERDEVELOPED (1 paragraph) |
 
 **Document Structure Needs:**
-- FinacialTracker_overview.md: Complete rewrite (~400-500 lines needed)
+- FinancialTracker_overview.md: Complete rewrite (~400-500 lines needed)
 - RecommendationEngine.md: Complete rewrite (~400-500 lines needed)
 - Biometric_HealthTracker.md: Complete rewrite (~400-500 lines needed)
 
@@ -170,7 +170,7 @@ Target: ~800 lines per engine brief
 
 | Action | File | Lines |
 |--------|------|-------|
-| Expand | FinacialTracker_overview.md -> CommerceTrackingAligned.md | 24 -> 800 |
+| Expand | FinancialTracker_overview.md -> CommerceTrackingAligned.md | 24 -> 800 |
 | Expand | RecommendationEngine.md -> RecommendationEngineAligned.md | 30 -> 800 |
 | Expand | Biometric_HealthTracker.md -> DataTrackingAligned.md | 22 -> 800 |
 | Create | Terminology_Maps/ (directory with 4 files) | New |
