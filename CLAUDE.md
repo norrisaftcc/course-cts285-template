@@ -58,6 +58,11 @@ course-cts285-template/
 2. **ASSIGNMENT_TRACKER.md** - What's done vs. what needs creation
 3. **VISUAL_ROADMAP.md** - Timeline and clearance progression
 
+**For Spring 2026 Capstone Alignment Work:**
+- **26SP_Planning/ProjectAlignment.md** - Guide for continuing aligned brief creation
+- Check GitHub Issues #5, #6, #7, #10 for current status
+- See `/26SP_Planning/` directory for all capstone planning materials
+
 **In the project knowledge base:**
 - `AlgoCratic_Futures__Style_Guide__Human-Readable_Version_.md` - Voice and tone
 - `TRAINING_MODULE_MANIFEST.md` - Module progression framework
