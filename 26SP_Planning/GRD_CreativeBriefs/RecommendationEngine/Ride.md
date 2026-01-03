@@ -105,85 +105,142 @@ Ride became that system—an app that learns what matters to you and prompts the
 
 A vehicle comparison platform that helps you define what matters (safety, space, tech, budget), track those priorities across multiple test drives, and compare vehicles systematically so you can make confident decisions without dealer pressure. Unlike review sites giving opinions or data sites overwhelming with specs, Ride focuses on YOUR priorities and captures details in the moment—during test drives when information is fresh and dealers are watching.
 
-### Physical Component: Comparison Worksheet Pad
+### Physical Component: Smart Scanner Key Fob
 
-**Format:** Letter-size pad (8.5”x11”) | 50 sheets | Tear-away perforated top | Rigid cardboard backing for writing in showroom/car | Fits in folder or clipboard
+**Format:** Keychain-sized device (approximately 2” x 1” x 0.5”) | Built-in camera scanner | Single button operation | LED indicator lights | Rechargeable via USB-C | Durable construction for daily keychain carry
 
-**Structure:**
+**Base Product Reference:** Similar form factor to car key fobs, hotel key cards, Tile trackers (students can reference existing key fob products for design mockups)
 
-- **Your Priorities** (top section): Rank what matters—Safety | Space/Cargo | Fuel Economy | Tech Features | Price/Value | Performance | Reliability | Brand/Resale
-- **Vehicle Info** (one per page): Make/Model/Trim | Year | MSRP | Dealer Price | Monthly Payment Est. | Test Drive Date/Location
-- **Feature Checklist** (organized by priority categories):
-  - Safety: Blind-spot monitoring | Adaptive cruise | Lane keep | Automatic braking | Airbags count | Crash test ratings
-  - Space: Cargo dimensions | Passenger room | Seating capacity | Folding seats config
-  - Tech: Infotainment screen size | Apple CarPlay/Android Auto | Navigation | Sound system | Driver display
-  - Performance: Engine specs | 0-60 | Towing capacity | AWD/FWD/4WD | Transmission
-  - Fuel: MPG city/highway | Tank size | Fuel type | Range
-- **Test Drive Notes** (during drive): How did it feel? | Visibility | Noise level | Comfort | Power/handling | Concerns?
-- **Dealer Notes** (sales pitch tracking): What did salesperson emphasize? | Pressure tactics used? | Deal offered | Expiration/urgency claims
-- **Overall Rating** (your gut feeling): 1-5 stars | Would buy? Yes/Maybe/No | Next steps
+**Fictitious Smart Features (The “Magic”):**
 
-**Key Features:**
+- **Multi-Format Scanning:** Camera reads QR codes (dealer window stickers) | OCR captures text from printed window stickers (Monroney labels) | Scans dealer spec sheets/printouts | Can photograph online listings shown on dealer computer screens
+- **Automatic Data Extraction:** Pulls from scanned documents: Make/Model/Trim/Year | VIN | MSRP and dealer price | Complete features list | MPG ratings | Engine specs | Safety features | Tech package details | Options/add-ons
+- **Bluetooth Sync:** Press button after scan → LED blinks (confirming capture) → Auto-syncs to Ride app on phone | Can scan 5-6 cars per dealer visit, all stored separately | Works offline (syncs when back in phone range)
+- **Cross-Reference Intelligence:** Matches scanned dealer data against online listings saved via browser extension | Alerts to price increases, missing features, trim differences, bait-and-switch attempts
 
-- **Use during dealer visit** (designed to look professional, not awkward)
-- **One vehicle per sheet** (easy to compare side-by-side later)
-- **Checklist format** (quick checkmarks, not paragraphs)
-- **Dealer-facing acceptable** (looks like serious buyer doing research, not insulting dealer)
-- **Tear-away sheets** (take home, leave pad in car for partner to use)
+**Physical Features:**
 
-**Why Physical Worksheet Matters:**
+- **Compact keychain design** (always with you, attached to car keys)
+- **Single-button operation** (point camera at document, press button, done)
+- **LED indicator lights** (scanning/synced/battery low/error states)
+- **Rechargeable battery** (USB-C charging, 2-week battery life per charge)
+- **Durable materials** (drop-resistant for dealer lot use, weather-resistant)
+- **Camera lens** (optimized for document capture in various lighting)
+- **Ride branding** (subtle logo, premium finish)
 
-- Writing during test drive improves memory retention
-- Physical document feels official (dealers take you seriously)
-- Can’t rely on memory after 3-4 test drives (details blur)
-- Partner/family can use same system (consistent comparison)
-- No phone distraction during important decision
+**Why Smart Scanner Key Fob Works:**
 
-### Digital Component: Vehicle Comparison App
+- Eliminates manual data entry (biggest barrier to comparison)
+- Captures perfect data from source documents (no typos, no forgotten details)
+- Fast (5 seconds to scan vs. 5 minutes to manually input)
+- Works with ANY dealer (window stickers are federally required, standardized)
+- Portable (on keychain, always available)
+- Professional appearance (serious buyer tool, not phone camera)
+- Students can reference existing key fob products for industrial design
+- Protects against dealer manipulation (documented proof of what was promised)
 
-**Core Features:**
+### Digital Component: Vehicle Comparison App + Browser Extension
+
+**Browser Extension (Online Research Tool):**
+
+- **One-Click Capture:** While browsing car listings (Autotrader, Cars.com, dealer websites), click Ride extension button in browser toolbar
+- **Automatic Data Extraction:** Captures from listing page: Make/Model/Year/Trim | Listed price | Claimed features | Photos | VIN (if shown) | Dealer name/location | Mileage | Link to original listing
+- **Shortlist Building:** Saves all captured listings to your Ride app comparison database | Organizes by: price range, make/model, dealer location
+- **Baseline Documentation:** Creates record of what was promised online (price, features, condition) before you visit dealer
+
+**Mobile App (Core Features):**
+**Mobile App (Core Features):**
 
 - **Priority Builder:** Answer questions about what matters—Safety first? Family hauling? Budget max? Long commute? | App ranks your priorities and customizes comparison checklist
-- **Vehicle Shortlist:** Add cars you’re considering (by VIN, model year, trim) | App pulls specs, pricing, reviews
-- **Test Drive Prep:** Before dealer visit, app shows: Questions to ask | Features to check | Test drive route suggestions | Negotiation tips for this model
-- **Worksheet Sync:** Photo-capture completed worksheets | App digitizes checkmarks and notes | Builds comparison chart automatically
-- **Side-by-Side Compare:** After multiple test drives, app shows: All vehicles on one screen | Your priorities highlighted | Which car wins each category | Missing features flagged
+- **Vehicle Shortlist:** Add cars you’re considering (via browser extension OR manual entry) | App pulls specs, pricing, reviews from trusted sources
+- **Smart Scanner Integration:** Receive scanned data from key fob | Auto-populates comparison with dealer specs, pricing, features
+- **Cross-Reference & Alert System:**
+  - Compares online listing vs. actual dealer car
+  - 🔴 **Price Alert:** “Price increased $2,700 from online listing”
+  - 🔴 **Feature Alert:** “Missing blind-spot monitoring shown in online listing”
+  - 🔴 **Bait-Switch Alert:** “Different trim - online showed EX-L, dealer has EX”
+  - ✅ **Match Confirmed:** “This matches online listing exactly”
+- **Side-by-Side Compare:** After scanning multiple vehicles, app shows all on one screen | Your priorities highlighted | Which car wins each category | Missing features flagged | Online vs. dealer discrepancies visible
 - **Decision Helper:** “Based on your ranked priorities, here’s the best match” | Shows why (matches 8/10 top priorities) | Alerts if compromise needed
 
 **Advanced Features:**
 
+- **Financing Comparison Calculator:**
+  - Dealer offers financing: “Approved! 6.9% APR, $485/month for 72 months”
+  - App compares against: Your credit union rates | Your bank rates | National average rates
+  - Shows total cost difference: “Credit union saves you $8,220 vs. dealer financing”
+  - ⚠️ **Alert:** “You could save $8,220 with credit union pre-approval”
+  - Pre-approval guidance: Links to local credit unions, recommended timing
 - **Price Tracking:** Fair market value by ZIP code | Dealer invoice estimates | Negotiation starting points | “This dealer is $2K over market” alerts
 - **Ownership Cost Calculator:** Insurance estimates | Maintenance costs | Depreciation | Total 5-year cost comparison
 - **Recall & Reliability Data:** Safety recall history | Consumer Reports reliability scores | Common issues for model years
-- **Dealer Reviews:** Other Ride users’ experiences at specific dealerships | Pressure tactic warnings | “Honest dealer” ratings
+- **Dealer Reviews:** Other Ride users’ experiences at specific dealerships | Pressure tactic warnings | “Honest dealer” ratings | Bait-and-switch incident reports
 - **Timeline Tracker:** How long you’ve been shopping | Reminds you to revisit top contenders | “You tested this 3 weeks ago—want to go back?”
 
 ### How Physical + Digital Work Together
 
-**Before Dealer Visit (Research Phase):**
+**Phase 1: Online Research (Browser Extension - Weeks 1-2)**
 
-- **App:** Build priority list, add vehicles to shortlist, review specs, prep questions
-- **Worksheet:** Print customized worksheet with your priority rankings, bring to dealer
+- **Browse car listings:** Autotrader, Cars.com, dealer websites
+- **See interesting car:** Click Ride browser extension button
+- **Extension captures:** All listing data (price, features, photos, VIN, dealer, link)
+- **Builds shortlist:** 5-10 cars saved to Ride app with baseline data
+- **Documentation created:** What was promised online (price $27,500, includes heated seats, EX-L trim)
 
-**During Test Drive:**
+**Phase 2: Dealer Visit Preparation**
 
-- **Worksheet:** Fill in vehicle specs, check off features, note test drive impressions, track sales pitch
-- **App:** Quick reference for questions you forgot to ask, price checking if dealer quotes seem high
+- **App shows:** Your shortlist with priorities ranked
+- **Key fob ready:** Charged, on keychain
+- **Questions prepped:** App suggests what to verify based on online listing
 
-**After Test Drive:**
+**Phase 3: At Dealership (Smart Scanner Fob - Weeks 3-4)**
 
-- **Worksheet:** Take completed sheet home
-- **App:** Photo-capture worksheet, app digitizes data and adds to comparison
+- **Salesperson shows car:** Points to vehicle on lot
+- **Pull out scanner fob:** Point at window sticker
+- **Press button:** Fob camera captures Monroney label or spec sheet
+- **LED blinks green:** Data captured successfully
+- **Immediate cross-reference:**
+  - App matches: “This is listing #3 from Cars.com”
+  - App alerts: ⚠️ “Price is $2,200 higher than online” OR ✅ “Matches online exactly”
+  - App alerts: ⚠️ “Missing heated seats shown in listing photos”
 
-**Comparison Phase (After 3-4 Test Drives):**
+**Phase 4: Test Drive**
 
-- **App:** Side-by-side comparison of all vehicles based on YOUR priorities (not generic ratings)
-- **Worksheets:** Physical sheets laid out on table for family discussion, everyone can see same data
+- **Drive the car:** Focus on driving experience, not memorizing specs
+- **After drive:** Quick notes in app (“good visibility,” “tight steering”)
+- **Scan next car:** Repeat process for 3-4 vehicles same day
 
-**Decision Phase:**
+**Phase 5: Comparison (Back at Home)**
 
-- **App:** Shows which vehicle best matches priorities, flags compromises, estimates total ownership cost
-- **Return to Dealer:** Bring worksheet with competitor info, negotiate from position of knowledge
+- **Open app:** See all scanned vehicles side-by-side
+- **Online vs. Dealer view:**
+  - What was promised online
+  - What dealer actually has
+  - Discrepancies highlighted in red
+- **Priorities highlighted:** Which car matches your ranked priorities
+- **Clear winner emerges:** Based on facts, not salesperson pressure
+
+**Phase 6: Financing Decision**
+
+- **Dealer offers financing:** “6.9% APR, $485/month, approved today!”
+- **Before signing:** Check Ride app financing calculator
+- **App shows:**
+  
+  ```
+  DEALER: $34,920 total | $5,920 interest
+  YOUR CREDIT UNION: $26,700 total | $2,700 interest
+  💰 SAVE $8,220
+  ```
+- **App alerts:** ⚠️ “Get credit union pre-approval before signing”
+- **You respond:** “I’ll check with my credit union first”
+
+**Phase 7: Negotiation**
+
+- **Armed with data:** Online listing showed $27,500
+- **Dealer says:** “Best price is $29,800”
+- **Pull up app:** Show saved online listing, scanned window sticker
+- **Negotiate from knowledge:** “Your website showed $27,500 for this exact VIN”
+- **Dealer can’t manipulate:** You have documented proof
 
 ### Why This Works When Others Don’t
 
@@ -241,14 +298,14 @@ Buying reliable car for client meetings and gear hauling, replacing dying 2008 s
 
 ### Print Deliverable Options (Choose 2 Beyond Required Packaging)
 
-**Required: Comparison Worksheet Pad Packaging**
-How does packaging communicate this is professional tool, not consumer product? Should packaging include quick-start guide (how to use at dealerships)? What makes this gift-worthy (new driver, first-time buyer, car-shopping friend)? How does retail presence work (auto parts stores, bookstores, online)? Consider: Shrink-wrap with belly band showing sample worksheet, rigid packaging that protects pad, includes pen/pencil, “Survive the dealer” messaging.
+**Required: Smart Scanner Key Fob Packaging**
+How does packaging communicate this is professional tech tool for car buyers (not novelty gadget)? Should packaging include quick-start guide (pairing with app, how to scan documents, charging instructions)? What makes this gift-worthy (new driver, first-time buyer, car-shopping friend)? How does retail presence work (auto parts stores, tech stores, online)? Consider: Window showing actual device, includes USB-C charging cable, “Protect yourself from dealer manipulation” messaging, tech product aesthetic (premium unboxing like Apple AirPods), includes browser extension download QR code.
 
-**Option 1: Dealership Survival Guide Booklet**
-8-16 page guide included with worksheet pad. How prepare buyers for dealer tactics? What goes first—pressure tactics or priority-setting? Should it include negotiation scripts (“I need to think about it” responses)? Sample filled worksheets showing good note-taking? Consider: Pocket-size for dealer visits, spiral-bound or saddle-stitch, tear-out negotiation cheat sheet, QR code for app download.
+**Option 1: Complete Setup & User Guide**
+Multi-page guide included with key fob. How introduce Ride system (browser extension + fob + app)? What goes first—philosophy or pairing instructions? Should it include sample scans showing good data capture? How explain cross-reference alerts (online vs. dealer discrepancies)? Financing comparison tutorial? Consider: QR codes to video tutorials, illustrated fob usage (how to hold, optimal distance, lighting tips), browser extension installation steps, troubleshooting (scan failed, won’t sync, battery), dealer pressure tactic responses.
 
-**Option 2: Extended Worksheet Pad (Comparison Categories)**
-Additional worksheet variations beyond vehicle comparison: **Insurance Comparison** (quotes from 5 companies with coverage details) | **Financing Comparison** (dealer vs. credit union vs. bank rates) | **Trade-In Value Tracker** (offers from multiple dealers). How package variations—separate pads or sections in one pad? Consider: Tab dividers, color-coding by category, perforated for filing.
+**Option 2: Key Fob Accessories Kit**
+Premium add-ons for smart scanner. What enhances device usage? USB-C charging cable (longer than included)? Protective carrying case (beyond keychain)? Replacement keychain attachments? Lens cleaning kit (for camera)? Belt clip option for dealer visits (instead of keychain)? How package accessories—bundled or individual? Consider: Premium charging dock (desktop charging stand), lens protector film, carabiner attachment, “Power Buyer Kit” branding, gift set packaging.
 
 **Option 3: Point-of-Sale Display for Auto Parts Stores**
 Counter presence at AutoZone, O’Reilly, Advance Auto Parts. What information beyond package? How prominently feature “Stand up to dealer pressure”? Should display include testimonials from buyers? Format: countertop stand, shelf talker, hanging display near checkout? Consider: Car shopping is planned (not impulse), messaging about “before you visit dealers,” price visibility, “As seen in…” credibility.
@@ -267,11 +324,15 @@ For honest dealers who want to differentiate: “We welcome Ride users” signag
 
 ### Digital Deliverable Options (Choose 2, or 1 if Designing Physical Product)
 
-**Physical Product Design: The Comparison Worksheet (Counts as 1 Digital Deliverable)**
-Design the actual worksheet pad. Dimensions (8.5”x11” standard or custom), cover design, backing rigidity, interior worksheet layout (priority ranking section, vehicle info, feature checklist organized by categories, test drive notes, dealer notes, rating scale), perforated edge, page count (50 sheets?). How does layout maximize usability during dealer visit (one-handed writing in car, clipboard-friendly)? Typography for quick scanning and checkboxes. Consider: Tear-away cleanly, room for handwriting, checklist vs. fill-in-blank balance, professional appearance for dealer-facing use.
+**Physical Product Design: The Smart Scanner Key Fob (Counts as 1 Digital Deliverable)**
+Design the actual key fob device as digital mockup. Dimensions (approximately 2”x1”x0.5”, but explore optimal size), materials (durable ABS plastic, rubberized grip areas, metal accents?), camera lens placement (optimal angle for document scanning), single button design (tactile feedback, size, position), LED indicator lights (how many, what colors, where placed—scanning/synced/low battery/error), keychain attachment mechanism (split ring, carabiner loop, clip), USB-C charging port location (protected from elements), Ride logo/branding placement. How does industrial design communicate “professional buyer protection tool” not “tech toy”? What makes it feel premium and trustworthy? Consider: Existing car key fob reference products (students can study Lexus/BMW fobs, Tile trackers), grip ergonomics for one-handed use while holding phone, weatherproofing for outdoor dealer lots, drop resistance from waist height, camera lens quality indicators.
 
-**Option 1: Mobile App Interface Design**
-Key screens: Priority Builder (quiz-style questions ranking what matters) | Shortlist (vehicles being considered with specs pulled automatically) | Test Drive Prep (questions to ask, features to check, dealer-specific tips) | Worksheet Capture (photo upload and OCR) | Comparison View (side-by-side all vehicles with your priorities highlighted) | Decision Helper (recommendation with reasoning) | Dealer Locator (with Ride user reviews). How make data-heavy interface feel manageable not overwhelming? How show confidence-building (you’re in control)? Consider: One-tap worksheet photo capture, voice notes during test drive, offline mode for poor dealer lot reception.
+**Option 1: Complete App + Browser Extension Interface Design**
+Key screens for mobile app: Priority Builder (quiz-style questions) | Shortlist (vehicles from extension + manual adds) | Scanner Sync (receiving fob data, confirmation) | Cross-Reference Alerts (online vs. dealer discrepancies highlighted) | Comparison View (side-by-side with online/dealer data layers) | Financing Calculator (dealer vs. credit union/bank comparison) | Decision Helper (recommendation with reasoning).
+
+Browser extension design: Toolbar icon | One-click capture popup | Data confirmation screen (did it capture listing correctly?) | “Added to Ride” success message | Settings (which data to capture, auto-capture preferences).
+
+How make data-heavy interface manageable? How show alerts prominently without overwhelming? How visualize online vs. dealer discrepancies? Consider: Color-coding (red=discrepancy, green=match), swipe between online/dealer views, financing savings shown in dollars not just percentages, offline mode for fob sync without internet.
 
 **Option 2: Social Media Campaign (Minimum 6 Posts)**
 Platform: Facebook/Instagram, Reddit (r/whatcarshouldIbuy), YouTube. Campaign concept: “Dealer Horror Stories” (relatable pressure moments) | “Worksheet Wins” (buyers who used Ride successfully) | “Feature Confusion” (which car had what?). Goal: worksheet sales, app downloads, brand awareness. How create shareable content? Consider: User-generated content (filled worksheets with permission), dealer reaction videos (respectful), before/after decision confidence testimonials.
@@ -341,31 +402,33 @@ Look: NADA data | Edmunds buyer behavior research | Consumer Reports car buying 
 
 **What you need from them:**
 
-- Priority algorithm (how does app rank and weight user priorities?)
-- Worksheet OCR capabilities (can app read handwritten checkmarks/notes? accuracy limitations?)
-- Vehicle data API (where does app pull specs, pricing, reliability? update frequency?)
-- Comparison algorithm (how does app decide “best match”?)
-- Offline functionality (dealer lots have poor reception—what works without internet?)
+- Browser extension development (which browsers supported? Chrome/Firefox/Safari? Data scraping from listing sites—legal/technical limitations?)
+- OCR technology specs (how accurate is document scanning from fob camera? Optimal lighting/distance? Which fonts/formats can it read reliably?)
+- Key fob hardware (camera quality needed for Monroney label capture? Bluetooth range/pairing process? Battery life with typical usage? LED indicator programming?)
+- Cross-reference algorithm (how does app match online listing to scanned dealer data? VIN matching priority? Fuzzy matching for similar vehicles?)
+- Financing calculator API (where does app pull credit union/bank rates? Real-time or database? User credit score integration options?)
 
 **What they need from you:**
 
-- Brand assets (logo, color codes, typography specs)
-- UI design specs (screen layouts, comparison view, component library, form fields)
-- Iconography (priority categories, feature types, rating systems, vehicle categories)
-- Microcopy (app prompts, decision helper reasoning, pressure tactic responses, encouragement messages)
-- User flow priorities (what’s critical during dealer visit? navigation during high-stress moments?)
+- Brand assets (logo, color codes, typography specs for app, extension, and device branding)
+- Industrial design specs for fob (device dimensions, button placement, LED indicators, camera lens position, keychain attachment)
+- Browser extension UI design (toolbar icon, popup interface, data capture confirmation screens)
+- App UI design specs (screen layouts, alert system design, comparison view, financing calculator interface, component library)
+- Iconography (alert symbols—red warnings/green matches, priority categories, feature types, vehicle categories, financing comparison visuals)
+- Microcopy (browser extension prompts, fob sync confirmations, cross-reference alert text, financing savings messaging, dealer pressure responses)
 
 **How to work together:**
-Regular check-ins about technical constraints. Ask early about feasibility (Can OCR really read handwriting? How accurate is pricing data?). Share WIP for feedback. Be open to technical limitations requiring design adaptation. Explain rationale (why confidence tone matters, why worksheet must be one page, why comparison view prioritizes user’s ranked priorities). They’re building intelligence, you’re designing confidence tool—both essential for keeping buyers in control during high-pressure process.
+Regular check-ins about technical constraints. Ask early about feasibility (Can browser extension scrape all listing sites legally? Can fob camera really read Monroney labels in outdoor lighting? How accurate is cross-reference matching? Can financing calculator pull real-time rates?). Share WIP for feedback. Be open to technical limitations requiring design adaptation (maybe some listing sites block scraping, maybe OCR needs optimal lighting conditions, maybe some credit unions don’t share rate APIs). Explain rationale (why browser extension needs one-click simplicity, why fob must be pocket-sized for keychain, why cross-reference alerts must be prominent not buried, why financing savings must show total dollars not just APR difference). They’re building dealer protection intelligence, you’re designing buyer confidence system—both essential for protecting car shoppers from manipulation.
 
 ### Final Reminders
 
-This is not fill-in-the-blank work—creativity happens in how you interpret “confident straight-shooter cutting through BS.” Car buying tools often look corporate-boring (Consumer Reports) or salesy-sketchy (dealer sites). Ride should feel like smart friend giving you the system to stay in control. Your unique value proposition is **systematic comparison during the moment that matters (test drive) so you can make confident decisions despite dealer pressure**—not generic ratings, not opinions, not data overload. Emphasize physical + digital working together—worksheet captures in the moment, app builds intelligence. Every design decision needs rationale. This is portfolio-worthy work demonstrating: brand positioning for high-stakes decisions, designing for anxiety reduction, physical + digital tools for stressful environments, confidence-building through systematic process.
+This is not fill-in-the-blank work—creativity happens in how you interpret “confident straight-shooter cutting through BS.” Car buying tools often look corporate-boring (Consumer Reports) or salesy-sketchy (dealer sites). Ride should feel like smart friend giving you the protection system to stay in control. Your unique value proposition is **automatic data capture (browser extension + key fob scanner) combined with cross-reference alerts and financing comparison to protect buyers from dealer manipulation**—not generic ratings, not opinions, not manual worksheets. Emphasize the complete system working together: extension captures online promises → fob verifies dealer reality → app alerts to discrepancies → financing calculator exposes overpriced dealer loans. Every design decision needs rationale. This is portfolio-worthy work demonstrating: brand positioning for consumer protection, designing IoT product + browser tool + mobile app ecosystem, anti-manipulation advocacy design, confidence-building through automated verification.
 
 **Keep asking yourself:**
 
-- Does this feel like a confidence tool or just another data source?
-- Am I showing how worksheet works AT THE DEALER (not just at home)?
-- Does the system help buyers stand up to pressure or just give more information?
-- Would an anxious first-time buyer feel capable using this?
-- Does the design reduce decision paralysis or add to it?
+- Does this feel like buyer protection technology or just another comparison app?
+- Am I showing how browser extension + fob + app work together seamlessly (not three separate products)?
+- Do the cross-reference alerts clearly expose dealer manipulation tactics?
+- Does the financing calculator make dealer loan costs immediately obvious?
+- Would an anxious first-time buyer trust this system to protect them from getting ripped off?
+- Does the design empower buyers to negotiate from knowledge, not pressure?
