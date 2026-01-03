@@ -80,7 +80,7 @@ Bookmark became that system—digital app for discovery and recommendations, phy
 
 1. **Logo & Brand Identity System** (wordmark, logomark if appropriate, color system, typography)
 1. **Brand Style Guide** (1-2 pages: logo usage, colors, fonts, voice/tone, visual examples)
-1. **Product Packaging** (physical journal packaging—consider unboxing experience, shelf presence, premium feel)
+1. **Product Packaging** (smart reading light packaging—consider unboxing experience, tech product presentation, premium feel, includes charging cable)
 
 **Students choose:**
 
@@ -96,29 +96,36 @@ Bookmark became that system—digital app for discovery and recommendations, phy
 
 A recommendation engine that learns your reading preferences and suggests books based on patterns in what you’ve loved—but unlike algorithmic platforms, Bookmark captures **context** (who recommended it, why you added it, what mood you were seeking) and **feeling** (emotional response, memorable moments, who else would love it). The system includes a **preference-learning app** and **physical reading journal** that work together to build reading memory.
 
-### Physical Component: Reading Journal
+### Physical Component: Smart Reading Light & Page Holder
 
-**Format:** Hardcover journal (approximately 6”x8”) | 200+ pages | Ribbon bookmark | Lay-flat binding
+**Format:** LED reading light with page-holding clips (approximately 6”x9” illuminated panel) | Rechargeable via USB-C | Bluetooth connectivity | Embedded book-recognition technology
 
-**Structure:**
+**Base Product Reference:** Similar to flat-panel LED reading lights (students can reference existing products like rechargeable book lights on Walmart/Amazon for design mockups)
 
-- **Want to Read** section: Title | Author | Who recommended it | Why it sounds good | Mood/genre tags | Date added
-- **Currently Reading** section: Start date | Page tracker | Thoughts while reading | Quotes worth saving
-- **Completed** section: Finish date | One-sentence feeling | Star rating | Would recommend to (who?) | What to read next based on this
+**Fictitious Smart Features (The “Magic”):**
 
-**Key Features:**
+- **Embedded camera/sensor** “reads” physical book pages via OCR and book recognition technology
+- **Automatic tracking:** Recognizes which book you’re reading, tracks pages read, reading speed, session duration
+- **Bluetooth sync to app:** Sends reading data to Bookmark app in real-time
+- **Unified reading profile:** Also connects to Kindle, Apple Books, Kobo, Google Play Books accounts—tracks ALL reading (physical + digital) in one place
+- **Tactile reading controls:** Touch-sensitive panel to mark quotes, flag pages, add quick notes without phone
 
-- **Quick-capture format** (fill-in-the-blank prompts, not essay prompts)
-- **Recommendation source tracking** (friend name, podcast episode, Instagram account, book club)
-- **Mood/feeling emphasis** (not just genre categorization)
-- **Reading patterns over time** (quarterly reflection pages to see patterns)
+**Physical Features:**
 
-**Why Physical Journal Matters:**
+- **Page-holding clips** keep book open hands-free
+- **Adjustable LED brightness** (warm/cool light settings for day/night reading)
+- **Slim profile** fits in book bag, doesn’t add bulk
+- **Long battery life** (20+ hours reading time per charge)
+- **Durable materials** for daily use (bedside, commute, travel)
 
-- Writing by hand improves memory retention
-- No screen fatigue | Tangible archive of reading life
-- Can be used without phone/app (bedside, coffee shop, waiting room)
-- Premium object that honors reading as valued activity
+**Why Smart Reading Light Works:**
+
+- Solves biggest gap in reading apps: tracking physical book reading automatically
+- Practical function (lights pages, holds book open) + smart technology layer
+- No manual entry required (camera recognizes book, tracks progress passively)
+- Unified profile means recommendations based on ALL reading, not just digital
+- Premium object that enhances reading experience while gathering data
+- Students can easily mockup using existing LED reading light products as reference
 
 ### Digital Component: Recommendation App
 
@@ -143,24 +150,37 @@ A recommendation engine that learns your reading preferences and suggests books 
 **Before Reading:**
 
 - **App:** Add book to TBR with context (who recommended, why, mood tags)
-- **Journal:** Write it in “Want to Read” with personal note about appeal
+- **Reading Light:** Already charged and ready at bedside/reading spot
 
-**During Reading:**
+**During Reading (Physical Books):**
 
-- **App:** Track progress, time reading, receive prompts
-- **Journal:** Capture quotes, thoughts, memorable moments by hand
+- **Reading Light:** Clip onto book, turn on light, camera automatically recognizes book title and author
+- **Passive Tracking:** Device tracks pages read, reading speed, session time—sends to app via Bluetooth
+- **Quick Notes:** Touch panel to flag memorable passages (syncs page numbers to app for later reference)
 
-**After Reading:**
+**During Reading (Digital Books):**
 
-- **Journal:** Write one-sentence feeling, star rating, who’d love it
-- **App:** Photo-capture journal entry, feeds recommendation engine
-- **System learns:** Your taste, which sources to trust, which moods lead to loved books
+- **App:** Connects to Kindle/Apple Books/Kobo accounts, pulls reading data automatically
+- **Unified Profile:** Physical book reading + digital reading combined in one reading history
+
+**After Finishing a Book:**
+
+- **App:** Prompts: “You finished [Book]! One-sentence feeling?” | Rate it | Who’d love this? | What to read next?
+- **Reading Light:** Data already synced—app knows you finished based on pages tracked
+- **Pattern Learning:** App analyzes: You loved books you described as “beautiful sentences”—here are similar books
 
 **Recommendation Flow:**
 
-- App suggests books based on feeling/mood patterns from journal entries
-- Shows “You loved [Book A] because ‘beautiful sentences’—try [Book B], readers describe it the same way”
-- Tracks whether recommendations hit or miss, adjusts future suggestions
+- App learns patterns from ALL reading (physical + digital): pacing preferences, genre variety, author styles, “feeling” patterns from your one-sentence reflections
+- Suggests books based on: “You loved [Book A] because ‘couldn’t put down’—try [Book B], readers describe it the same way”
+- Reading light provides data richness (did you race through it or savor slowly?), app provides intelligence
+
+**The Integration Advantage:**
+
+- No manual logging for physical books (camera does the work)
+- Digital books sync automatically (connected accounts)
+- One complete reading profile powers better recommendations
+- Reading light enhances experience (better lighting, hands-free) while gathering preference data
 
 ### Why This Works When Others Don’t
 
@@ -218,14 +238,14 @@ James reads 2-3 books monthly, summer reading jumps to 8-10/month. Income ~$54K.
 
 ### Print Deliverable Options (Choose 2 Beyond Required Packaging)
 
-**Required: Physical Reading Journal Packaging**
-How does packaging communicate this is a premium tool, not just a notebook? Should packaging include setup guide (how to use journal + app together)? What unboxing experience makes readers excited to start? How does retail presence differentiate from blank journals or planners? Consider: sustainable materials signal quality, die-cut window shows journal cover, magnetic closure feels premium.
+**Required: Smart Reading Light Packaging**
+How does packaging communicate this is smart tech + premium reading tool (not just book light)? Should packaging include quick-start guide (pairing with app, connecting digital reading accounts)? What unboxing experience makes readers excited to start tracking? How does retail presence differentiate from standard book lights? Consider: Window showing actual device, sustainable materials signal quality, “Tracks physical + digital reading” messaging, includes USB-C charging cable, tech product aesthetic (Apple/premium gadget vibe) not novelty gift.
 
-**Option 1: Reading Journal Companion Guide**
-Small booklet (16-24 pages) included with journal. How introduce the Bookmark system without overwhelming? What goes on page 1—philosophy or instructions? Should it include sample entries to show “quick capture” in action? How make this inspiring not instructional? Consider: fold-out quick reference, perforated bookmark with prompts.
+**Option 1: Quick Start Guide & Tech Setup Card**
+Included with reading light. How introduce Bookmark system (device + app) without overwhelming? What goes on page 1—pairing instructions or philosophy? Should it include troubleshooting (device won’t recognize book, Bluetooth connection issues)? How explain unified reading profile (physical + digital books tracked together)? Consider: Fold-out quick reference, QR code for app download, illustrated pairing steps, charging instructions, book recognition tips (optimal lighting, page positioning).
 
-**Option 2: Bookmark Collection Set (Physical Bookmarks)**
-Premium bookmark set (6-10 bookmarks) for active readers. How do these connect to brand visually? Should each have mood/genre on one side, note space on reverse? What material feels premium enough to keep? How does packaging display them (envelope, box, belly band)? Consider: Letterpress, unique shapes, writable surface with pencil included.
+**Option 2: Reading Light Accessories Kit**
+Premium add-ons for the smart reading light. What accessories enhance experience? Protective travel case? Additional charging cable? Adjustable stand for hands-free reading? Page-holding clip extenders for larger books? How package accessories (individual or bundled)? Consider: Premium carrying case (protects device during travel), desk stand (converts reading light to bedside display), cleaning cloth for camera lens, cable organizer, “Power Reader Kit” branding.
 
 **Option 3: Point-of-Sale Display for Bookstores**
 Bookstore counter/shelf presence when there’s no staff recommendation. What information beyond package? How prominently feature “remember the feeling” differentiator? Should it include sample journal pages or app screenshots? Format: countertop easel, shelf talker, hanging display? Consider: indie bookstore aesthetic vs. chain store presence.
@@ -244,8 +264,8 @@ Independent bookstore partnership—posters for stores that carry Bookmark. Info
 
 ### Digital Deliverable Options (Choose 2, or 1 if Designing Physical Product)
 
-**Physical Product Design: The Reading Journal (Counts as 1 Digital Deliverable)**
-Design the actual journal as digital mockup. Dimensions (6”x8” suggested, but explore), cover material/finish, interior page layouts (Want to Read / Currently Reading / Completed sections), ribbon bookmark color, binding type. How does cover communicate “sophisticated tool for serious readers”? What interior typography makes quick-capture feel easy? Consider: Lay-flat binding requirement, cover debossing/foiling, paper quality signaling.
+**Physical Product Design: The Smart Reading Light (Counts as 1 Digital Deliverable)**
+Design the actual reading light device as digital mockup. Dimensions (6”x9” illuminated panel suggested, but explore), materials (durable plastic, metal accents, soft-touch coating?), LED panel design (edge-lit, brightness controls, warm/cool light toggle), page-holding clip mechanism (spring-loaded, adjustable width), camera/sensor placement (discreet, optimal for page recognition), touch-sensitive control panel (brightness, note flagging, power), charging port location (USB-C), brand logo placement, color options (reader-friendly neutrals or premium tech aesthetic?). How does industrial design communicate “smart tech” + “premium reading tool”? What makes it distinctive from generic book lights? Consider: Apple-level product design quality, ergonomic grip for one-handed use, minimal light bleed (focused on page only), folds flat for travel, premium weight/feel, camera indicator light (privacy consideration).
 
 **Option 1: Mobile App Interface Design**
 Key screens: Dashboard (current reads, TBR at-a-glance, recommendation widget) | TBR Management (search, filter, sort by source/mood/priority) | Book Detail (why you added it, who recommended, progress if reading) | Recommendation Feed (suggested books with reasoning) | Source Analysis (which recommenders match your taste) | Reading Stats (monthly/yearly overview). How make data-rich interface feel calm not overwhelming? How make “capture context” feel fast? Consider: One-tap save from screenshots, voice note integration.
@@ -270,8 +290,8 @@ Length (60 seconds recommended for social, 90-120 for website)? Animation style�
 
 ### Multi-Page Layout Options (Choose 1, Minimum 8 Pages/Slides)
 
-**Option 1: Complete Reading Journal Interior (Cover + 8-12 Spreads)**
-Design actual journal pages for production. Include: Introduction/how to use | Want to Read section (with prompts) | Currently Reading section (with progress tracking) | Completed section (with feeling capture) | Quarterly Reflection pages | Recommendation Source tracker | Reading Goals pages. Not blank notebook—guided experience with prompts. Typography hierarchy for scanning vs. deep reading. Consider: Grid system for handwriting, perforated pages for sharing recommendations, pocket for receipts/bookmarks.
+**Option 1: Complete Smart Reading Light User Guide**
+Comprehensive guide for device + app system. Include: **Introduction** (welcome, what makes this different from regular book light) | **Getting Started** (charging, pairing with app, connecting digital reading accounts) | **Physical Book Reading** (how camera recognizes books, optimal positioning, page-holding clip usage, flagging quotes with touch panel) | **Digital Book Integration** (linking Kindle/Apple Books/Kobo accounts, unified reading profile) | **App Features** (recommendations based on reading patterns, TBR management, reading stats) | **Troubleshooting** (book not recognized, Bluetooth connection issues, battery optimization, camera lens cleaning) | **Advanced Features** (reading speed insights, genre diversity tracking, friend recommendations). Not just instruction manual—guide to transforming reading life. Typography for easy scanning, illustrated device diagrams. Consider: QR codes to video tutorials, progressive disclosure (basic → advanced), actual reader testimonials, reading habit formation tips.
 
 **Option 2: Brand Guidelines Document (Comprehensive)**
 Full standards guide for Bookmark brand. Include: Logo (wordmark, logomark, clear space, sizing, incorrect usage) | Color system (primary, secondary, accessibility compliance) | Typography (headings, body, UI, print vs. digital) | Voice/Tone (how Bookmark speaks—sophisticated but warm, example copy) | Photography style | Iconography | Physical product applications | Digital UI elements | Social media templates | Partnerships (indie bookstore co-branding guidelines). Make this reflect brand personality not dry corporate manual. Consider: Actual product mockups showing guidelines in action.
@@ -314,31 +334,32 @@ Look: Pew Research Center (reading statistics) | Publishing industry reports | A
 
 **What you need from them:**
 
-- Recommendation algorithm technical specs (how does it learn from journal entries?)
-- App data structure (how are books, sources, moods, feelings stored/tagged?)
-- Journal-to-app sync workflow (photo capture process, OCR capabilities?)
-- Source tracking implementation (how does app analyze recommender success rates?)
-- Discovery mode parameters (how does algorithm suggest outside filter bubble?)
+- Book recognition technology specs (how does camera/OCR identify books? accuracy rates? lighting requirements?)
+- Bluetooth connectivity implementation (pairing process, data sync frequency, battery impact?)
+- Digital reading account API integration (which services allow data access? Kindle, Apple Books, Kobo capabilities?)
+- Reading tracking algorithm (how distinguish active reading from device being left on? page turn detection?)
+- Device battery optimization (how long between charges with typical reading usage?)
 
 **What they need from you:**
 
-- Brand assets (logo files, color codes, typography specifications for app UI)
-- UI design specifications (screen layouts, component library, interaction patterns)
-- Iconography (for moods, genres, sources, features—consistent visual system)
-- Copywriting (microcopy for prompts, error messages, empty states, onboarding)
-- User flow priorities (which features are primary vs. secondary in navigation?)
+- Brand assets (logo files, color codes, typography specifications for app UI and device branding)
+- Industrial design specifications (device dimensions, button/control placement, LED panel design, camera positioning)
+- UI design specifications for app (screen layouts, component library, interaction patterns for device pairing)
+- Device interaction design (touch panel controls, visual feedback for camera recognition, charging indicators)
+- User flow priorities (device setup process, book recognition feedback, app pairing experience)
 
 **How to work together:**
-Regular check-ins on technical constraints that affect design. Ask questions early about feasibility (Can journal sync work with handwriting? How accurate is mood pattern recognition?). Share work-in-progress for feedback. Be open to technical limitations requiring design adaptation. Explain design rationale (why sophisticated not cozy, why source tracking matters visually). They’re building the engine, you’re designing the experience—both essential.
+Regular check-ins on technical constraints that affect design. Ask questions early about feasibility (Can camera really recognize any book? How accurate is OCR in various lighting? Which digital reading platforms allow API access?). Share work-in-progress for feedback. Be open to technical limitations requiring design adaptation (maybe camera needs optimal lighting conditions, maybe some e-reader accounts can’t sync). Explain design rationale (why device needs to feel premium not novelty, why camera placement matters for natural reading position, why touch controls should be intuitive for readers holding book). They’re building the recognition engine and connectivity, you’re designing the physical reading experience enhancement—both essential.
 
 ### Final Reminders
 
-This is not fill-in-the-blank work—creativity happens in how you interpret “sophisticated guide for readers.” Book recommendation apps often look cozy-cute or corporate-sterile. Bookmark should feel like a tool for discerning readers who take their reading life seriously. Your unique value proposition is **capturing context and feeling so readers remember**, not just consuming content. Emphasize the physical + digital integration—this only works because handwriting improves memory and the app provides intelligence. Every design decision needs rationale. This is portfolio-worthy work that demonstrates you understand: brand positioning, designing for meaningful behavior change, physical + digital product ecosystems, and sophisticated design for intelligent audiences.
+This is not fill-in-the-blank work—creativity happens in how you interpret “sophisticated guide for readers.” Book recommendation apps often look cozy-cute or corporate-sterile. Bookmark should feel like a tool for discerning readers who take their reading life seriously. Your unique value proposition is **automatic tracking of physical + digital reading so recommendations are based on complete reading life**, not just what you manually log or only digital books. Emphasize the physical device enhances reading (better light, hands-free pages) while passively gathering intelligence for the app. Every design decision needs rationale. This is portfolio-worthy work that demonstrates you understand: brand positioning for smart home/IoT product, designing physical tech that enhances analog experience, hardware + software ecosystem integration, and sophisticated design for intelligent audiences.
 
 **Keep asking yourself:**
 
-- Does this feel like a tool for serious readers or casual browsers?
-- Am I showing how physical journal + app work together, not separately?
-- Does “remember the feeling” come through in visual and verbal language?
-- Would this make someone choose Bookmark over free Goodreads?
-- Does the design respect readers’ intelligence and time?
+- Does this feel like premium tech for serious readers or a novelty gadget?
+- Am I showing how device + app work together seamlessly, not separately?
+- Does “automatic tracking” come through (no manual logging hassle)?
+- Would someone choose Bookmark’s smart device over free Goodreads?
+- Does the industrial design respect readers’ focus and book-as-object appreciation?
+- Does the device feel like it belongs in a reader’s hands during their most focused time?
