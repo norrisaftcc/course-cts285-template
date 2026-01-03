@@ -953,6 +953,10 @@ The Algorithm provides structure. Structure provides safety. Safety provides lea
 **Now go forth and create excellent assignments.**
 
 ---
+Additional context:
+the file 26SP_Planning/ProjectAlignment.md contains information on the alignment of creative briefs subtask. Reference it if necessary, and update it if it is out of date please, if we're doing something within that subfolder.
+
+---
 
 *Document Version: 1.0*  
 *For: Claude Code instances working on AlgoCratic Futures*  
