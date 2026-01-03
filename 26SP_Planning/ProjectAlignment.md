@@ -4,8 +4,8 @@
 
 **Purpose**: This document helps future Claude Code instances quickly understand and continue the alignment work for capstone project briefs.
 
-**Last Updated**: 2026-01-03
-**Current Status**: All Recommendation Engine aligned briefs complete (split format migration done)
+**Last Updated**: 2026-01-03 (evening)
+**Current Status**: Commerce/Financial Engine 6 of 7 complete; hybrid workflow (Linx + scrum-team-engineer) now recommended
 
 ---
 
@@ -33,7 +33,7 @@ When resuming alignment work:
    ```
 
 2. **Key Issues to Review**:
-   - **Issue #5**: Commerce/Financial Engine aligned briefs (OPEN - 3 remaining)
+   - **Issue #5**: Commerce/Financial Engine aligned briefs (OPEN - 1 remaining: Trusty)
    - **Issue #6**: Task Manager Engine aligned briefs (OPEN - 3 remaining)
    - **Issue #7**: Blocking issues (Data Tracking still blocked)
    - **Issue #10**: Recommendation Engine aligned briefs (CLOSED - complete)
@@ -106,8 +106,8 @@ When resuming alignment work:
 | AF_PayComply | ✅ | ✅ | Complete |
 | Atlas_TravelExpenses | ✅ | ✅ | Complete |
 | Bag_CollegeFinance | ✅ | ✅ | Complete (split format: _base + _technical) |
-| PocketBack_ExpenseTracker | ✅ | ❌ | **Needs alignment** |
-| Sprout_FamilyFinance | ✅ | ❌ | **Needs alignment** |
+| PocketBack_ExpenseTracker | ✅ | ✅ | Complete (split format: _base + _technical, PR #19) |
+| Sprout_FamilyFinance | ✅ | ✅ | Complete (split format: _base + _technical, PR #20) |
 | Trusty_ProjectExpenseTracker | ✅ | ❌ | **Needs alignment** |
 
 ### Task Manager Engine (Issue #6)
@@ -348,9 +348,50 @@ When creating split-format aligned briefs:
 
 **Example**: Issue #15 tracked 3 products (Bookmark, LetsEat, Ride), each with separate PR (#16, #17, #18)
 
+### Hybrid Workflow (Linx + Scrum-Team-Engineer) ⭐ RECOMMENDED
+**Introduced**: 2026-01-03 for PocketBack and Sprout (PRs #19, #20)
+
+This workflow leverages each agent's strengths for split-file aligned briefs:
+
+**Step-by-step process:**
+1. **Linx** reviews the source GRD brief (e.g., `Product.md`)
+2. **Linx** creates the `_base.md` file (Parts 1-4) as her iterative pass:
+   - Preserves all original creative content
+   - Adds core innovation explainers
+   - Enhances clarity and organization
+   - Elevates brand values
+   - Incorporates editorial improvements
+3. **Scrum-team-engineer** creates the `_technical.md` file (Parts 5-6):
+   - Engine capability mapping
+   - Database entity alignment with extensions
+   - Complete YAML configuration (not snippets)
+   - Asset delivery specifications
+   - API integration points
+   - 8-week sprint collaboration guide
+4. **Create feature branch** and commit both files
+5. **Create PR** with both documents
+6. **Update issue** with completion comment
+
+**Why this works:**
+- **Linx** brings brand depth, voice consistency, and editorial refinement to creative content
+- **Scrum-team-engineer** brings technical precision for database schemas, API specs, and platform integration
+- Clear separation of concerns (creative vs. technical)
+- Both agents working in parallel on their strengths
+- Consistent quality across both document types
+
+**When to use:**
+- Split-file format products (complex, >2000 lines expected)
+- Products requiring deep technical mapping (multi-user systems, complex workflows)
+- When both brand refinement AND technical depth are needed
+
+**Examples:**
+- PocketBack_ExpenseTracker (PR #19): Dual-use case system, B2B2E model
+- Sprout_FamilyFinance (PR #20): Multi-account family structure, age-appropriate transparency
+
 ### Batch Sizing
 - **Single-file**: 2-3 aligned briefs per batch (~3000-4000 lines total)
 - **Split-file**: 1 product per PR (easier review, clearer git history)
+- **Hybrid workflow**: 1 product per PR (Linx → scrum-team-engineer → commit)
 - Pattern: Mix satirical (AF_) with genuine market products
 
 ---
@@ -399,14 +440,14 @@ When creating split-format aligned briefs:
   - [x] RideAligned (split format)
   - [x] AF_PreferenceOptimizerAligned (split format)
 - [x] Bag_CollegeFinanceAligned (split format: _base + _technical)
+- [x] PocketBack_ExpenseTrackerAligned (split format: _base + _technical, PR #19, hybrid workflow)
+- [x] Sprout_FamilyFinanceAligned (split format: _base + _technical, PR #20, hybrid workflow)
 
 ### Next Priority (Issue #5 - Commerce/Financial Engine)
-Remaining Commerce/Financial aligned briefs (3 products):
-- [ ] PocketBack_ExpenseTrackerAligned
-- [ ] Sprout_FamilyFinanceAligned
+Remaining Commerce/Financial aligned brief (1 product - almost done!):
 - [ ] Trusty_ProjectExpenseTrackerAligned
 
-**Recommendation**: Use single-file format unless documents exceed ~2000 lines
+**Recommendation**: Use hybrid workflow (Linx + scrum-team-engineer) for split-file format
 
 ### Then (Issue #6 - Task Manager Engine)
 Remaining Task Manager aligned briefs (3 products):
@@ -437,7 +478,14 @@ The goal is continuity - each session should be able to pick up where the last l
 
 ## Recent Updates
 
-### 2026-01-03
+### 2026-01-03 (Evening Update)
+- **Hybrid Workflow Introduced**: New recommended workflow using Linx + scrum-team-engineer for split-file briefs
+- **PocketBack_ExpenseTracker Complete**: PR #19 created using hybrid workflow (75KB base + 55KB technical)
+- **Sprout_FamilyFinance Complete**: PR #20 created using hybrid workflow (75KB base + 80KB technical)
+- **Commerce/Financial Engine Progress**: 6 of 7 complete (86%), only Trusty remaining
+- **Workflow Benefits Documented**: Added section explaining why hybrid approach is effective
+
+### 2026-01-03 (Morning)
 - **Recommendation Engine Complete**: All 4 products now have aligned briefs in split format
 - **Issue #15 Closed**: Migration to split format complete (PRs #16, #17, #18)
 - **Issue #10 Closed**: Original Recommendation Engine alignment work complete
@@ -451,7 +499,7 @@ The goal is continuity - each session should be able to pick up where the last l
 
 ---
 
-*Document Version: 2.0*
+*Document Version: 2.1*
 *Created: 2026-01-02*
-*Last Updated: 2026-01-03*
+*Last Updated: 2026-01-03 (evening)*
 *For: Claude Code instances continuing alignment work*
