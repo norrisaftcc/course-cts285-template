@@ -67,13 +67,7 @@ FitCore is a **performance tracking system** that includes a wristband tracker a
 
 ### How Physical + Digital Work Together
 
-Wristband tracks workout performance in real-time (reps, sets, heart rate, form quality). Scale measures body composition weekly. App combines both data sources to answer the question: **“Is my training working?”**
-
-**Example 1—Beginner:** Scale shows 3lb weight loss. App breaks down: lost 5lbs fat, gained 2lbs muscle. Proof that strength training + calorie deficit is working even though “only” 3lbs down.
-
-**Example 2—Intermediate:** Scale shows same weight for 6 weeks. Traditional tracker = plateau, frustration, quit. FitCore shows: down 4% body fat, up 6lbs muscle mass. This is **recomposition**, the goal.
-
-**Example 3—Advanced:** Athlete chasing new squat PR. Wristband shows declining bar speed, elevated resting heart rate. Scale shows water retention up (inflammation marker). App recommends deload week before injury happens.
+The wristband tracks workout performance in real-time (reps, sets, heart rate, form quality) while the scale measures body composition weekly. The app combines both data sources to answer: **“Is my training working?”** It distinguishes between weight changes from fat, muscle, or water, tracks strength progression (1RM increases, PRs), monitors recovery readiness through biometric data, and identifies overtraining patterns before injury occurs. The system shows beginners that body recomposition is happening even when scale weight barely moves, confirms for intermediate users that weight gain is muscle not fat, and warns advanced athletes when recovery is insufficient despite feeling “fine.”
 
 ### Why This System Works When Others Don’t
 
