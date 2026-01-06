@@ -561,7 +561,7 @@ Time tracking integrates with project management—start working on a project, t
 - **Scope protection prompts:** "This is outside agreed scope—bill separately or include?"
 - **Unbilled hours alerts:** "You have 23 hours completed but uninvoiced for Client A—send invoice?"
 
-**ROI calculation:** If you capture just 10 lost hours per month at $75/hour, that's $750/month recovered income. FreelanceFlow pays for itself in the first month.
+**ROI calculation:** If you capture just 10 lost hours per month at $75/hour, that's $750/month recovered income. With typical FreelanceFlow subscriptions ranging from approximately $40–$80 per month depending on configuration, it effectively pays for itself in the first month.
 
 **3. Professional Client Image**
 
