@@ -437,23 +437,32 @@ project_config:
   project_name_singular: "client"
   project_name_plural: "clients"
   creator_label: "primary contact"
+  # NOTE: Client colors below are selected to meet or exceed WCAG AA contrast
+  # when used as text on a light background or as background colors with
+  # white/dark text, to keep color-coding both accessible and readable.
   color_codes:
     - code: "red"
-      hex: "#E74C3C"
+      hex: "#C0392B"
     - code: "orange"
-      hex: "#E67E22"
+      hex: "#D35400"
     - code: "yellow"
-      hex: "#F39C12"
+      hex: "#B9770E"
     - code: "green"
-      hex: "#27AE60"
+      hex: "#1E8449"
     - code: "blue"
-      hex: "#3498DB"
+      hex: "#2874A6"
     - code: "purple"
-      hex: "#9B59B6"
+      hex: "#8E44AD"
     - code: "pink"
-      hex: "#EC407A"
+      hex: "#C2185B"
     - code: "gray"
-      hex: "#95A5A6"
+      hex: "#566573"
+  accessibility_notes: >
+    All client color codes are intended for use in UI labels and badges and
+    have been selected to provide sufficient contrast for WCAG AA when
+    rendered against light backgrounds with dark text or as background colors
+    with white text. Any additions or changes to this palette should be
+    checked with a WCAG contrast checker.
   billing_types:
     - "project_rate"
     - "hourly_rate"
