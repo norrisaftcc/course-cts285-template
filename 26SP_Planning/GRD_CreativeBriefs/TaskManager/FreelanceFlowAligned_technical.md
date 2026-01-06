@@ -1062,8 +1062,8 @@ FreelanceFlow is built by two student teams working in parallel:
 ### Invoice Generation Constraints
 
 **Line Item Character Limits**:
-- "Invoice line item descriptions limited to 50 characters (PDF layout constraints)"
-  - **Design impact**: Truncate with tooltip, or auto-summarize: "Website Design (Project Alpha)"
+- "Invoice line item descriptions support up to 120 characters (with soft wrapping in PDF layout; longer text may be truncated as needed)"
+  - **Design impact**: Prefer concise, scannable descriptions but allow richer detail; implement wrapping in PDF templates and only truncate with tooltip or auto-summarize when exceeding 120 characters (e.g., "Website Design – UX/UI overhaul for Project Alpha").
 
 ---
 
