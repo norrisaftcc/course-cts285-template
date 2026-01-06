@@ -540,7 +540,8 @@ boundary_config:
   enable_do_not_disturb: true
   office_hours_enforcement: true
   capacity_warnings: true
-  overload_threshold: 45  # hours/week warning
+  overload_threshold_default: 45  # default hours/week warning; per-freelancer override recommended
+  overload_threshold_per_freelancer: true
   time_blocking: true
   end_of_day_ritual: true  # "Review tomorrow, close shop" prompt
 
