@@ -351,7 +351,7 @@ FreelanceFlow is a **hybrid physical-digital project management system** designe
 - 18" × 24" digital display (landscape or portrait orientation)
 - Wall-mounted (home office) or desk stand included
 - Touchscreen with stylus input for quick notes and adjustments
-- E-ink technology (readable in any lighting, low power consumption, non-distracting)
+- E-ink technology (grayscale-only; readable in any lighting, low power consumption, non-distracting)
 - Real-time sync with mobile/web apps and client updates
 - Always-on ambient awareness (glance = instant context)
 
