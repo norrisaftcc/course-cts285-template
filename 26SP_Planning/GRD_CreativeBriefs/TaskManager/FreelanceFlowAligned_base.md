@@ -144,7 +144,7 @@ The existing solutions weren't solving the problem. Asana and Trello were built 
 
 **The Solution:**
 
-TalentBridge funded FreelanceFlow as a separate venture, with Sarah as CEO. The company's mission: **Reduce the overhead of freelancing so talented people can focus on their craft, not administrative chaos.**
+TalentBridge funded and incubated FreelanceFlow as an internal product venture, with Sarah leading the FreelanceFlow business as its General Manager while continuing as Director of Freelance Relations at TalentBridge. The venture's mission: **Reduce the overhead of freelancing so talented people can focus on their craft, not administrative chaos.**
 
 The founding philosophy: "You became a freelancer to do work you love, not to spend 20 hours a week on administration. FreelanceFlow handles the overhead so you can focus on the work."
 
