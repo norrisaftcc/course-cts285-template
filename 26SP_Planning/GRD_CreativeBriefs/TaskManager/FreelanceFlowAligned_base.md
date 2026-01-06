@@ -726,7 +726,7 @@ Rachel uses Trello for project tracking (separate board per client), Harvest for
 
 **Outcome:**
 
-Rachel captured 12 additional billable hours in her first month ($900 recovered income). Invoicing went from 3 hours/month of procrastination to 15 minutes/month of one-click generation. Client satisfaction increased—they appreciated the transparent project dashboards. Rachel felt more professional and in control of her business.
+At her standard rate of $75/hour, Rachel captured 12 additional billable hours in her first month ($900 recovered income). Invoicing went from 3 hours/month of procrastination to 15 minutes/month of one-click generation. Client satisfaction increased—they appreciated the transparent project dashboards. Rachel felt more professional and in control of her business.
 
 **Design Takeaway:**
 
