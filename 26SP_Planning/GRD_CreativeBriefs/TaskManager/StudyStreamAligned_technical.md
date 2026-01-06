@@ -2063,7 +2063,7 @@ POST /api/v1/groups
 
 **WebSocket Connection**:
 ```
-wss://api.studystream.app/ws/display?device_token={token}
+wss://api.studystream.app/ws/display  // device authenticates via headers or an initial auth message, not query params
 ```
 
 **Message Types** (Bidirectional):
