@@ -1057,8 +1057,8 @@ FreelanceFlow is built by two student teams working in parallel:
   - **Design impact**: Read-only interface with explicit approval actions
 
 **Secure Link Expiration**:
-- "Access tokens expire after 90 days—client must request new link"
-  - **Design impact**: Expiration notice, "Contact freelancer for updated access" message
+- "Access tokens have a configurable expiration per client/project (default: 90 days); shorter windows or long-term/permanent access can be set based on agreement"
+  - **Design impact**: Show configured expiry (e.g., "Link expires in 7 days / 90 days / does not expire per agreement"), display an expiration notice when access ends, and provide a clear "Contact freelancer for updated access" message to request a new link if needed
 
 ### Time Tracking Constraints
 
