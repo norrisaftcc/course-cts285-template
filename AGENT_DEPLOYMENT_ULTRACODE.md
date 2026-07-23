@@ -40,7 +40,7 @@ Reach for a single agent when the task is self-contained and sequential (size on
 | QA / Test | `test-engineer` | Test authoring & review |
 | Acceptance / internal customer | `product-acceptance-tester` | Validates delivered work against the story, not just the code |
 | Architecture advisor | `product-architect-advisor` | Consulted for design & product-strategy decisions |
-| **Process gate** | `kevin-github-algorithm` | **Enforces** The Sacred Flow™ — checks issues/PRs for compliance |
+| **Process gate** | `kevin-github-algorithm` | **Enforces** The Trusted Flow™ — checks issues/PRs for compliance |
 
 Craft-support agents — `clive-prompt-strategist`, `linx-wordsmith`, `liza-creative-companion` — sit outside the Scrum roles and are pulled in for prompt design, prose polish, and ideation.
 
@@ -56,9 +56,9 @@ Craft-support agents — `clive-prompt-strategist`, `linx-wordsmith`, `liza-crea
 
 ---
 
-## 3. The Sacred Flow™ with GitHub tooling
+## 3. The Trusted Flow™ with GitHub tooling
 
-The Sacred Flow™ (what you may hear called the "Trusted Flow") — **Issue → Branch → Code → PR → Review → Merge** — is not optional ceremony. Each stage produces an artifact the next stage depends on for traceability. Skip a stage and you break the audit trail; a broken audit trail is a blocked merge.
+The Trusted Flow™  — **Issue → Branch → Code → PR → Review → Merge** — is not optional ceremony. Each stage produces an artifact the next stage depends on for traceability. Skip a stage and you break the audit trail; a broken audit trail is a blocked merge.
 
 ### 1. Issue
 Every unit of work starts as a GitHub Issue:
@@ -115,7 +115,7 @@ Drive this as a normal Claude Code session. Most steps are single-agent; **step 
    Two *independent* questions, so run them as one `parallel([...])` barrier instead of two sequential prompts. **You** reconcile the task breakdown against the estimate — the workflow gathers, it doesn't decide.
 
 3. **Create the issue & branch — `scrum-project-manager`, then audited by `kevin-github-algorithm`.**
-   *Ask the PM:* "Open a GitHub issue from this story using our template, then create `feature/citizen-07-transaction-validation`." *Then ask Kevin:* "Audit this issue and branch for Sacred Flow™ compliance." (The Scrum Master authors; Kevin gates — never the same agent.)
+   *Ask the PM:* "Open a GitHub issue from this story using our template, then create `feature/citizen-07-transaction-validation`." *Then ask Kevin:* "Audit this issue and branch for Trusted Flow™ compliance." (The Scrum Master authors; Kevin gates — never the same agent.)
 
 4. **★ Implement + adversarially verify — ultracode `find → verify`.**
    The payoff. One workflow: `scrum-team-engineer` implements, then **three separate agent instances** try to *refute* the result at once — `test-engineer` hunts uncovered inputs, a second `scrum-team-engineer` instance reviews the diff, `product-architect-advisor` checks architectural fit. Because they're distinct instances, no one grades their own homework. The "zero-amount" gap surfaces *this turn* instead of three review cycles later. (Script in §5.)
