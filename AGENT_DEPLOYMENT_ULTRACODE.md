@@ -1,7 +1,7 @@
 # Deploying the Agent Team with Ultracode
 ## A Scrum + GitHub software-development workflow, orchestrated
 
-**Audience:** anyone driving this project's custom Claude Code agents to build software the way we run it — GitHub-based Scrum, following The Sacred Flow™ (Issue → Branch → Code → PR → Review → Merge).
+**Audience:** anyone driving this project's custom Claude Code agents to build software the way we run it — GitHub-based Scrum, following The Trusted Flow™ (Issue → Branch → Code → PR → Review → Merge).
 
 **What this document is:** a practical guide to using **ultracode** (multi-agent orchestration) to put the agent roster to work as a coordinated team, plus a worked example you can copy.
 
