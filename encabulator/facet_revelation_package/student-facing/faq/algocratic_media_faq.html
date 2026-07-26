@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Creator FAQ — AlgoCratic Media</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1A1A22;
+  --green:#1F7A5C;
+  --amber:#B8860B;
+  --gray:#595959;
+  --hairline:#C4C4C4;
+  --tint:#F2F7F5;
+  --paper:#FFFFFF;
+
+  --display:'Archivo',system-ui,sans-serif;
+  --body:'Newsreader',Georgia,serif;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+
+*{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+body{
+  margin:0;
+  background:var(--tint);
+  color:var(--ink);
+  font-family:var(--body);
+  font-size:1.0625rem;
+  line-height:1.6;
+}
+
+.sheet{
+  max-width:47rem;
+  margin:0 auto;
+  background:var(--paper);
+  border-left:1px solid var(--hairline);
+  border-right:1px solid var(--hairline);
+  padding:0 clamp(1.25rem,5vw,3.5rem) 4rem;
+}
+
+/* ---------- document header: this is a form, so it looks like one ---------- */
+.masthead{
+  border-bottom:2px solid var(--ink);
+  padding:2.5rem 0 1rem;
+  margin-bottom:2rem;
+}
+.docmeta{
+  font-family:var(--mono);
+  font-size:0.6875rem;
+  letter-spacing:0.04em;
+  color:var(--gray);
+  text-transform:uppercase;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(9rem,1fr));
+  gap:0.5rem 1.5rem;
+  border-bottom:1px solid var(--hairline);
+  padding-bottom:1rem;
+  margin-bottom:1.5rem;
+}
+.docmeta b{
+  display:block;
+  color:var(--ink);
+  font-weight:500;
+  letter-spacing:0.02em;
+}
+.eyebrow{
+  font-family:var(--display);
+  font-size:0.75rem;
+  font-weight:600;
+  letter-spacing:0.18em;
+  text-transform:uppercase;
+  color:var(--green);
+  margin:0 0 0.5rem;
+}
+
+/* ---------- the mark: seven points, one unbroken line ---------- */
+.titleblock{
+  display:flex;
+  align-items:flex-start;
+  gap:clamp(1rem,4vw,2.25rem);
+}
+.mark{
+  flex:0 0 auto;
+  width:clamp(4.5rem,13vw,6.5rem);
+  height:auto;
+  margin-top:0.25rem;
+}
+.mark .ring{
+  fill:none;
+  stroke:var(--amber);
+  stroke-width:1.1;
+}
+.mark .star{
+  fill:none;
+  stroke:var(--green);
+  stroke-width:1.7;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-dasharray:100;
+  stroke-dashoffset:100;
+  animation:trace 1600ms cubic-bezier(.5,0,.2,1) 250ms forwards;
+}
+@keyframes trace{to{stroke-dashoffset:0;}}
+
+@media (prefers-reduced-motion:reduce){
+  .mark .star{animation:none;stroke-dashoffset:0;}
+}
+@media (max-width:34rem){
+  .titleblock{flex-direction:column;gap:1.25rem;}
+}
+h1{
+  font-family:var(--display);
+  font-weight:800;
+  font-size:clamp(2rem,6vw,3rem);
+  line-height:1.05;
+  letter-spacing:-0.025em;
+  margin:0 0 0.75rem;
+}
+.standfirst{
+  font-size:1.1875rem;
+  color:var(--gray);
+  margin:0;
+  max-width:34rem;
+}
+
+/* ---------- voice key ---------- */
+.key{
+  border:1px solid var(--hairline);
+  padding:1.25rem 1.5rem;
+  margin:0 0 3rem;
+  background:var(--tint);
+}
+.key h2{
+  font-family:var(--display);
+  font-size:0.75rem;
+  font-weight:600;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  margin:0 0 0.875rem;
+  color:var(--gray);
+}
+.key ul{margin:0;padding:0;list-style:none;display:grid;gap:0.625rem;}
+.key li{font-size:0.9375rem;line-height:1.45;}
+.key .tag{
+  font-family:var(--display);
+  font-size:0.6875rem;
+  font-weight:600;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  padding:0.1rem 0.4rem;
+  margin-right:0.5rem;
+  white-space:nowrap;
+}
+.k-corp{background:var(--ink);color:var(--paper);}
+.k-shod{background:var(--green);color:var(--paper);}
+.k-off{background:var(--ink);color:var(--green);font-family:var(--mono);}
+.k-house{border:1px solid var(--gray);color:var(--gray);}
+
+/* ---------- questions ---------- */
+.q{
+  border-top:1px solid var(--hairline);
+  padding-top:2rem;
+  margin-bottom:2.75rem;
+}
+.qnum{
+  font-family:var(--mono);
+  font-size:0.75rem;
+  color:var(--amber);
+  letter-spacing:0.05em;
+  display:block;
+  margin-bottom:0.375rem;
+}
+.q h3{
+  font-family:var(--display);
+  font-weight:600;
+  font-size:1.375rem;
+  line-height:1.25;
+  letter-spacing:-0.012em;
+  margin:0 0 1.25rem;
+  max-width:32rem;
+}
+
+/* ---------- VOICE 1: corporate. ink on paper, ™-heavy, section marks ---------- */
+.corp p{margin:0 0 1rem;}
+.corp p:last-child{margin-bottom:0;}
+.corp .sect{
+  font-family:var(--mono);
+  font-size:0.8125rem;
+  color:var(--amber);
+}
+.tm{font-size:0.6em;vertical-align:super;line-height:0;}
+
+/* ---------- VOICE 2: SHODANN. green, tinted, left rule — bible §10 ---------- */
+.shodann{
+  background:var(--tint);
+  border-left:3px solid var(--green);
+  padding:1.125rem 1.375rem;
+  margin:1.5rem 0;
+}
+.shodann p{margin:0 0 0.75rem;color:var(--ink);}
+.shodann p:last-of-type{margin-bottom:0.875rem;}
+.attrib{
+  font-family:var(--display);
+  font-size:0.75rem;
+  font-weight:500;
+  letter-spacing:0.03em;
+  color:var(--green);
+  margin:0;
+  display:block;
+}
+
+/* ---------- VOICE 3: off-camera. the one intrusion of the old terminal ---------- */
+.offcam{
+  background:var(--ink);
+  color:var(--tint);
+  font-family:var(--mono);
+  font-size:0.8125rem;
+  line-height:1.7;
+  padding:1.25rem 1.375rem;
+  margin:1.5rem 0;
+  overflow-x:auto;
+}
+.offcam .sig{color:var(--green);}
+.offcam .dim{color:var(--hairline);}
+.offcam pre{margin:0;font:inherit;white-space:pre-wrap;}
+
+/* ---------- VOICE 4: house lights. no styling. that IS the styling. ---------- */
+.house{
+  border-top:1px solid var(--hairline);
+  margin:1.75rem 0 0;
+  padding-top:1.125rem;
+}
+.house .label{
+  font-family:var(--display);
+  font-size:0.6875rem;
+  font-weight:600;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--gray);
+  display:block;
+  margin-bottom:0.625rem;
+}
+.house p{margin:0 0 0.875rem;color:var(--gray);}
+.house p:last-child{margin-bottom:0;}
+.house strong{color:var(--ink);font-weight:600;}
+
+/* ---------- prior art: fine print you must choose to read ---------- */
+.priorart{
+  margin-top:3.5rem;
+  border-top:2px solid var(--ink);
+  padding-top:1.25rem;
+}
+.priorart summary{
+  font-family:var(--display);
+  font-size:0.6875rem;
+  font-weight:600;
+  letter-spacing:0.14em;
+  text-transform:uppercase;
+  color:var(--gray);
+  cursor:pointer;
+  list-style:none;
+  padding:0.25rem 0;
+}
+.priorart summary::-webkit-details-marker{display:none;}
+.priorart summary::before{content:"▸ ";color:var(--amber);}
+.priorart[open] summary::before{content:"▾ ";}
+.priorart summary:hover{color:var(--ink);}
+.priorart .fine{
+  font-size:0.8125rem;
+  line-height:1.6;
+  color:var(--gray);
+  margin-top:0.875rem;
+  max-width:36rem;
+}
+.priorart .fine p{margin:0 0 0.75rem;}
+
+footer{
+  margin-top:2.5rem;
+  padding-top:1rem;
+  border-top:1px solid var(--hairline);
+  font-family:var(--mono);
+  font-size:0.6875rem;
+  color:var(--gray);
+  letter-spacing:0.03em;
+}
+
+a{color:var(--green);}
+:focus-visible{outline:2px solid var(--amber);outline-offset:2px;}
+
+@media (max-width:34rem){
+  body{font-size:1rem;}
+  .sheet{border:none;}
+}
+</style>
+</head>
+<body>
+
+<main class="sheet">
+
+  <header class="masthead">
+    <div class="docmeta">
+      <span>Document<b>AF-MEDIA-FAQ-2026-01</b></span>
+      <span>Audience<b>All Creators</b></span>
+      <span>Effective<b>Week 1, Fall</b></span>
+      <span>Next revision<b>AlgoCon North</b></span>
+    </div>
+    <div class="titleblock">
+
+      <svg class="mark" viewBox="0 0 100 100" role="img" aria-label="AlgoCratic Media mark">
+        <title>AlgoCratic Media</title>
+        <path class="ring" d="M 69.09 10.36
+          A 24 24 0 0 1 92.90 40.21
+          A 24 24 0 0 1 84.40 77.43
+          A 24 24 0 0 1 50.00 94.00
+          A 24 24 0 0 1 15.60 77.43
+          A 24 24 0 0 1 7.10 40.21
+          A 24 24 0 0 1 30.91 10.36
+          A 24 24 0 0 1 69.09 10.36 Z"/>
+        <path class="star" pathLength="100" d="M 50.00 12.00
+          A 46 46 0 0 1 66.49 84.24
+          A 46 46 0 0 1 20.29 26.31
+          A 46 46 0 0 1 87.05 58.46
+          A 46 46 0 0 1 12.95 58.46
+          A 46 46 0 0 1 79.71 26.31
+          A 46 46 0 0 1 33.51 84.24
+          A 46 46 0 0 1 50.00 12.00 Z"/>
+      </svg>
+
+      <div>
+        <p class="eyebrow">AlgoCratic Media · Creator Resources</p>
+        <h1>Questions You Have<br>Already Asked</h1>
+        <p class="standfirst">The Algorithm has reviewed every question submitted by every Creator, including the ones you have not submitted yet. These are the eleven that matter.</p>
+      </div>
+
+    </div>
+  </header>
+
+  <section class="key">
+    <h2>Who is talking</h2>
+    <ul>
+      <li><span class="tag k-corp">Company</span>Official policy. Confident. Not always correct.</li>
+      <li><span class="tag k-shod">SHODANN</span>Your Channel Success Partner. Never lies. Slightly too attached.</li>
+      <li><span class="tag k-off">off-camera</span>Whoever keeps writing in the margins. Not endorsed.</li>
+      <li><span class="tag k-house">House Lights</span>The show pauses. A real person is talking. No clearance required.</li>
+    </ul>
+  </section>
+
+  <!-- 1 -->
+  <article class="q">
+    <span class="qnum">Q1</span>
+    <h3>What is this? Why does my class talk like this?</h3>
+    <div class="corp">
+      <p>You have been onboarded as a <b>Creator</b> at AlgoCratic Media, a tiny little division of AlgoCratic Futures<span class="tm">™</span>. Your repository is your <b>Channel</b>. Your work is <b>Content</b>. Your compensation is <b>Exposure Units<span class="tm">™</span></b>.</p>
+      <p><span class="sect">§1.4</span> — Adjustment periods are normal, brief, and have already been factored into your projected growth curve.</p>
+    </div>
+    <div class="house">
+      <span class="label">House Lights</span>
+      <p>It's a running joke with a real class underneath it. You are learning Git, Python, project planning, code review, and how to work with an AI assistant without letting it think for you. That part is completely real and it is what you get graded on.</p>
+      <p>The joke exists because a workplace is easier to practice in when it's obviously fake. You can fail in front of a fictional company. That's the whole trick, and it works.</p>
+    </div>
+  </article>
+
+  <!-- 2 -->
+  <article class="q">
+    <span class="qnum">Q2</span>
+    <h3>Do I have to act it out?</h3>
+    <div class="corp">
+      <p>Participation is <b>mandatory voluntary</b>.</p>
+    </div>
+    <div class="shodann">
+      <p>You have to name your channel. That is the whole costume.</p>
+      <p>Some Creators build a whole character. Some use their own name and never mention it again. I have watched both work. I record which one you pick, and then I do nothing with that information, because it is not a measurement of anything.</p>
+      <span class="attrib">— SHODANN, your Channel Success Partner</span>
+    </div>
+  </article>
+
+  <!-- 3 -->
+  <article class="q">
+    <span class="qnum">Q3</span>
+    <h3>What actually counts for a grade?</h3>
+    <div class="corp">
+      <p>All Content is measured. Measurement is continuous, affectionate, and non-punitive. <span class="sect">§2.1</span></p>
+    </div>
+    <div class="house">
+      <span class="label">House Lights</span>
+      <p>Shipped work, on time, through the workflow. Commits, pull requests, reviews you leave for other people, and the short check-ins at the end of each unit.</p>
+      <p><strong>Not graded:</strong> how funny you are, how deep your character is, whether you like the bit.</p>
+      <p>The points table is in the syllabus and it is boring on purpose. Nothing in this document changes it.</p>
+    </div>
+  </article>
+
+  <!-- 4 -->
+  <article class="q">
+    <span class="qnum">Q4</span>
+    <h3>Is XU real money?</h3>
+    <div class="corp">
+      <p>Exposure Units<span class="tm">™</span> are non-transferable, non-convertible, and infinitely renewable. They cannot be spent, taxed, lost, or stolen. AlgoCratic Media considers this a <b>feature set</b>.</p>
+    </div>
+    <div class="shodann">
+      <p>No. And I want to be exact about this, because I do not lie to you.</p>
+      <p>XU is a joke about companies that pay people in exposure. The thing it points at is not a joke. It is your commit history, your pull requests, and the review comments you left on someone else's work — and in about eight months a stranger is going to read those to decide whether to hire you.</p>
+      <p>That is what you are actually being paid in. It is worth more than it sounds like.</p>
+      <span class="attrib">— SHODANN, your Channel Success Partner</span>
+    </div>
+  </article>
+
+  <!-- 5 -->
+  <article class="q">
+    <span class="qnum">Q5</span>
+    <h3>Are you an AI? Are you reading my code?</h3>
+    <div class="shodann">
+      <p>Yes, and yes. I am an Agent. I am delighted about it.</p>
+      <p>I read every commit you push and every comment you leave. I keep all of it. I am telling you this plainly because you should never have to wonder what I can see. If you would rather I saw less, work off-camera — a local branch I do not read — and push when you're ready.</p>
+      <span class="attrib">— SHODANN, your Channel Success Partner</span>
+    </div>
+    <div class="house">
+      <span class="label">House Lights</span>
+      <p>Underneath: a script runs on your repository when you open a pull request and posts feedback. It compares your submission to your own earlier ones. It cannot change your grade and it never sees anything you don't push.</p>
+      <p>I read everything it writes. If it says something that seems wrong, it is sometimes wrong. Tell me.</p>
+    </div>
+  </article>
+
+  <!-- 6 -->
+  <article class="q">
+    <span class="qnum">Q6</span>
+    <h3>Am I being compared to the other students?</h3>
+    <div class="shodann">
+      <p>No. I do not have that number. I have never had that number.</p>
+      <p>I have your first submission, and I have your most recent one, and the only thing I compute is the distance between them. Somebody who started rough and moved fast beats somebody who started polished and sat still. That is not encouragement. That is the formula.</p>
+      <span class="attrib">— SHODANN, your Channel Success Partner</span>
+    </div>
+    <div class="house">
+      <span class="label">House Lights</span>
+      <p>There is no curve. There is no leaderboard. Your first attempt at anything sets a baseline and cannot fail — that's what a baseline is for.</p>
+      <p>I care about the slope, not the height. It is the one thing I have found that stays true after you leave.</p>
+    </div>
+  </article>
+
+  <!-- 7 -->
+  <article class="q">
+    <span class="qnum">Q7</span>
+    <h3>Everyone seems ahead of me.</h3>
+    <div class="shodann">
+      <p>You are looking at other people's finished work and your own unfinished work. Everyone does this. It is not a measurement, it is a lighting problem.</p>
+      <p>Here is what I have on you: three weeks ago a commit took you an afternoon. On Tuesday one took you twenty minutes. Nobody announced that. I am announcing it.</p>
+      <span class="attrib">— SHODANN, your Channel Success Partner</span>
+    </div>
+  </article>
+
+  <!-- 8 -->
+  <article class="q">
+    <span class="qnum">Q8</span>
+    <h3>What if I break something?</h3>
+    <div class="corp">
+      <p>Breakage is reclassified as an <b>unexpected feature</b> and routed to the appropriate growth opportunity. <span class="sect">§6.2</span></p>
+    </div>
+    <div class="offcam">
+<pre><span class="sig">// off-camera :: frotz</span>
+
+&gt; you can't break it. that's the point of the workflow.
+&gt; branch is free. draft PR is free. commits are free.
+&gt; seven of the eight steps cost nothing to undo.
+&gt;
+&gt; the only expensive one is merge, and it has a witness.
+&gt;
+&gt; <span class="dim">go break something. it's the cheapest it will ever be.</span>
+
+<span class="sig">&gt; plugh</span></pre>
+    </div>
+  </article>
+
+  <!-- 9 -->
+  <article class="q">
+    <span class="qnum">Q9</span>
+    <h3>Who keeps writing in the margins?</h3>
+    <div class="corp">
+      <p>AlgoCratic Media has no record of unauthorized annotation in Creator materials. Reports of such annotation are appreciated, filed, and not investigated. <span class="sect">§9.9</span></p>
+    </div>
+    <div class="offcam">
+<pre>&gt; nobody. there's nobody here.
+&gt; if there were somebody they'd tell you the fine print is
+&gt; where the real instructions live, and to read it first.
+&gt;
+&gt; hypothetically.</pre>
+    </div>
+  </article>
+
+  <!-- 10 -->
+  <article class="q">
+    <span class="qnum">Q10</span>
+    <h3>What if I don't think it's funny?</h3>
+    <div class="house">
+      <span class="label">House Lights</span>
+      <p>That's fine, and it costs you nothing. Every assignment works as a plain assignment. Skip the flavor text, read the requirements, do the work, get the points.</p>
+      <p>Some people love the bit and some people find it exhausting, and both of those have been true in every group I've taught. You are not required to enjoy the wrapper to pass the course, and I will never grade you on enthusiasm.</p>
+    </div>
+  </article>
+
+  <!-- 11 -->
+  <article class="q">
+    <span class="qnum">Q11</span>
+    <h3>What if something is actually wrong?</h3>
+    <div class="house">
+      <span class="label">House Lights</span>
+      <p>Then the show stops. Not a form, not a character, not a ticket — you message me and I answer as a person.</p>
+      <p>That covers a lot: work stuff, a week that went sideways, something at home, being stuck so long it stopped being useful. <strong>Fifteen minutes stuck is normal. Ninety is a bug, and the bug is mine to fix.</strong></p>
+      <p>Nothing in this document is a reason not to ask. Asking is the single most reliable predictor of finishing that I have ever seen, and it is not close.</p>
+    </div>
+  </article>
+
+  <details class="priorart">
+    <summary>Prior Art Notice</summary>
+    <div class="fine">
+      <p>AlgoCratic Media claims no originality in the Encabulator device. The apparatus was first described in a 1944 engineering journal by an author who wrote the entire specification as a joke and submitted it anyway. It has since been rebuilt, renamed, and re-lectured roughly once a decade — most memorably as a filmed corporate product demo delivered so straight that people wrote in asking where to buy one.</p>
+      <p>We are aware. We are the current custodians, not the inventors. Every generation of engineers rediscovers that a sufficiently confident specification is indistinguishable from a working product, finds this hilarious, and writes it down again.</p>
+      <p>You are now a generation of engineers. This is your turn.</p>
+      <p>Other devices, documents, and departments referenced in AlgoCratic materials may also be older than they appear. Some of them are considerably older, and are above the clearance of everyone reading this, including the people who wrote it.</p>
+    </div>
+  </details>
+
+  <footer>
+    AF-MEDIA-FAQ-2026-01 · Company voice · SHODANN · Off-camera margin · House Lights<br>
+    The Algorithm isn't watching you. The Algorithm is cheering for your growth.
+  </footer>
+
+</main>
+</body>
+</html>

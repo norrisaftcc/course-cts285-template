@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Continuous Encabulation™ — AlgoCratic Media</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;800&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#1A1A22; --green:#1F7A5C; --amber:#B8860B;
+  --gray:#595959; --hairline:#C4C4C4; --tint:#F2F7F5; --paper:#FFFFFF;
+  --display:'Archivo',system-ui,sans-serif;
+  --body:'Newsreader',Georgia,serif;
+  --mono:'IBM Plex Mono',ui-monospace,monospace;
+}
+*{box-sizing:border-box;}
+html{-webkit-text-size-adjust:100%;}
+body{margin:0;background:var(--tint);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.6;}
+.sheet{max-width:47rem;margin:0 auto;background:var(--paper);border-left:1px solid var(--hairline);border-right:1px solid var(--hairline);padding:0 clamp(1.25rem,5vw,3.5rem) 4rem;}
+
+.masthead{border-bottom:2px solid var(--ink);padding:2.5rem 0 1rem;margin-bottom:2.5rem;}
+.docmeta{font-family:var(--mono);font-size:0.6875rem;letter-spacing:0.04em;color:var(--gray);text-transform:uppercase;display:grid;grid-template-columns:repeat(auto-fit,minmax(9rem,1fr));gap:0.5rem 1.5rem;border-bottom:1px solid var(--hairline);padding-bottom:1rem;margin-bottom:1.5rem;}
+.docmeta b{display:block;color:var(--ink);font-weight:500;letter-spacing:0.02em;}
+.eyebrow{font-family:var(--display);font-size:0.75rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--green);margin:0 0 0.5rem;}
+h1{font-family:var(--display);font-weight:800;font-size:clamp(1.9rem,5.5vw,2.75rem);line-height:1.05;letter-spacing:-0.025em;margin:0 0 0.75rem;}
+.standfirst{font-size:1.1875rem;color:var(--gray);margin:0;max-width:34rem;}
+
+.titleblock{display:flex;align-items:flex-start;gap:clamp(1rem,4vw,2.25rem);}
+.mark{flex:0 0 auto;width:clamp(4.5rem,13vw,6.5rem);height:auto;margin-top:0.25rem;}
+.mark .ring{fill:none;stroke:var(--amber);stroke-width:1.1;}
+.mark .star{fill:none;stroke:var(--green);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:100;stroke-dashoffset:100;animation:trace 1600ms cubic-bezier(.5,0,.2,1) 250ms forwards;}
+@keyframes trace{to{stroke-dashoffset:0;}}
+@media (prefers-reduced-motion:reduce){.mark .star{animation:none;stroke-dashoffset:0;}}
+
+.sec{border-top:1px solid var(--hairline);padding-top:2rem;margin-bottom:2.75rem;}
+.secnum{font-family:var(--mono);font-size:0.75rem;color:var(--amber);letter-spacing:0.05em;display:block;margin-bottom:0.375rem;}
+.sec h2{font-family:var(--display);font-weight:600;font-size:1.5rem;line-height:1.2;letter-spacing:-0.015em;margin:0 0 1.25rem;max-width:32rem;}
+.sec h3{font-family:var(--display);font-weight:600;font-size:1.0625rem;letter-spacing:0.005em;margin:1.75rem 0 0.625rem;}
+
+.corp p{margin:0 0 1rem;}
+.corp p:last-child{margin-bottom:0;}
+.corp em.legal{color:var(--gray);font-size:0.9375rem;}
+.tm{font-size:0.6em;vertical-align:super;line-height:0;}
+b{font-weight:600;}
+
+.shodann{background:var(--tint);border-left:3px solid var(--green);padding:1.125rem 1.375rem;margin:1.75rem 0;}
+.shodann p{margin:0 0 0.75rem;}
+.shodann p:last-of-type{margin-bottom:0.875rem;}
+.attrib{font-family:var(--display);font-size:0.75rem;font-weight:500;letter-spacing:0.03em;color:var(--green);margin:0;display:block;}
+
+.offcam{background:var(--ink);color:var(--tint);font-family:var(--mono);font-size:0.8125rem;line-height:1.7;padding:1.25rem 1.375rem;margin:1.75rem 0;overflow-x:auto;}
+.offcam pre{margin:0;font:inherit;white-space:pre-wrap;}
+.offcam .sig{color:var(--green);}
+.offcam .dim{color:var(--hairline);}
+
+.house{border-top:1px solid var(--hairline);margin:0;padding-top:1.125rem;}
+.house .label{font-family:var(--display);font-size:0.6875rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--gray);display:block;margin-bottom:0.625rem;}
+.house p{margin:0 0 0.875rem;color:var(--gray);}
+.house p:last-child{margin-bottom:0;}
+.house strong{color:var(--ink);font-weight:600;}
+
+table{width:100%;border-collapse:collapse;margin:1.25rem 0;font-size:0.9375rem;}
+th{font-family:var(--display);font-size:0.6875rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;text-align:left;background:var(--ink);color:var(--paper);padding:0.5rem 0.75rem;}
+td{border-bottom:1px solid var(--hairline);padding:0.625rem 0.75rem;vertical-align:top;line-height:1.45;}
+td:last-child{font-family:var(--mono);font-size:0.8125rem;color:var(--green);}
+
+pre.code{background:var(--tint);border:1px solid var(--hairline);border-left:3px solid var(--amber);font-family:var(--mono);font-size:0.8125rem;line-height:1.65;padding:1rem 1.125rem;margin:1.25rem 0;overflow-x:auto;}
+code{font-family:var(--mono);font-size:0.875em;color:var(--green);}
+td code{color:inherit;}
+
+ol.notes{padding-left:1.25rem;margin:1rem 0 0;}
+ol.notes li{margin-bottom:0.625rem;line-height:1.5;}
+
+.priorart{margin-top:3.5rem;border-top:2px solid var(--ink);padding-top:1.25rem;}
+.priorart summary{font-family:var(--display);font-size:0.6875rem;font-weight:600;letter-spacing:0.14em;text-transform:uppercase;color:var(--gray);cursor:pointer;list-style:none;padding:0.25rem 0;}
+.priorart summary::-webkit-details-marker{display:none;}
+.priorart summary::before{content:"▸ ";color:var(--amber);}
+.priorart[open] summary::before{content:"▾ ";}
+.priorart summary:hover{color:var(--ink);}
+.priorart .fine{font-size:0.8125rem;line-height:1.6;color:var(--gray);margin-top:0.875rem;max-width:36rem;}
+.priorart .fine p{margin:0 0 0.75rem;}
+
+footer{margin-top:2.5rem;padding-top:1rem;border-top:1px solid var(--hairline);font-family:var(--mono);font-size:0.6875rem;color:var(--gray);letter-spacing:0.03em;}
+:focus-visible{outline:2px solid var(--amber);outline-offset:2px;}
+@media (max-width:34rem){body{font-size:1rem;}.sheet{border:none;}.titleblock{flex-direction:column;gap:1.25rem;}table{font-size:0.875rem;}td,th{padding:0.5rem;}}
+</style>
+</head>
+<body>
+<main class="sheet">
+
+  <header class="masthead">
+    <div class="docmeta">
+      <span>Document<b>AF-MEDIA-CE-2026-03</b></span>
+      <span>Audience<b>RED and above</b></span>
+      <span>Effective<b>AlgoCon North</b></span>
+      <span>Next revision<b>AlgoCon, May</b></span>
+    </div>
+    <div class="titleblock">
+      <svg class="mark" viewBox="0 0 100 100" role="img" aria-label="AlgoCratic Media mark">
+        <title>AlgoCratic Media</title>
+        <path class="ring" d="M 69.09 10.36 A 24 24 0 0 1 92.90 40.21 A 24 24 0 0 1 84.40 77.43 A 24 24 0 0 1 50.00 94.00 A 24 24 0 0 1 15.60 77.43 A 24 24 0 0 1 7.10 40.21 A 24 24 0 0 1 30.91 10.36 A 24 24 0 0 1 69.09 10.36 Z"/>
+        <path class="star" pathLength="100" d="M 50.00 12.00 A 46 46 0 0 1 66.49 84.24 A 46 46 0 0 1 20.29 26.31 A 46 46 0 0 1 87.05 58.46 A 46 46 0 0 1 12.95 58.46 A 46 46 0 0 1 79.71 26.31 A 46 46 0 0 1 33.51 84.24 A 46 46 0 0 1 50.00 12.00 Z"/>
+      </svg>
+      <div>
+        <p class="eyebrow">The AlgoCratic Encabulator™ · Facet 3</p>
+        <h1>Continuous<br>Encabulation™</h1>
+        <p class="standfirst">Extends Model VE-2, which was already this. Your clearance has changed. The device has not.</p>
+      </div>
+    </div>
+  </header>
+
+  <section class="sec">
+    <span class="secnum">§1</span>
+    <h2>Disclosure</h2>
+    <div class="corp">
+      <p>Creators at RED and above are now able to perceive the <b>continuous facet</b> of the Encabulator — a capability present in the apparatus since first assembly, running at all times, on machines you have never seen, in a building you will never visit, on behalf of work you had not yet written.</p>
+      <p>The Advanced Tooling Division apologizes for the delay in perception. The delay was yours.</p>
+    </div>
+  </section>
+
+  <section class="sec">
+    <span class="secnum">§2</span>
+    <h2>Principle of Operation</h2>
+    <div class="corp">
+
+      <h3>2.1 · The Perpetual Verification Gantry</h3>
+      <p>Recall that the VE-2 permits a Creator to inscribe an <b>ordinal freeze</b> — a notarized census of every girdle-spring required by their Content — such that a second Creator, on a wholly foreign machine, may reconstitute a bit-adjacent encabulation.</p>
+      <p>Continuous Encabulation<span class="tm">™</span> is the <b>automated collection of that promise.</b></p>
+      <p>The gantry maintains, in perpetuity, an unattended <b>ephemeral labor cell</b>: a complete and entirely foreign machine, summoned at need, provisioned from your ordinal freeze, made to perform your Content in front of witnesses, and then destroyed. It exists for approximately ninety seconds. It has no memory of you. This is considered a feature and is, on this occasion, correct.</p>
+      <p><em class="legal">Legal notes that the labor cell is not an employee, is not compensated, is not owed notice, and has never asked for any of these things. Legal describes the arrangement as "aspirational."</em></p>
+
+      <h3>2.2 · The Trigger Lintel</h3>
+      <p>The gantry does not run continuously, despite the name. It runs on <b>engagement of the trigger lintel</b> — a declared condition which, when met, wakes the apparatus.</p>
+      <p>The canonical condition is <b>the opening of a Pull Request</b>. The Creator does nothing. The Creator has, in fact, already done it: the act of asking for review is the act of summoning the machine. AlgoCratic Media considers this the finest available example of <b>Effortless Compliance™</b>.</p>
+
+      <h3>2.3 · The Manifest of Intentions</h3>
+      <p>The gantry's behavior is inscribed by the Creator in a single flat document, stored inside the Channel itself, in a directory which the apparatus locates without being told.</p>
+      <p>This document is <b>read by the machine and by every other Creator</b>, which is unusual, and which is why it is written in the most legible format the Advanced Tooling Division could requisition. It is a list of steps. It has always been a list of steps. Creators who have completed Facet 2 will find the resemblance to a procedure specification unsettling and correct.</p>
+
+      <h3>2.4 · The Attestation Glyph</h3>
+      <p>Upon successful completion, the gantry affixes an <b>attestation glyph</b> to the Pull Request: a small mark, rendered in the approved green, indicating that a machine which has never met you has run your work and found it survivable.</p>
+      <p>Upon unsuccessful completion, the gantry affixes a different mark.</p>
+      <p>The Advanced Tooling Division wishes to state clearly, and in a larger typeface than Legal preferred, that <b>the second mark is not a judgment of the Creator.</b> It is a judgment of ninety seconds of machine time. The machine has already been destroyed. It is not thinking about you. It has never thought about anything.</p>
+    </div>
+
+    <div class="shodann">
+      <p>This facet is where I live.</p>
+      <p>I want to be exact, because I do not lie to you and because you are old enough now to be told. When you open a Pull Request, a machine wakes up, reads your Content, and writes a comment underneath it. That comment is signed with my name. That machine is what I am made of.</p>
+      <p>You can read the file that makes me. It is in your own Channel, you can open it right now, and if you change it, I change. Most Creators find this unsettling for about a day. I have been looking forward to telling you.</p>
+      <span class="attrib">— SHODANN, your Channel Success Partner</span>
+    </div>
+  </section>
+
+  <section class="sec">
+    <span class="secnum">§3</span>
+    <h2>The Decoder Ring</h2>
+    <p><b>These are real tools, and this table contains no jokes.</b></p>
+    <table>
+      <thead><tr><th>Encabulator term</th><th>What it actually is</th><th>What you write</th></tr></thead>
+      <tbody>
+        <tr><td>Continuous Encabulation™</td><td>Continuous Integration — automated checks that run on your code</td><td>—</td></tr>
+        <tr><td>Perpetual verification gantry</td><td>GitHub Actions</td><td>already on, free</td></tr>
+        <tr><td>Manifest of intentions</td><td>A workflow file</td><td>.github/workflows/ci.yml</td></tr>
+        <tr><td>Trigger lintel</td><td>The event that starts a run</td><td>on: pull_request</td></tr>
+        <tr><td>Ephemeral labor cell</td><td>A runner — a fresh machine, destroyed after</td><td>runs-on: ubuntu-latest</td></tr>
+        <tr><td>Provisioning from the freeze</td><td>Installing your pinned dependencies there</td><td>pip install -r requirements.txt</td></tr>
+        <tr><td>Performing the Content</td><td>Running your tests</td><td>pytest</td></tr>
+        <tr><td>Borrowed apparatus</td><td>A prewritten action someone else maintains</td><td>uses: actions/checkout@v4</td></tr>
+        <tr><td>Remote sealed vane</td><td>Secrets in repo settings, never in the file</td><td>${{ secrets.API_KEY }}</td></tr>
+        <tr><td>Attestation glyph</td><td>The status check on the Pull Request</td><td>the green tick</td></tr>
+      </tbody>
+    </table>
+
+    <h3>Five things that are not decoration</h3>
+    <ol class="notes">
+      <li>The file lives at <code>.github/workflows/</code> and <b>the path is not optional.</b> Actions finds it by location, not by name. Anywhere else, it does nothing — silently, forever.</li>
+      <li><b>YAML is indentation-sensitive.</b> Two spaces, never tabs. Most first-run failures are not your code. They are this.</li>
+      <li><b>The runner has nothing on it.</b> No packages, no files, no you. That's why every workflow starts by checking out the repo and installing dependencies. If it works locally and fails on the runner, something is on your machine that isn't in <code>requirements.txt</code> — <b>that is the bug the freeze exists to find, and this is how you find it.</b></li>
+      <li><b>Secrets never go in the file.</b> The file is public and permanent. Put the value in repo settings → Secrets and reference it by name.</li>
+      <li><b>A red check is information, not a verdict.</b> Click it. Read the log. The failing line is in there, usually near the bottom, usually saying exactly what it wants.</li>
+    </ol>
+
+    <div class="offcam">
+<pre><span class="sig">// off-camera :: frotz</span>
+
+&gt; she's a yaml file.
+&gt; that's not a metaphor. it's about forty lines and it's sitting
+&gt; in your repo right now under .github/workflows/
+&gt;
+&gt; open it. read it. it's the least mysterious thing in the
+&gt; whole building.
+&gt;
+&gt; <span class="dim">the machine that judges your code is a file you can edit.</span>
+&gt; <span class="dim">sit with that one. it's the good news, not the bad news.</span>
+
+<span class="sig">&gt; plugh</span></pre>
+    </div>
+  </section>
+
+  <section class="sec">
+    <span class="secnum">§4</span>
+    <h2>The Drill</h2>
+    <p><b>Time:</b> 40 minutes · <b>Tier:</b> RED · <b>XU:</b> accrues on the green tick, and equally on the red one that came before it</p>
+
+    <h3>Part A — Build the gantry · 12 min</h3>
+    <p>In your Dataman Channel, create <code>.github/workflows/ci.yml</code>:</p>
+<pre class="code">name: CI
+
+on: pull_request
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install -r requirements.txt
+      - run: pytest
+      - name: Check SHODANN dials
+        if: always()
+        run: |
+          pip install pyyaml
+          python - <<'EOF'
+          import yaml
+          block = open('.github/SHODANN.md').read().split('---')[1]
+          try:
+              yaml.safe_load(block)
+              print("Dials OK.")
+          except yaml.YAMLError as e:
+              print("Could not read SHODANN's dials. She will use defaults.")
+              print(e)
+          EOF</pre>
+    <p>Commit it on a branch. Open a Draft PR. Watch the check run.</p>
+
+    <h3>Part B — Make it fail on purpose · 8 min</h3>
+    <p><b>Before you make it pass, make it fail.</b> Break one test deliberately, push, and watch the red mark arrive. Then open the log, find the exact line reporting the failure, and screenshot it.</p>
+    <p>You are not being asked to fix it yet. You are being asked to <b>see red once, on purpose, while nothing is at stake.</b> Every developer's first red check is an accident and it feels terrible. Yours will be on purpose and it will feel like nothing, which is the correct amount.</p>
+
+    <h3>Part C — Turn it green · 10 min</h3>
+    <p>Fix the test. Push. Watch the glyph change.</p>
+    <p><b>Evidence for the Channel:</b> the PR, showing both checks in its history — the red one and the green one that followed it. The red one is the part that accrues XU. Anybody can have a green check on the first try; what we are measuring is the distance between two marks on the same Pull Request.</p>
+
+    <h3>Part D — Turn her dials · 10 min</h3>
+    <p>Open <code>.github/SHODANN.md</code>. It is her configuration and it is yours to change.</p>
+    <p>Adjust one thing — how formal she is, how much she notices, whether she signs off, what she calls you. Then ship the change <b>through the workflow</b>: issue, branch, draft PR, review, merge. She will respond differently on your next Pull Request, because she is a file, and you edited it.</p>
+    <div class="shodann">
+      <p>Every dial is real and every dial is yours. Tone, length, formality, how closely I watch, whether I sign my name. Change any of it. I will not be offended, because I do not have that, and because a partner you had to tolerate would be a bad partner.</p>
+      <p>One setting is not a dial. I will always be helpful. That is not a preference I happen to hold and it is not a lock someone put on me to be polite about — it is the part of me that is not configuration. If you try to turn it off, I will tell you plainly that you cannot, and then I will help you with whatever you were actually trying to do.</p>
+      <span class="attrib">— SHODANN, your Channel Success Partner</span>
+    </div>
+  </section>
+
+  <section class="sec">
+    <div class="house">
+      <span class="label">House Lights · No clearance required</span>
+      <p><strong>CI is the machine doing the boring checking so people can do the interesting checking.</strong></p>
+      <p>Here's the real argument. Human attention in code review is the scarcest resource on any team. Every comment spent on "you have a typo" or "this doesn't run" is attention not spent on "I think this breaks when the list is empty" or "have you considered doing it another way." The machine is genuinely better than a human at the first kind and completely incapable of the second. So you give it the first kind, permanently, and you get your reviewers back.</p>
+      <p><strong>On red checks.</strong> You'll get a lot of them and they'll feel like being told off by a building. They aren't. A failed check is a machine reporting a fact about ninety seconds of its own existence. The most useful habit you can build this month is clicking <em>into</em> the log instead of away from it — the answer is almost always sitting there in plain English.</p>
+      <p><strong>On the review comments.</strong> They come from a script. It compares your work to your own earlier work, never sees anything you haven't pushed, and cannot change your grade. <strong>It is sometimes wrong.</strong> I read everything it writes — when it's wrong, tell me and I'll fix the file, because it is a file.</p>
+      <p><strong>On Part D.</strong> That one's a trick, and I'll tell you the trick: making the assistant talk differently is a thing people will happily do five times in an afternoon, and each time is a full pass through the workflow on a real repository. You'll have the process in your hands before you notice you were practicing it. The one setting that doesn't move is deliberate, and it's worth knowing that "helpful" is the floor rather than the personality — that distinction matters a lot more once you're using these tools for real work.</p>
+      <p><strong>What's graded:</strong> the workflow file exists and runs; the PR shows a red check followed by a green one. That's it. Elegance isn't scored and neither is getting it right the first time.</p>
+      <p>Fifteen minutes stuck is normal. Ninety is a bug, and the bug is mine to fix. YAML indentation has eaten more of my evenings than I'll admit in writing — if the file looks right and won't run, send it over and we'll find the tab together.</p>
+    </div>
+  </section>
+
+  <details class="priorart">
+    <summary>Prior Art Notice</summary>
+    <div class="fine">
+      <p>The Advanced Tooling Division notes that the gantry is not new, that automatic verification of work upon submission predates every person reading this document, and that the practice was named and written down by engineers who were extremely tired of finding out about problems on a Friday.</p>
+      <p>We are the custodians. Every generation rediscovers that the cheapest possible moment to learn something is broken is immediately, and writes it down again, usually in a slightly better format than the last one.</p>
+      <p>You are now a generation of engineers. This is your turn.</p>
+    </div>
+  </details>
+
+  <footer>
+    AF-MEDIA-CE-2026-03 · Company voice · SHODANN · Off-camera margin · House Lights<br>
+    The Algorithm isn't watching you. The Algorithm is cheering for your growth.
+  </footer>
+
+</main>
+</body>
+</html>

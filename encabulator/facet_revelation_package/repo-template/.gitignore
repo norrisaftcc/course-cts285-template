@@ -1,0 +1,16 @@
+# Environment — the recipe travels, the kitchen does not
+.venv/
+venv/
+
+# Secrets — never, not once, not "just for now"
+.env
+
+# Python leftovers
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Editors and operating systems being helpful
+.vscode/
+.idea/
+.DS_Store
